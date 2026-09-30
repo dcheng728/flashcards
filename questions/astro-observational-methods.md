@@ -135,13 +135,16 @@ What is the cosmic distance ladder?
 A sequence of overlapping distance methods, each calibrated using distances from the rung below: parallax (direct geometry, $\lesssim$ kpc) $\to$ standard candles like Cepheids (calibrated via parallax, $\lesssim$ tens of Mpc) $\to$ Type Ia supernovae (calibrated via Cepheids in their host galaxies, out to Gpc) $\to$ Hubble's law (calibrated via supernovae, largest scales).
 
 <pre>
-  ||====================================||  Gpc      Hubble's law (v = H0 d)
-  ||                                     ||
-  ||====================================||  Mpc-Gpc  Type Ia supernovae
-  ||                                     ||            (calibrated via Cepheids)
-  ||====================================||  ~Mpc      Cepheid standard candles
-  ||                                     ||            (calibrated via parallax)
-  ||====================================||  ~kpc      stellar parallax (direct geometry)
+  Gpc      Hubble's law (v = H0 d)
+             ^
+             | calibrates
+  Mpc-Gpc  Type Ia supernovae
+             ^
+             | calibrates
+  ~Mpc     Cepheid standard candles
+             ^
+             | calibrates
+  ~kpc     stellar parallax (direct geometry)
 </pre>
 
 ---
