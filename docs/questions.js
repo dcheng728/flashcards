@@ -1932,7 +1932,7 @@ const ALL_QUESTIONS = [
     "answer": "$E = \\frac{3}{5} N E_F$",
     "explanation": "The 3D density of states is $g(E) = C E^{1/2}$ where $C = \\frac{V}{2\\pi^2}\\left(\\frac{2m}{\\hbar^2}\\right)^{3/2}$. At $T=0$, all states up to $E_F$ are filled, so $N = \\int_0^{E_F} g(E)\\,dE = C \\cdot \\frac{2}{3} E_F^{3/2}$. The total energy is $E_{\\text{tot}} = \\int_0^{E_F} E\\,g(E)\\,dE = C \\int_0^{E_F} E^{3/2}\\,dE = C \\cdot \\frac{2}{5} E_F^{5/2}$. Dividing: $E_{\\text{tot}}/N = \\frac{C \\cdot \\frac{2}{5} E_F^{5/2}}{C \\cdot \\frac{2}{3} E_F^{3/2}} = \\frac{3}{5} E_F$. The factor $3/5$ (not $1/2$) arises because $g(E) \\propto E^{1/2}$ weights higher energies more heavily -- there are more states near $E_F$ than near $E = 0$.",
     "subject": "statistical-mechanics",
-    "difficulty": "inetermediate",
+    "difficulty": "intermediate",
     "labels": [
       "fermi-gas"
     ]
@@ -2237,6 +2237,125 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "noether-qft"
+    ]
+  },
+  {
+    "name": "<!-- Questions on survey design, observing strategy, photometry, imaging, catalogs, and Rubin data. -->",
+    "question": "### photometric redshift\ndifficulty: intermediate\nlabels: photometric-redshift, galaxies, survey-methods\n\nHow is a photometric redshift estimated from multiband photometry, and why is it uncertain?",
+    "answer": "A photometric redshift, or photo-$z$, estimates a galaxy's redshift by fitting its measured fluxes in several filters to redshifted spectral-energy-distribution templates or a trained model. A template fit can minimize\n\n$$\\chi^2(z,\\theta)=\\sum_i\\frac{\\left[F_i^{\\mathrm{obs}}-aF_i^{\\mathrm{model}}(z,\\theta)\\right]^2}{\\sigma_i^2},$$\n\nwhere $i$ labels filters, $\\theta$ describes the galaxy template, and $a$ is its overall normalization.",
+    "explanation": "The likelihood is constrained by spectral features moving between filters, especially the 4000-Å break and Lyman break. Different galaxy types and redshifts can have similar colors, so the result is a probability distribution $p(z)$ rather than an exact value. Its bias and scatter matter for weak-lensing and clustering.",
+    "subject": "astro-observational-methods",
+    "difficulty": "",
+    "labels": []
+  },
+  {
+    "name": "astrophysical filters",
+    "question": "What are photometric filters, and why are they useful?",
+    "answer": "A filter transmits light over a selected wavelength band, so a measurement gives the source's flux in that band.",
+    "explanation": "For the common $UBVRIJHK$ notation, typical broad-band ranges are approximately:\n\n- $U$ (ultraviolet): $300$–$400\\,\\mathrm{nm}$\n- $B$ (blue): $400$–$500\\,\\mathrm{nm}$\n- $V$ (visual): $500$–$600\\,\\mathrm{nm}$\n- $R$ (red): $600$–$750\\,\\mathrm{nm}$\n- $I$ (near-infrared): $750$–$900\\,\\mathrm{nm}$\n- $J$, $H$, $K$ (near-infrared): roughly $1.1$–$1.4$, $1.5$–$1.8$, and $2.0$–$2.4\\,\\mu\\mathrm{m}$\n\nComparing fluxes in different bands gives colors that constrain temperature, dust, galaxy type, and redshift. Exact passbands depend on the instrument.",
+    "subject": "astro-observational-methods",
+    "difficulty": "basic",
+    "labels": [
+      "photometry",
+      "filters",
+      "colors"
+    ]
+  },
+  {
+    "name": "<!-- Questions on cosmological distances, expansion, structure growth, lensing, clustering, and dark energy. -->",
+    "question": "### baryon acoustic oscillations\ndifficulty: intermediate\nlabels: baryon-acoustic-oscillations, cosmology, large-scale-structure\n\nWhat are baryon acoustic oscillations, and why are they useful in cosmology?",
+    "answer": "BAO are a preferred galaxy separation set by the early-Universe sound horizon, roughly $150\\,\\mathrm{Mpc}$. Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.",
+    "explanation": "Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.",
+    "subject": "astro-cosmology",
+    "difficulty": "",
+    "labels": []
+  },
+  {
+    "name": "strong-lensing time delays",
+    "question": "How do strong-lensing time delays measure the Hubble constant?",
+    "answer": "Different images of a variable source have different geometric and Shapiro delays. A lens model gives the Fermat-potential difference $\\Delta\\phi_{ij}$:\n\n$$\\Delta t_{ij} = \\frac{D_{\\Delta t}}{c}\\,\\Delta\\phi_{ij},$$\n\nThe time-delay distance satisfies $D_{\\Delta t}\\propto H_0^{-1}$, so measured delays constrain $H_0$.",
+    "explanation": "The main uncertainties are the lens model, line-of-sight mass, and mass-sheet degeneracy.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "strong-lensing",
+      "time-delays",
+      "hubble-constant"
+    ]
+  },
+  {
+    "name": "weak gravitational lensing",
+    "question": "What is weak gravitational lensing, and what does it measure?",
+    "answer": "Weak lensing is the small, coherent distortion of background-galaxy images by foreground matter. Averaged shear and convergence map projected mass and its growth.",
+    "explanation": "Shear correlations constrain structure growth; key systematics include PSF modeling, intrinsic alignments, blending, and photo-$z$ errors.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "weak-lensing",
+      "gravitational-lensing",
+      "structure-growth"
+    ]
+  },
+  {
+    "name": "galaxy clustering",
+    "question": "What does galaxy clustering measure, and what must be modeled?",
+    "answer": "Galaxy clustering measures the two-point correlation function or power spectrum of galaxy positions. Its scale dependence probes BAO, the matter spectrum, and structure growth.",
+    "explanation": "Galaxy bias and peculiar velocities must be modeled, along with photo-$z$ errors and nonlinear evolution.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "galaxy-clustering",
+      "large-scale-structure",
+      "cosmology"
+    ]
+  },
+  {
+    "name": "type Ia supernovae as distance indicators",
+    "question": "Why are Type Ia supernovae useful as distance indicators?",
+    "answer": "Type Ia supernovae are thermonuclear disruptions of carbon-oxygen white dwarfs. Their light-curve shape and color standardize their luminosities, allowing their observed fluxes to give luminosity distances.",
+    "explanation": "Their distance modulus versus redshift forms a Hubble diagram; dust, calibration, selection, and population evolution are key systematics.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "type-ia",
+      "supernovae",
+      "standard-candles",
+      "cosmology"
+    ]
+  },
+  {
+    "name": "standard candles and intrinsic luminosity",
+    "question": "What is a standard candle, and how does intrinsic luminosity determine a source's distance?",
+    "answer": "A standard candle is an object with known intrinsic luminosity $L$. Comparing $L$ with the observed flux $F$ gives the luminosity distance through\n\n$$F = \\frac{L}{4\\pi d_L^2}.$$",
+    "explanation": "Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "standard-candles",
+      "luminosity-distance",
+      "photometry"
+    ]
+  },
+  {
+    "name": "<!-- Questions on stellar structure and evolution, supernovae, compact remnants, binaries, nucleosynthesis, and stellar populations. -->",
+    "question": "### what is a supernova\ndifficulty: basic\nlabels: supernovae, transients, stellar-evolution\n\nWhat is a supernova, and what are its two main channels?",
+    "answer": "A supernova is a brief, extremely luminous stellar explosion. It can result from core collapse in a massive star or thermonuclear disruption of a carbon-oxygen white dwarf, usually a Type Ia event.",
+    "explanation": "Core-collapse events leave neutron stars or black holes; Type Ia events leave no white-dwarf remnant and can be standardized as distance indicators.",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "",
+    "labels": []
+  },
+  {
+    "name": "luminosity",
+    "question": "What is luminosity in astrophysics, and how does it differ from observed flux?",
+    "answer": "Luminosity is the rate at which a source emits energy,\n\n$$L = \\frac{dE}{dt}.$$\n\nIt is an intrinsic power measured in watts, where $1\\,\\mathrm{W}=1\\,\\mathrm{J/s}$. For example, the Sun has $L_\\odot\\approx3.8\\times10^{26}\\,\\mathrm{W}$.",
+    "explanation": "The flux we observe at distance $d$ is\n\n$$F = \\frac{L}{4\\pi d^2}.$$\n\nLuminosity is the source's intrinsic energy output; flux or apparent brightness is the energy received per unit area. Bolometric luminosity covers all wavelengths, while band luminosity refers to a range such as $r$-band or X-ray, and luminosity may be expressed in solar units such as $10^5L_\\odot$.",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "basic",
+    "labels": [
+      "luminosity",
+      "stellar-properties",
+      "photometry"
     ]
   }
 ];

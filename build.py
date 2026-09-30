@@ -16,6 +16,8 @@ SUBJECTS = [
     'math-trigonometry', 'math-special-functions', 'math-group-theory',
     'classical-mechanics', 'electromagnetism', 'quantum-mechanics',
     'statistical-mechanics', 'relativity', 'quantum-field-theory',
+    'astro-observational-methods', 'astro-cosmology', 'astro-dark-matter',
+    'astro-stellar-astrophysics',
 ]
 
 
