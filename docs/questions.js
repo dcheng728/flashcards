@@ -2433,6 +2433,18 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "mass of the Sun",
+    "question": "What is the mass of the Sun, and why is it used as a reference unit?",
+    "answer": "$M_\\odot\\approx1.989\\times10^{30}$ kg. Stellar and galactic masses are usually quoted in solar masses — e.g. neutron stars are $\\approx1.4$–$2\\,M_\\odot$.",
+    "explanation": "Measured via Kepler's third law from Earth's orbit: $M_\\odot=\\dfrac{4\\pi^2a^3}{GT^2}$, using semi-major axis $a=1$ AU and period $T=1$ yr.",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "basic",
+    "labels": [
+      "solar-mass",
+      "stellar-properties"
+    ]
+  },
+  {
     "name": "luminosity",
     "question": "What is luminosity in astrophysics, and how does it differ from observed flux?",
     "answer": "Luminosity is the rate at which a source emits energy,\n\n$$L = \\frac{dE}{dt}.$$\n\nIt is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\\odot\\approx3.8\\times10^{26}$ W.",
