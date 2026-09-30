@@ -159,7 +159,7 @@ The Gibbs free energy $G = U - TS + PV$ is minimized at constant $T$ and $P$ ins
 ===
 
 ### Fermi gas ground-state energy
-difficulty: inetermediate
+difficulty: intermediate
 labels: fermi-gas
 
 What is the total ground-state energy of $N$ non-interacting fermions in 3D, in terms of the Fermi energy $E_F$?
