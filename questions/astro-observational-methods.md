@@ -35,12 +35,12 @@ A filter transmits light over a selected wavelength band, so a measurement gives
 
 For the common $UBVRIJHK$ notation, typical broad-band ranges are approximately:
 
-- $U$ (ultraviolet): $300$–$400\,\mathrm{nm}$
-- $B$ (blue): $400$–$500\,\mathrm{nm}$
-- $V$ (visual): $500$–$600\,\mathrm{nm}$
-- $R$ (red): $600$–$750\,\mathrm{nm}$
-- $I$ (near-infrared): $750$–$900\,\mathrm{nm}$
-- $J$, $H$, $K$ (near-infrared): roughly $1.1$–$1.4$, $1.5$–$1.8$, and $2.0$–$2.4\,\mu\mathrm{m}$
+- $U$ (ultraviolet): $300$–$400$ nm
+- $B$ (blue): $400$–$500$ nm
+- $V$ (visual): $500$–$600$ nm
+- $R$ (red): $600$–$750$ nm
+- $I$ (near-infrared): $750$–$900$ nm
+- $J$, $H$, $K$ (near-infrared): roughly $1.1$–$1.4$, $1.5$–$1.8$, and $2.0$–$2.4$ μm
 
 Comparing fluxes in different bands gives colors that constrain temperature, dust, galaxy type, and redshift. Exact passbands depend on the instrument.
 
@@ -54,7 +54,7 @@ What is an astronomical unit, and what scale is it used for?
 
 ---
 
-$1\,\mathrm{AU}\approx1.496\times10^{11}\,\mathrm{m}$, the mean Earth-Sun distance. Used for solar-system scales.
+1 AU $\approx 1.496\times10^{11}$ m, the mean Earth-Sun distance. Used for solar-system scales.
 
 ---
 
@@ -68,13 +68,13 @@ What is stellar parallax, and how does it give a distance?
 
 ---
 
-The apparent angular shift $p$ of a nearby star against distant background stars, measured from two points on Earth's orbit (a $1\,\mathrm{AU}$ baseline, usually 6 months apart). 
+The apparent angular shift $p$ of a nearby star against distant background stars, measured from two points on Earth's orbit (a 1 AU baseline, usually 6 months apart). 
 Distance follows from $d[\mathrm{pc}] = 1/p[\mathrm{arcsec}]$.
 
 ---
 
 The direct, geometric rung of the cosmic distance ladder — no assumptions about the star's physics are needed, only trigonometry. 
-Ground-based parallax is limited by atmospheric blurring to $d\lesssim100\,\mathrm{pc}$; space missions like Gaia reach much further by avoiding atmospheric seeing.
+Ground-based parallax is limited by atmospheric blurring to $d\lesssim100$ pc; space missions like Gaia reach much further by avoiding atmospheric seeing.
 
 ===
 
@@ -86,7 +86,7 @@ What is a parsec, and how is it defined observationally?
 
 ---
 
-A parsec (pc) is the distance at which $1\,\mathrm{AU}$ subtends a parallax angle of $1$ arcsecond: $d[\mathrm{pc}] = 1/p[\mathrm{arcsec}]$. $1\,\mathrm{pc}\approx3.086\times10^{16}\,\mathrm{m}\approx3.26$ light-years.
+A parsec (pc) is the distance at which 1 AU subtends a parallax angle of $1$ arcsecond: $d[\mathrm{pc}] = 1/p[\mathrm{arcsec}]$. 1 pc $\approx 3.086\times10^{16}$ m $\approx 3.26$ light-years.
 
 ---
 
@@ -103,7 +103,7 @@ What is a light-year?
 
 ---
 
-The distance light travels in one Julian year: $1\,\mathrm{ly}\approx9.461\times10^{15}\,\mathrm{m}\approx0.307\,\mathrm{pc}$.
+The distance light travels in one Julian year: 1 ly $\approx 9.461\times10^{15}$ m $\approx 0.307$ pc.
 
 ---
 

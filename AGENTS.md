@@ -69,7 +69,7 @@ Each block must contain:
 5. Two `---` separators dividing the question, answer, and explanation.
 6. A final `===` separator, including after the last question in a file.
 
-Use single backslashes in LaTeX commands, such as `\frac`, `\vec`, and `\hat`. Do not place standalone `---` or `===` lines inside the question, answer, or explanation.
+Use single backslashes in LaTeX commands, such as `\frac`, `\vec`, and `\hat`. Do not place standalone `---` or `===` lines inside the question, answer, or explanation. Avoid `\,` and `\;` spacing commands where a plain space or `\quad` reads fine.
 
 ## Writing questions
 

@@ -32,7 +32,7 @@ Luminosity is the rate at which a source emits energy,
 
 $$L = \frac{dE}{dt}.$$
 
-It is an intrinsic power measured in watts, where $1\,\mathrm{W}=1\,\mathrm{J/s}$. For example, the Sun has $L_\odot\approx3.8\times10^{26}\,\mathrm{W}$.
+It is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\odot\approx3.8\times10^{26}\,\mathrm{W}$.
 
 ---
 

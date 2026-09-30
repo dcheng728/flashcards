@@ -8,7 +8,7 @@ What are baryon acoustic oscillations, and why are they useful in cosmology?
 
 ---
 
-Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150\,\mathrm{Mpc}$.
+Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.
 Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.
 
 ---
@@ -27,7 +27,7 @@ How do strong-lensing time delays measure the Hubble constant?
 
 Different images of a variable source have different geometric and Shapiro delays (the extra light-travel time from spacetime curvature near the lens mass). A lens model gives the Fermat-potential difference $\Delta\phi_{ij}$:
 
-$$\Delta t_{ij} = \frac{D_{\Delta t}}{c}\,\Delta\phi_{ij},$$
+$$\Delta t_{ij} = \frac{D_{\Delta t}}{c}\Delta\phi_{ij},$$
 
 The time-delay distance satisfies $D_{\Delta t}\propto H_0^{-1}$, so measured delays constrain $H_0$.
 
