@@ -71,6 +71,12 @@ Each block must contain:
 
 Use single backslashes in LaTeX commands, such as `\frac`, `\vec`, and `\hat`. Do not place standalone `---` or `===` lines inside the question, answer, or explanation. Avoid `\,` and `\;` spacing commands where a plain space or `\quad` reads fine.
 
+### Diagrams
+
+`app.js` renders question/answer/explanation text by injecting it directly as HTML (no Markdown parser, no sanitization). For a diagram, write plain ASCII art wrapped in a literal `<pre>...</pre>` tag in the `.md` source — this works because `<pre>` is native HTML (monospace, preserves whitespace) with zero build changes needed. Markdown fences (`` ``` ``) do nothing here since there's no Markdown layer to interpret them; they'd render as literal backticks with the art's spacing collapsed.
+
+Escape any `<` or `>` used inside the art (e.g. as arrows) as `&lt;`/`&gt;`, since unescaped angle brackets are parsed as HTML tags.
+
 ## Writing questions
 
 - Make the name the shortest unambiguous index entry for the topic.

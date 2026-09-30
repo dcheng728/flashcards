@@ -22,6 +22,7 @@ SUBJECTS = [
 
 
 def parse_questions(text, subject):
+    text = re.sub(r'^<!--.*?-->\s*\n+', '', text)
     questions = []
     for block in re.split(r'^===$', text, flags=re.MULTILINE):
         block = block.strip()
