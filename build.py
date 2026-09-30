@@ -16,10 +16,13 @@ SUBJECTS = [
     'math-trigonometry', 'math-special-functions', 'math-group-theory',
     'classical-mechanics', 'electromagnetism', 'quantum-mechanics',
     'statistical-mechanics', 'relativity', 'quantum-field-theory',
+    'astro-observational-methods', 'astro-cosmology', 'astro-dark-matter',
+    'astro-stellar-astrophysics',
 ]
 
 
 def parse_questions(text, subject):
+    text = re.sub(r'^<!--.*?-->\s*\n+', '', text)
     questions = []
     for block in re.split(r'^===$', text, flags=re.MULTILINE):
         block = block.strip()
