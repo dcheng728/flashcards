@@ -31,6 +31,15 @@ $$\Delta t_{ij} = \frac{D_{\Delta t}}{c}\Delta\phi_{ij},$$
 
 The time-delay distance satisfies $D_{\Delta t}\propto H_0^{-1}$, so measured delays constrain $H_0$.
 
+<pre>
+                    ________ image A (path length L_A)
+                   /
+  source *--------o  lens mass  -------* observer
+                   \________ image B (path length L_B)
+
+       unequal path lengths + Shapiro delay -&gt; Δt_AB
+</pre>
+
 ---
 
 The main uncertainties are the lens model, line-of-sight mass, and mass-sheet degeneracy.

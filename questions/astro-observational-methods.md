@@ -71,6 +71,20 @@ What is stellar parallax, and how does it give a distance?
 The apparent angular shift $p$ of a nearby star against distant background stars, measured from two points on Earth's orbit (a 1 AU baseline, usually 6 months apart). 
 Distance follows from $d[\mathrm{pc}] = 1/p[\mathrm{arcsec}]$.
 
+<pre>
+  Earth (Jan) o
+               \
+                \  p
+                 \
+      Sun  S------* nearby star ----- (fixed background stars)
+                 /
+                /  p
+               /
+  Earth (Jul) o
+
+        |&lt;-- 1 AU --&gt;|&lt;------- d = 1/p -------&gt;|
+</pre>
+
 ---
 
 The direct, geometric rung of the cosmic distance ladder — no assumptions about the star's physics are needed, only trigonometry. 
@@ -119,6 +133,16 @@ What is the cosmic distance ladder?
 ---
 
 A sequence of overlapping distance methods, each calibrated using distances from the rung below: parallax (direct geometry, $\lesssim$ kpc) $\to$ standard candles like Cepheids (calibrated via parallax, $\lesssim$ tens of Mpc) $\to$ Type Ia supernovae (calibrated via Cepheids in their host galaxies, out to Gpc) $\to$ Hubble's law (calibrated via supernovae, largest scales).
+
+<pre>
+  ||====================================||  Gpc      Hubble's law (v = H0 d)
+  ||                                     ||
+  ||====================================||  Mpc-Gpc  Type Ia supernovae
+  ||                                     ||            (calibrated via Cepheids)
+  ||====================================||  ~Mpc      Cepheid standard candles
+  ||                                     ||            (calibrated via parallax)
+  ||====================================||  ~kpc      stellar parallax (direct geometry)
+</pre>
 
 ---
 
