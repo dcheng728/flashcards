@@ -503,9 +503,9 @@ function displayQuestion() {
         questionLabelsEl.appendChild(pill);
     }
 
-    questionText.innerHTML = q.question.replace(/\n/g, '<br>');
-    answerText.innerHTML = q.answer.replace(/\n/g, '<br>');
-    explanationText.innerHTML = (q.explanation || '').replace(/\n/g, '<br>');
+    questionText.innerHTML = formatCardText(q.question);
+    answerText.innerHTML = formatCardText(q.answer);
+    explanationText.innerHTML = formatCardText(q.explanation || '');
 
     answerSection.classList.add('hidden');
     showAnswerContainer.classList.remove('hidden');
@@ -517,6 +517,33 @@ function displayQuestion() {
     renderMath(questionText);
     updateScore();
     renderQueueList();
+}
+
+// Supports `- ` / `1. ` list lines and `**bold**`; everything else passes
+// through as raw HTML (there is no full Markdown parser here). `<pre>` blocks
+// are left untouched so ASCII diagrams keep their literal whitespace.
+function formatCardText(text) {
+    if (!text) return '';
+    const lines = text.split('\n');
+    const out = [];
+    let listTag = null;
+    const closeList = () => {
+        if (listTag) { out.push(`</${listTag}>`); listTag = null; }
+    };
+    for (const line of lines) {
+        const bullet = line.match(/^- (.*)$/);
+        const numbered = line.match(/^\d+\. (.*)$/);
+        const tag = bullet ? 'ul' : numbered ? 'ol' : null;
+        if (tag) {
+            if (listTag !== tag) { closeList(); out.push(`<${tag}>`); listTag = tag; }
+            out.push(`<li>${(bullet || numbered)[1]}</li>`);
+        } else {
+            closeList();
+            out.push(line + '<br>');
+        }
+    }
+    closeList();
+    return out.join('').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 }
 
 function renderMath(container) {

@@ -2317,7 +2317,7 @@ const ALL_QUESTIONS = [
   {
     "name": "cosmic distance ladder",
     "question": "What is the cosmic distance ladder?",
-    "answer": "A sequence of overlapping distance methods, each calibrated using distances from the rung below: parallax (direct geometry, $\\lesssim$ kpc) $\\to$ standard candles like Cepheids (calibrated via parallax, $\\lesssim$ tens of Mpc) $\\to$ Type Ia supernovae (calibrated via Cepheids in their host galaxies, out to Gpc) $\\to$ Hubble's law (calibrated via supernovae, largest scales).\n\n<pre>\n  ||====================================||  Gpc      Hubble's law (v = H0 d)\n  ||                                     ||\n  ||====================================||  Mpc-Gpc  Type Ia supernovae\n  ||                                     ||            (calibrated via Cepheids)\n  ||====================================||  ~Mpc      Cepheid standard candles\n  ||                                     ||            (calibrated via parallax)\n  ||====================================||  ~kpc      stellar parallax (direct geometry)\n</pre>",
+    "answer": "A sequence of overlapping distance methods, each calibrated using distances from the rung below: parallax (direct geometry, $\\lesssim$ kpc) $\\to$ standard candles like Cepheids (calibrated via parallax, $\\lesssim$ tens of Mpc) $\\to$ Type Ia supernovae (calibrated via Cepheids in their host galaxies, out to Gpc) $\\to$ Hubble's law (calibrated via supernovae, largest scales).\n\n<pre>\n  Gpc      Hubble's law (v = H0 d)\n             ^\n             | calibrates\n  Mpc-Gpc  Type Ia supernovae\n             ^\n             | calibrates\n  ~Mpc     Cepheid standard candles\n             ^\n             | calibrates\n  ~kpc     stellar parallax (direct geometry)\n</pre>",
     "explanation": "No single method spans all scales, so each rung's calibration uncertainty propagates to the ones above it. This is a main reason local ($H_0$ ladder) and early-Universe (CMB) measurements of $H_0$ are in tension.",
     "subject": "astro-observational-methods",
     "difficulty": "basic",
@@ -2420,9 +2420,22 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "neutron stars",
+    "question": "What is a neutron star, and what sets its basic scale?",
+    "answer": "The collapsed core left behind by a core-collapse supernova when the progenitor's mass is too great for electron degeneracy pressure to halt collapse. Neutron degeneracy pressure takes over instead, producing a compact remnant of mass $\\approx1.4$–$2\\,M_\\odot$ and radius $\\approx10$ km.",
+    "explanation": "Densities reach $\\rho\\sim10^{17}$ kg/m³, comparable to nuclear density — a neutron star is essentially a giant atomic nucleus held together by gravity. Rotating, strongly magnetized neutron stars are observed as pulsars; above roughly $2$–$3\\,M_\\odot$ the remnant instead collapses further to a black hole (the exact maximum mass, the TOV limit, is not precisely known).",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "basic",
+    "labels": [
+      "neutron-stars",
+      "compact-remnants",
+      "stellar-evolution"
+    ]
+  },
+  {
     "name": "luminosity",
     "question": "What is luminosity in astrophysics, and how does it differ from observed flux?",
-    "answer": "Luminosity is the rate at which a source emits energy,\n\n$$L = \\frac{dE}{dt}.$$\n\nIt is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\\odot\\approx3.8\\times10^{26}\\,\\mathrm{W}$.",
+    "answer": "Luminosity is the rate at which a source emits energy,\n\n$$L = \\frac{dE}{dt}.$$\n\nIt is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\\odot\\approx3.8\\times10^{26}$ W.",
     "explanation": "The flux we observe at distance $d$ is\n\n$$F = \\frac{L}{4\\pi d^2}.$$\n\nLuminosity is the source's intrinsic energy output; flux or apparent brightness is the energy received per unit area. Bolometric luminosity covers all wavelengths, while band luminosity refers to a range such as $r$-band or X-ray, and luminosity may be expressed in solar units such as $10^5L_\\odot$.",
     "subject": "astro-stellar-astrophysics",
     "difficulty": "basic",

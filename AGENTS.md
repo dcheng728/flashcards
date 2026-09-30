@@ -71,11 +71,15 @@ Each block must contain:
 
 Use single backslashes in LaTeX commands, such as `\frac`, `\vec`, and `\hat`. Do not place standalone `---` or `===` lines inside the question, answer, or explanation. Avoid `\,` and `\;` spacing commands where a plain space or `\quad` reads fine.
 
-### Diagrams
+### Formatting
 
-`app.js` renders question/answer/explanation text by injecting it directly as HTML (no Markdown parser, no sanitization). For a diagram, write plain ASCII art wrapped in a literal `<pre>...</pre>` tag in the `.md` source — this works because `<pre>` is native HTML (monospace, preserves whitespace) with zero build changes needed. Markdown fences (`` ``` ``) do nothing here since there's no Markdown layer to interpret them; they'd render as literal backticks with the art's spacing collapsed.
+`app.js` renders question/answer/explanation text by injecting it directly as HTML (no sanitization, and no full Markdown parser — `formatCardText` in `src/app.js` only handles the subset below). Supported:
 
-Escape any `<` or `>` used inside the art (e.g. as arrows) as `&lt;`/`&gt;`, since unescaped angle brackets are parsed as HTML tags.
+- `- item` lines → bullet list, `1. item` lines → numbered list (must be the whole line).
+- `**bold**`.
+- A literal `<pre>...</pre>` block for ASCII diagrams — `<pre>` is native HTML (monospace, preserves whitespace), so art typed inside it renders as-is.
+
+Anything else (headers, links, code fences, italics, nested lists) is not supported — either add it to `formatCardText` or fall back to raw HTML tags (`<em>`, `<a>`, etc.) directly in the `.md` source. Escape any `<` or `>` used as literal characters (e.g. arrows in ASCII art) as `&lt;`/`&gt;`, since unescaped angle brackets are parsed as HTML tags.
 
 ## Writing questions
 

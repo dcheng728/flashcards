@@ -20,6 +20,22 @@ Core-collapse events leave neutron stars or black holes; Type Ia events leave no
 
 ===
 
+### neutron stars
+difficulty: basic
+labels: neutron-stars, compact-remnants, stellar-evolution
+
+What is a neutron star, and what sets its basic scale?
+
+---
+
+The collapsed core left behind by a core-collapse supernova when the progenitor's mass is too great for electron degeneracy pressure to halt collapse. Neutron degeneracy pressure takes over instead, producing a compact remnant of mass $\approx1.4$–$2\,M_\odot$ and radius $\approx10$ km.
+
+---
+
+Densities reach $\rho\sim10^{17}$ kg/m³, comparable to nuclear density — a neutron star is essentially a giant atomic nucleus held together by gravity. Rotating, strongly magnetized neutron stars are observed as pulsars; above roughly $2$–$3\,M_\odot$ the remnant instead collapses further to a black hole (the exact maximum mass, the TOV limit, is not precisely known).
+
+===
+
 ### luminosity
 difficulty: basic
 labels: luminosity, stellar-properties, photometry
@@ -32,7 +48,7 @@ Luminosity is the rate at which a source emits energy,
 
 $$L = \frac{dE}{dt}.$$
 
-It is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\odot\approx3.8\times10^{26}\,\mathrm{W}$.
+It is an intrinsic power measured in watts, where 1 W = 1 J/s. For example, the Sun has $L_\odot\approx3.8\times10^{26}$ W.
 
 ---
 
