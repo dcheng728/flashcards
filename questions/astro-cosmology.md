@@ -9,11 +9,28 @@ What are baryon acoustic oscillations, and why are they useful in cosmology?
 ---
 
 Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.
+This is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.
 Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.
 
 ---
 
 Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.
+
+===
+
+### surface of last scattering
+difficulty: basic
+labels: cmb, recombination, surface-of-last-scattering
+
+What is the surface of last scattering, and what does it have to do with the cosmic microwave background?
+
+---
+
+The set of points, at $z\approx1100$ (recombination, $\sim380{,}000$ years after the Big Bang), where CMB photons last Thomson-scattered before free-streaming to us — when electrons and protons combined into neutral hydrogen, making the Universe transparent.
+
+---
+
+The CMB is an image of this surface: its anisotropies encode the photon-baryon plasma's density fluctuations at that moment, from the same acoustic physics that sets the BAO sound horizon.
 
 ===
 
@@ -86,11 +103,11 @@ Why are Type Ia supernovae useful as distance indicators?
 
 ---
 
-Type Ia supernovae are thermonuclear disruptions of carbon-oxygen white dwarfs. Their light-curve shape and color standardize their luminosities, allowing their observed fluxes to give luminosity distances.
+They have standardized luminosities, allowing their observed fluxes to give luminosity distances.
 
 ---
 
-Their distance modulus versus redshift forms a Hubble diagram; dust, calibration, selection, and population evolution are key systematics.
+Thermonuclear white-dwarf disruptions; standardized via light-curve shape and color.
 
 ===
 
