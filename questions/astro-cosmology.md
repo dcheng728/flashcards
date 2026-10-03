@@ -9,6 +9,7 @@ What are baryon acoustic oscillations, and why are they useful in cosmology?
 ---
 
 Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.
+This is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.
 Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.
 
 ---
@@ -102,11 +103,11 @@ Why are Type Ia supernovae useful as distance indicators?
 
 ---
 
-Type Ia supernovae are thermonuclear disruptions of carbon-oxygen white dwarfs. Their light-curve shape and color standardize their luminosities, allowing their observed fluxes to give luminosity distances.
+They have standardized luminosities, allowing their observed fluxes to give luminosity distances.
 
 ---
 
-Their distance modulus versus redshift forms a Hubble diagram; dust, calibration, selection, and population evolution are key systematics.
+Thermonuclear white-dwarf disruptions; standardized via light-curve shape and color.
 
 ===
 

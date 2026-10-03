@@ -2330,7 +2330,7 @@ const ALL_QUESTIONS = [
   {
     "name": "baryon acoustic oscillations",
     "question": "What are baryon acoustic oscillations, and why are they useful in cosmology?",
-    "answer": "Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.\nMeasuring this standard ruler at different redshifts constrains cosmic distances and expansion.",
+    "answer": "Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.\nThis is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.\nMeasuring this standard ruler at different redshifts constrains cosmic distances and expansion.",
     "explanation": "Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.",
     "subject": "astro-cosmology",
     "difficulty": "intermediate",
@@ -2395,8 +2395,8 @@ const ALL_QUESTIONS = [
   {
     "name": "type Ia supernovae as distance indicators",
     "question": "Why are Type Ia supernovae useful as distance indicators?",
-    "answer": "Type Ia supernovae are thermonuclear disruptions of carbon-oxygen white dwarfs. Their light-curve shape and color standardize their luminosities, allowing their observed fluxes to give luminosity distances.",
-    "explanation": "Their distance modulus versus redshift forms a Hubble diagram; dust, calibration, selection, and population evolution are key systematics.",
+    "answer": "They have standardized luminosities, allowing their observed fluxes to give luminosity distances.",
+    "explanation": "Thermonuclear white-dwarf disruptions; standardized via light-curve shape and color.",
     "subject": "astro-cosmology",
     "difficulty": "intermediate",
     "labels": [
