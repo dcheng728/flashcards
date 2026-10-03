@@ -2341,6 +2341,19 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "surface of last scattering",
+    "question": "What is the surface of last scattering, and what does it have to do with the cosmic microwave background?",
+    "answer": "The set of points, at $z\\approx1100$ (recombination, $\\sim380{,}000$ years after the Big Bang), where CMB photons last Thomson-scattered before free-streaming to us — when electrons and protons combined into neutral hydrogen, making the Universe transparent.",
+    "explanation": "The CMB is an image of this surface: its anisotropies encode the photon-baryon plasma's density fluctuations at that moment, from the same acoustic physics that sets the BAO sound horizon.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "cmb",
+      "recombination",
+      "surface-of-last-scattering"
+    ]
+  },
+  {
     "name": "strong-lensing time delays",
     "question": "How do strong-lensing time delays measure the Hubble constant?",
     "answer": "Different images of a variable source have different geometric and Shapiro delays (the extra light-travel time from spacetime curvature near the lens mass). A lens model gives the Fermat-potential difference $\\Delta\\phi_{ij}$:\n\n$$\\Delta t_{ij} = \\frac{D_{\\Delta t}}{c}\\Delta\\phi_{ij},$$\n\nThe time-delay distance satisfies $D_{\\Delta t}\\propto H_0^{-1}$, so measured delays constrain $H_0$.\n\n<pre>\n                    ________ image A (path length L_A)\n                   /\n  source *--------o  lens mass  -------* observer\n                   \\________ image B (path length L_B)\n\n       unequal path lengths + Shapiro delay -&gt; Δt_AB\n</pre>",
