@@ -411,10 +411,9 @@ a:hover { text-decoration: underline; }
     gap: 0.6rem;
 }
 
-.badge-subject {
-    font-size: 0.72rem;
-    background: #d4e8f7;
-    color: #2a5a7a;
+.difficulty-label {
+    font-size: 0.78rem;
+    color: #999;
 }
 
 /* Difficulty bars */
@@ -491,7 +490,6 @@ a:hover { text-decoration: underline; }
 
 .familiarity-indicator:empty { display: none; }
 
-.familiarity-indicator.fam-new { background: #f0ede8; color: #aaa; }
 .familiarity-indicator.fam-weak { background: #f8d7da; color: #8a3a3a; }
 .familiarity-indicator.fam-shaky { background: #fff3cd; color: #7a6520; }
 .familiarity-indicator.fam-decent { background: #d4e8f7; color: #2a5a7a; }
@@ -664,6 +662,23 @@ kbd {
     overflow: hidden;
 }
 
+.queue-legend {
+    display: flex;
+    gap: 6px;
+    float: right;
+    font-size: 0.72rem;
+    color: #bbb;
+}
+
+/* Fixed-width columns so the header sits over the bars */
+.queue-legend span,
+.queue-indicators .fam-bar-wrap,
+.queue-indicators .difficulty-indicator {
+    width: 64px;
+    justify-content: center;
+    text-align: center;
+}
+
 .queue-title {
     font-size: 0.8rem;
     font-weight: normal;
@@ -671,6 +686,7 @@ kbd {
     padding: 0.5rem 0.75rem;
     border-bottom: 1px solid #eee;
     letter-spacing: 0.3px;
+    padding-right: calc(0.75rem + var(--scrollbar-width, 0px));
 }
 
 .queue-list {

@@ -257,7 +257,7 @@ let sessionUnsure = 0;
 const sortOrder = document.getElementById('sort-order');
 const shuffleBtn = document.getElementById('shuffle-btn');
 const counterEl = document.getElementById('counter');
-const categoryBadge = document.getElementById('category-badge');
+const difficultyLabel = document.getElementById('difficulty-label');
 const difficultyIndicator = document.getElementById('difficulty-indicator');
 const familiarityBadge = document.getElementById('familiarity-badge');
 const sessionScore = document.getElementById('session-score');
@@ -328,7 +328,7 @@ function buildFamiliarityMap() {
 }
 
 function getFamiliarityLabel(score) {
-    if (score === null) return { text: 'new', cls: 'fam-new' };
+    if (score === null) return { text: '', cls: '' };
     if (score < 0.3) return { text: Math.round(score * 100) + '%', cls: 'fam-weak' };
     if (score < 0.6) return { text: Math.round(score * 100) + '%', cls: 'fam-shaky' };
     if (score < 0.85) return { text: Math.round(score * 100) + '%', cls: 'fam-decent' };
@@ -456,7 +456,7 @@ function displayQuestion() {
         showAnswerContainer.classList.add('hidden');
         gradeContainer.classList.add('hidden');
         counterEl.textContent = '';
-        categoryBadge.textContent = '';
+        difficultyLabel.textContent = '';
         difficultyIndicator.innerHTML = '';
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
@@ -472,7 +472,7 @@ function displayQuestion() {
 
     const q = queue[currentIndex];
     counterEl.textContent = `Question ${currentIndex + 1} of ${queue.length}`;
-    categoryBadge.textContent = q.subject;
+    difficultyLabel.textContent = 'Difficulty:';
 
     // Difficulty indicator (bars)
     const diffLevel = DIFF_LEVEL[q.difficulty] || 0;
@@ -618,7 +618,7 @@ function getStats() {
 // ── Queue Display ──
 
 function renderDifficultyBars(level) {
-    let html = '<span class="difficulty-indicator">';
+    let html = `<span class="difficulty-indicator" title="difficulty ${level} of 3">`;
     for (let i = 0; i < 3; i++) {
         html += `<span class="diff-bar${i < level ? ' active' : ''}"></span>`;
     }
@@ -681,6 +681,10 @@ function renderQueueList() {
         more.textContent = `... ${queue.length - end} more`;
         list.appendChild(more);
     }
+
+    // Keep the column headers over the bars when the list shows a scrollbar
+    document.getElementById('queue-panel').style.setProperty(
+        '--scrollbar-width', (list.offsetWidth - list.clientWidth) + 'px');
 
     // Scroll current item into view within the list only
     const currentItem = list.querySelector('.queue-item.current');
