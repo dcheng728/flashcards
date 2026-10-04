@@ -511,6 +511,18 @@ a:hover { text-decoration: underline; }
     margin-bottom: 0.75rem;
 }
 
+.question-category {
+    align-self: center;
+    font-size: 0.75rem;
+    color: #6a6a6a;
+}
+
+.question-category::after {
+    content: "|";
+    margin-left: 0.4rem;
+    color: #ccc;
+}
+
 .question-labels:empty {
     display: none;
 }
