@@ -499,6 +499,10 @@ function displayQuestion() {
 
     // Question labels
     questionLabelsEl.innerHTML = '';
+    const category = document.createElement('span');
+    category.className = 'question-category';
+    category.textContent = q.subject;
+    questionLabelsEl.appendChild(category);
     for (const label of q.labels) {
         const pill = document.createElement('span');
         pill.className = 'label-pill small';
