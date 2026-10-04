@@ -8,12 +8,16 @@ body {
     font-family: 'Georgia', 'Times New Roman', serif;
     background: #f5f0eb;
     color: #2c2c2c;
-    min-height: 100vh;
+    line-height: 1.6;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 1rem 0;
+    padding: 2rem 1rem 0;
 }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 #app {
     max-width: 700px;
@@ -124,12 +128,6 @@ body {
 
 .dropdown-actions a {
     font-size: 0.75rem;
-    color: #6a8a9a;
-    text-decoration: none;
-}
-
-.dropdown-actions a:hover {
-    text-decoration: underline;
 }
 
 .subject-checkbox {
