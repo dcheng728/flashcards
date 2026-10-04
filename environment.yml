@@ -1,4 +1,4 @@
-name: quiz
+name: flashcards
 channels:
   - defaults
 dependencies:

@@ -1,6 +1,6 @@
-# Physics Daily Quiz
+# Physics Flashcards
 
-A static flashcard quiz app for GitHub Pages. Helps a theoretical physics student stay sharp on fundamental math and physics.
+A static flashcard app for GitHub Pages. Helps a theoretical physics student stay sharp on fundamental math and physics.
 
 ## Project Structure
 
@@ -17,7 +17,7 @@ environment.yml      conda environment specification
 
 ```bash
 conda env create -f environment.yml
-conda activate quiz
+conda activate flashcards
 ```
 
 ## Adding / Editing Questions

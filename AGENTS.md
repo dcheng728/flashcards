@@ -1,8 +1,8 @@
-# Physics Daily Quiz: Agent Instructions
+# Physics Flashcards: Agent Instructions
 
 ## Project overview
 
-This repository contains a static flashcard quiz for reviewing theoretical physics and mathematics. It has no backend and is deployed to GitHub Pages from `docs/`.
+This repository contains a static flashcard app for reviewing theoretical physics and mathematics. It has no backend and is deployed to GitHub Pages from `docs/`.
 
 The app opens directly on a question. Users reveal the answer, self-grade with Got it, Not sure, or Missed it, and continue through a filtered queue. Progress is stored in browser `localStorage` and can optionally be synchronized through a GitHub Gist.
 
@@ -18,10 +18,10 @@ The app opens directly on a question. Users reveal the answer, self-grade with G
 
 ```text
 src/
-  index.html        Quiz page structure
+  index.html        Flashcards page structure
   about.html        About page
   style.css         Application styles
-  app.js            Quiz, filters, queue, history, and sync logic
+  app.js            Cards, filters, queue, history, and sync logic
   config.js         Familiarity scores and conventions
 pages/              Markdown source for the About page
 questions/          Markdown question files, one per subject
