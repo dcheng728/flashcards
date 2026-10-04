@@ -1,4 +1,7 @@
 const CONFIG = {
+    // Where card issue reports go (uses .github/ISSUE_TEMPLATE/card-error.yml)
+    repoUrl: 'https://github.com/dcheng728/flashcards',
+
     // Familiarity score awarded for each self-grade
     gradeScores: { right: 1, unsure: 0.3, wrong: 0.01 },
     // Exponential decay time constant in hours (weight drops to 1/e after this many hours)

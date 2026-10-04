@@ -39,6 +39,7 @@ environment.yml     Python environment for the build
 - Familiarity is a recency-weighted average of previous grade scores. Older grades lose influence relative to newer grades; an isolated grade does not decrease solely as time passes because the result is normalized by total weight.
 - Question names are persistent identifiers used by history, Gist synchronization, and search. Keep every name unique and avoid renaming existing questions without considering history migration.
 - KaTeX is loaded from a CDN and renders `$...$` and `$$...$$` expressions.
+- Each card has a "Report an issue" link that opens a pre-filled GitHub issue form (`.github/ISSUE_TEMPLATE/card-error.yml`, label `card-feedback`). Its field ids (`card`, `subject`) are the URL parameters set in `displayQuestion`; keep them in sync, and keep `CONFIG.repoUrl` pointing at the repo.
 - API keys and Gist credentials are stored locally in the browser. Never commit credentials to the repository.
 
 ## Question format

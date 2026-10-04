@@ -255,6 +255,7 @@ const sortOrder = document.getElementById('sort-order');
 const shuffleBtn = document.getElementById('shuffle-btn');
 const counterEl = document.getElementById('counter');
 const difficultyLabel = document.getElementById('difficulty-label');
+const reportLink = document.getElementById('report-link');
 const difficultyIndicator = document.getElementById('difficulty-indicator');
 const familiarityBadge = document.getElementById('familiarity-badge');
 const sessionScore = document.getElementById('session-score');
@@ -454,6 +455,7 @@ function displayQuestion() {
         gradeContainer.classList.add('hidden');
         counterEl.textContent = '';
         difficultyLabel.textContent = '';
+        reportLink.classList.add('hidden');
         difficultyIndicator.innerHTML = '';
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
@@ -470,6 +472,12 @@ function displayQuestion() {
     const q = queue[currentIndex];
     counterEl.textContent = `Question ${currentIndex + 1} of ${queue.length}`;
     difficultyLabel.textContent = 'Difficulty:';
+
+    // Pre-filled GitHub issue form for reporting a problem with this card
+    reportLink.href = `${CONFIG.repoUrl}/issues/new?template=card-error.yml` +
+        `&title=${encodeURIComponent('[Card] ' + q.name)}` +
+        `&card=${encodeURIComponent(q.name)}&subject=${encodeURIComponent(q.subject)}`;
+    reportLink.classList.remove('hidden');
 
     // Difficulty indicator (bars)
     const diffLevel = DIFF_LEVEL[q.difficulty] || 0;
