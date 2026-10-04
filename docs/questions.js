@@ -2469,6 +2469,18 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "large-scale structure scales",
+    "question": "What range of scales does \"large-scale structure\" refer to in cosmology?",
+    "answer": "Roughly Mpc to Gpc.",
+    "explanation": "For reference: galaxies are $\\sim10$–$100$ kpc, galaxy clusters and voids are $\\sim1$–$100$ Mpc, and the observable Universe has a radius of $\\sim14$ Gpc.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "large-scale-structure",
+      "cosmology"
+    ]
+  },
+  {
     "name": "what is a supernova",
     "question": "What is a supernova, and what are its two main channels?",
     "answer": "A supernova is a brief, extremely luminous stellar explosion. It can result from core collapse in a massive star or thermonuclear disruption of a carbon-oxygen white dwarf, usually a Type Ia event.",

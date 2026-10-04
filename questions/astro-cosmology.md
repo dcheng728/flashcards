@@ -200,3 +200,19 @@ The dense series of absorption lines seen blueward of a quasar's Lyman-$\alpha$ 
 The line pattern maps intergalactic gas density versus redshift — a probe of large-scale structure at high redshift.
 
 ===
+
+### large-scale structure scales
+difficulty: basic
+labels: large-scale-structure, cosmology
+
+What range of scales does "large-scale structure" refer to in cosmology?
+
+---
+
+Roughly Mpc to Gpc.
+
+---
+
+For reference: galaxies are $\sim10$–$100$ kpc, galaxy clusters and voids are $\sim1$–$100$ Mpc, and the observable Universe has a radius of $\sim14$ Gpc.
+
+===
