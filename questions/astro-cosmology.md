@@ -8,11 +8,15 @@ What are baryon acoustic oscillations, and why are they useful in cosmology?
 
 ---
 
+- Excess of matter, at characteristic scale (500M light years, 150 Mpc).
+- Gives rise to a peak in the 2-pt correlation func. of matter density.
+- Produced from sound waves in matter driven by a restorative potential created by photon pressure and gravitational force in the early universe.
+
+---
+
 Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.
 This is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.
 Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.
-
----
 
 Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.
 
