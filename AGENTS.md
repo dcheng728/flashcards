@@ -111,3 +111,7 @@ git diff --check
 ```
 
 Confirm that `docs/` was regenerated when source or question files changed. There is currently no automated test suite, so exercise affected behavior in a browser when changing application logic.
+
+## Shorthand
+
+- **SGMM**: "stage and give me message" — stage the pending changes (`git add`) and propose a commit message; do not commit until approved.
