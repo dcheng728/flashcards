@@ -2328,6 +2328,19 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "astronomical magnitude",
+    "question": "What is the magnitude system, and how do apparent and absolute magnitude differ?",
+    "answer": "$m=-2.5\\log_{10}(F/F_0)$, a logarithmic flux scale (larger $m$ = fainter). Apparent magnitude $m$ is how bright an object looks from Earth; absolute magnitude $M$ is its apparent magnitude if placed at $10$ pc, i.e. its intrinsic luminosity.",
+    "explanation": "They're related by the distance modulus, $m-M=5\\log_{10}(d/10\\,\\mathrm{pc})$, for the nearby (non-cosmological) case. The reference flux $F_0$ depends on the photometric system — e.g. the AB system sets $F_0=3631$ Jy — but the $-2.5\\log_{10}$ form is universal.",
+    "subject": "astro-observational-methods",
+    "difficulty": "basic",
+    "labels": [
+      "magnitude",
+      "photometry",
+      "distance-modulus"
+    ]
+  },
+  {
     "name": "baryon acoustic oscillations",
     "question": "What are baryon acoustic oscillations, and why are they useful in cosmology?",
     "answer": "- Excess of matter, at characteristic scale (500M light years, 150 Mpc).\n- Gives rise to a peak in the 2-pt correlation func. of matter density.\n- Produced from sound waves in matter driven by a restorative potential created by photon pressure and gravitational force in the early universe.",
