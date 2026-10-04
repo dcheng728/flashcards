@@ -1,4 +1,4 @@
-<!-- Questions on cosmological distances, expansion, structure growth, lensing, clustering, and dark energy. -->
+<!-- Questions on cosmological expansion, the CMB, large-scale structure, gravitational lensing as a cosmological probe, dark energy, and the high-redshift universe (quasars, AGN, and the intergalactic medium). -->
 
 ### baryon acoustic oscillations
 difficulty: intermediate
@@ -112,42 +112,6 @@ They have standardized luminosities, allowing their observed fluxes to give lumi
 ---
 
 Thermonuclear white-dwarf disruptions; standardized via light-curve shape and color.
-
-===
-
-### standard candles and intrinsic luminosity
-difficulty: basic
-labels: standard-candles, luminosity-distance, photometry
-
-What is a standard candle, and how does intrinsic luminosity determine a source's distance?
-
----
-
-A standard candle is an object with known intrinsic luminosity $L$. Comparing $L$ with the observed flux $F$ gives the luminosity distance through
-
-$$F = \frac{L}{4\pi d_L^2}.$$
-
----
-
-Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.
-
-===
-
-### types of standard candles
-difficulty: basic
-labels: standard-candles, distance-ladder
-
-What are the main types of standard candles used in the distance ladder?
-
----
-
-- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.
-- **Cepheid variables**: pulsating stars with a period-luminosity relation.
-- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.
-
----
-
-Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.
 
 ===
 
