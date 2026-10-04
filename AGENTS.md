@@ -19,8 +19,8 @@ The app opens directly on a question. Users reveal the answer, self-grade with G
 src/
   index.html        Page structure
   style.css         Application styles
-  app.js            Quiz, filters, queue, history, sync, and AI logic
-  config.js         Familiarity scores, conventions, and AI settings
+  app.js            Quiz, filters, queue, history, and sync logic
+  config.js         Familiarity scores and conventions
 questions/          Markdown question files, one per subject
 docs/               Generated GitHub Pages output
 build.py            Generates docs/ from src/ and questions/
@@ -34,7 +34,7 @@ environment.yml     Python environment for the build
 - The available queue orders are most unfamiliar, random, most familiar, and least seen.
 - Random ordering gives recently missed or uncertain questions a greater chance of appearing earlier. Each question still appears at most once in a queue.
 - Familiarity is a recency-weighted average of previous grade scores. Older grades lose influence relative to newer grades; an isolated grade does not decrease solely as time passes because the result is normalized by total weight.
-- Question names are persistent identifiers used by history, Gist synchronization, search, and AI-generated queues. Keep every name unique and avoid renaming existing questions without considering history migration.
+- Question names are persistent identifiers used by history, Gist synchronization, and search. Keep every name unique and avoid renaming existing questions without considering history migration.
 - KaTeX is loaded from a CDN and renders `$...$` and `$$...$$` expressions.
 - API keys and Gist credentials are stored locally in the browser. Never commit credentials to the repository.
 
