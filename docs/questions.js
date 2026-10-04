@@ -2420,6 +2420,18 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "types of standard candles",
+    "question": "What are the main types of standard candles used in the distance ladder?",
+    "answer": "- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.\n- **Cepheid variables**: pulsating stars with a period-luminosity relation.\n- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.",
+    "explanation": "Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "standard-candles",
+      "distance-ladder"
+    ]
+  },
+  {
     "name": "what is a supernova",
     "question": "What is a supernova, and what are its two main channels?",
     "answer": "A supernova is a brief, extremely luminous stellar explosion. It can result from core collapse in a massive star or thermonuclear disruption of a carbon-oxygen white dwarf, usually a Type Ia event.",

@@ -128,3 +128,21 @@ $$F = \frac{L}{4\pi d_L^2}.$$
 Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.
 
 ===
+
+### types of standard candles
+difficulty: basic
+labels: standard-candles, distance-ladder
+
+What are the main types of standard candles used in the distance ladder?
+
+---
+
+- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.
+- **Cepheid variables**: pulsating stars with a period-luminosity relation.
+- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.
+
+---
+
+Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.
+
+===
