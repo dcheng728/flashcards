@@ -772,7 +772,7 @@ function showTokenModal() {
         <div class="modal">
             <h2>Connect GitHub Gist</h2>
             <p>Enter a GitHub Personal Access Token with <strong>gist</strong> scope.
-               Create one at <a href="https://github.com/settings/tokens/new?scopes=gist&description=Quiz+Sync" target="_blank" rel="noopener">github.com/settings/tokens</a>.</p>
+               Create one at <a href="https://github.com/settings/tokens/new?scopes=gist&description=Flashcards+Sync" target="_blank" rel="noopener">github.com/settings/tokens</a>.</p>
             <input type="text" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
             <div class="modal-buttons">
                 <button class="btn btn-cancel" id="modal-cancel">Cancel</button>
@@ -848,7 +848,7 @@ async function gistPush(auto = false) {
                 method: 'POST',
                 headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    description: 'Physics & Math Quiz — answer history',
+                    description: 'Physics Flashcards — answer history',
                     public: false,
                     files: { [GIST_FILENAME]: { content } }
                 })
@@ -887,7 +887,7 @@ async function gistPull() {
 
         const data = await res.json();
         const file = data.files[GIST_FILENAME];
-        if (!file) throw new Error('Quiz history file not found in Gist');
+        if (!file) throw new Error('History file not found in Gist');
 
         const remoteHistory = JSON.parse(file.content);
         const localHistory = getHistory();

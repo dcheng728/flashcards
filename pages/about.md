@@ -3,7 +3,7 @@
 - This project is built with the help of Claude Opus 4.5–5 and ChatGPT 5.6 Sol.
 - The objective is to explore human-AI interactions aimed at human understanding.
 
-This “physics quiz” project began in March 2026, while I was working on my MSc dissertation in theoretical physics at Imperial College London.
+This “physics flashcard” project began in March 2026, while I was working on my MSc dissertation in theoretical physics at Imperial College London.
 Early into my dissertation, I came to believe that the challenge in AI4physics is not the model's capability, but the human researcher's ability to keep up with the breadth and depth of the model's progress.
 My view is that until some human can understand, verify, and be held accountable for a piece of work, however elegant or correct, it does not constitute knowledge.
 
