@@ -2445,6 +2445,19 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "Chandrasekhar mass and physical significance",
+    "question": "What is the Chandrasekhar mass, and what is its physical significance?",
+    "answer": "- The maximum mass a white dwarf can have while gravity (inward) is balanced by electron degeneracy pressure (outward) alone: $M_{Ch}\\approx1.4\\,M_\\odot$.\n- The standard mass at which accreting or merging white dwarfs trigger a Type Ia supernova, giving a standard luminosity.",
+    "explanation": "- Degeneracy pressure is quantum (Pauli exclusion), not thermal.\n- Compression pushes electrons to higher momenta; past $M_{Ch}$ they go relativistic, softening $P\\propto\\rho^{5/3}\\to\\rho^{4/3}$.\n- No radius balances gravity anymore, so the star collapses, triggering a Type Ia supernova.\n- The fixed trigger mass is why Type Ia luminosities are standardizable.",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "basic",
+    "labels": [
+      "chandrasekhar-mass",
+      "white-dwarfs",
+      "stellar-evolution"
+    ]
+  },
+  {
     "name": "neutron stars",
     "question": "What is a neutron star, and what sets its basic scale?",
     "answer": "The collapsed core left behind by a core-collapse supernova when the progenitor's mass is too great for electron degeneracy pressure to halt collapse. Neutron degeneracy pressure takes over instead, producing a compact remnant of mass $\\approx1.4$–$2\\,M_\\odot$ and radius $\\approx10$ km.",
