@@ -21,6 +21,7 @@ src/
   index.html        Flashcards page structure
   about.html        About page
   style.css         Application styles
+  favicon.svg       Tab icon (card stack with a pendulum)
   app.js            Cards, filters, queue, history, and sync logic
   config.js         Familiarity scores and conventions
 pages/              Markdown source for the About page
