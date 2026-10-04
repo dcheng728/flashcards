@@ -2328,6 +2328,31 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "standard candles and intrinsic luminosity",
+    "question": "What is a standard candle, and how does intrinsic luminosity determine a source's distance?",
+    "answer": "A standard candle is an object with known intrinsic luminosity $L$. Comparing $L$ with the observed flux $F$ gives the luminosity distance through\n\n$$F = \\frac{L}{4\\pi d_L^2}.$$",
+    "explanation": "Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.",
+    "subject": "astro-observational-methods",
+    "difficulty": "basic",
+    "labels": [
+      "standard-candles",
+      "luminosity-distance",
+      "photometry"
+    ]
+  },
+  {
+    "name": "types of standard candles",
+    "question": "What are the main types of standard candles used in the distance ladder?",
+    "answer": "- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.\n- **Cepheid variables**: pulsating stars with a period-luminosity relation.\n- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.",
+    "explanation": "Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.",
+    "subject": "astro-observational-methods",
+    "difficulty": "basic",
+    "labels": [
+      "standard-candles",
+      "distance-ladder"
+    ]
+  },
+  {
     "name": "astronomical magnitude",
     "question": "What is the magnitude system, and how do apparent and absolute magnitude differ?",
     "answer": "$$m=-2.5\\log_{10}(F/F_0)$$\n\n- a logarithmic flux scale (larger $m$ = fainter). \n- Apparent magnitude $m$ is how bright an object looks from Earth; absolute magnitude $M$ is its apparent magnitude if placed at $10$ pc (pc means parsec), i.e. its intrinsic luminosity.",
@@ -2417,31 +2442,6 @@ const ALL_QUESTIONS = [
       "supernovae",
       "standard-candles",
       "cosmology"
-    ]
-  },
-  {
-    "name": "standard candles and intrinsic luminosity",
-    "question": "What is a standard candle, and how does intrinsic luminosity determine a source's distance?",
-    "answer": "A standard candle is an object with known intrinsic luminosity $L$. Comparing $L$ with the observed flux $F$ gives the luminosity distance through\n\n$$F = \\frac{L}{4\\pi d_L^2}.$$",
-    "explanation": "Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.",
-    "subject": "astro-cosmology",
-    "difficulty": "basic",
-    "labels": [
-      "standard-candles",
-      "luminosity-distance",
-      "photometry"
-    ]
-  },
-  {
-    "name": "types of standard candles",
-    "question": "What are the main types of standard candles used in the distance ladder?",
-    "answer": "- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.\n- **Cepheid variables**: pulsating stars with a period-luminosity relation.\n- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.",
-    "explanation": "Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.",
-    "subject": "astro-cosmology",
-    "difficulty": "basic",
-    "labels": [
-      "standard-candles",
-      "distance-ladder"
     ]
   },
   {
