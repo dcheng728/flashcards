@@ -68,22 +68,6 @@ This is the same virtual-image mechanism as a mirror, just via refraction instea
 
 ===
 
-### ray-tracing strategy for refraction problems
-difficulty: basic
-labels: ray-optics, problem-solving
-
-What is the general strategy for finding where an object appears to be after refraction?
-
----
-
-First determine what the actual ray does physically — which way it bends, based on the index change — then back-trace the outgoing ray as an observer would, to find the apparent position.
-
----
-
-Applying this to the reversed case — an object in air viewed by an observer underwater — light bends toward the normal (low-to-high $n$), so back-tracing places the apparent object farther from the interface than it really is, opposite to the underwater-object-viewed-from-air case.
-
-===
-
 ### wave speed relation for light
 difficulty: basic
 labels: waves, electromagnetic-waves
