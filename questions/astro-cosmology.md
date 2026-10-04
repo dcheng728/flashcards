@@ -150,3 +150,53 @@ What are the main types of standard candles used in the distance ladder?
 Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.
 
 ===
+
+### active galactic nucleus (AGN)
+difficulty: basic
+labels: active-galactic-nuclei, supermassive-black-holes
+
+What is an active galactic nucleus, and what powers its emission?
+
+---
+
+A compact, highly luminous region at a galaxy's center, powered by accretion onto a supermassive black hole ($10^6$–$10^{10}\,M_\odot$) surrounded by a gaseous accretion disc.
+
+---
+
+Disc gas spirals inward, heats up, and radiates the energy away as electromagnetic radiation. Quasars are the most luminous subclass of AGN.
+
+Accretion converts up to $\sim10\%$ of the infalling rest-mass energy into radiation, which is why AGN can outshine their entire host galaxy.
+
+===
+
+### quasars
+difficulty: basic
+labels: quasars, active-galactic-nuclei
+
+What is a quasar, and how luminous can it be?
+
+---
+
+The most luminous subclass of AGN, also called a quasi-stellar object (QSO); the brightest quasars outshine an entire galaxy like the Milky Way by thousands of times.
+
+---
+
+Named for their point-like appearance on early photographic plates, despite being powered by ordinary AGN accretion physics. Their redshifts are cosmological, so their extreme luminosity makes them visible to very high redshift — useful as probes of the early Universe.
+
+===
+
+### Lyman-$\alpha$ forest
+difficulty: intermediate
+labels: lyman-alpha-forest, quasars, intergalactic-medium
+
+What is the Lyman-$\alpha$ forest, and what does it probe?
+
+---
+
+The dense series of absorption lines seen blueward of a quasar's Lyman-$\alpha$ emission line, caused by neutral hydrogen in the intergalactic medium along the line of sight.
+
+---
+
+The line pattern maps intergalactic gas density versus redshift — a probe of large-scale structure at high redshift.
+
+===

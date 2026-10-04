@@ -2432,6 +2432,43 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "active galactic nucleus (AGN)",
+    "question": "What is an active galactic nucleus, and what powers its emission?",
+    "answer": "A compact, highly luminous region at a galaxy's center, powered by accretion onto a supermassive black hole ($10^6$–$10^{10}\\,M_\\odot$) surrounded by a gaseous accretion disc.",
+    "explanation": "Disc gas spirals inward, heats up, and radiates the energy away as electromagnetic radiation. Quasars are the most luminous subclass of AGN.\n\nAccretion converts up to $\\sim10\\%$ of the infalling rest-mass energy into radiation, which is why AGN can outshine their entire host galaxy.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "active-galactic-nuclei",
+      "supermassive-black-holes"
+    ]
+  },
+  {
+    "name": "quasars",
+    "question": "What is a quasar, and how luminous can it be?",
+    "answer": "The most luminous subclass of AGN, also called a quasi-stellar object (QSO); the brightest quasars outshine an entire galaxy like the Milky Way by thousands of times.",
+    "explanation": "Named for their point-like appearance on early photographic plates, despite being powered by ordinary AGN accretion physics. Their redshifts are cosmological, so their extreme luminosity makes them visible to very high redshift — useful as probes of the early Universe.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "quasars",
+      "active-galactic-nuclei"
+    ]
+  },
+  {
+    "name": "Lyman-$\\alpha$ forest",
+    "question": "What is the Lyman-$\\alpha$ forest, and what does it probe?",
+    "answer": "The dense series of absorption lines seen blueward of a quasar's Lyman-$\\alpha$ emission line, caused by neutral hydrogen in the intergalactic medium along the line of sight.",
+    "explanation": "The line pattern maps intergalactic gas density versus redshift — a probe of large-scale structure at high redshift.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "lyman-alpha-forest",
+      "quasars",
+      "intergalactic-medium"
+    ]
+  },
+  {
     "name": "what is a supernova",
     "question": "What is a supernova, and what are its two main channels?",
     "answer": "A supernova is a brief, extremely luminous stellar explosion. It can result from core collapse in a massive star or thermonuclear disruption of a carbon-oxygen white dwarf, usually a Type Ia event.",
