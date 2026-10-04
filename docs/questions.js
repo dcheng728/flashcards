@@ -2330,7 +2330,7 @@ const ALL_QUESTIONS = [
   {
     "name": "astronomical magnitude",
     "question": "What is the magnitude system, and how do apparent and absolute magnitude differ?",
-    "answer": "$m=-2.5\\log_{10}(F/F_0)$, a logarithmic flux scale (larger $m$ = fainter). Apparent magnitude $m$ is how bright an object looks from Earth; absolute magnitude $M$ is its apparent magnitude if placed at $10$ pc, i.e. its intrinsic luminosity.",
+    "answer": "$$m=-2.5\\log_{10}(F/F_0)$$\n\n- a logarithmic flux scale (larger $m$ = fainter). \n- Apparent magnitude $m$ is how bright an object looks from Earth; absolute magnitude $M$ is its apparent magnitude if placed at $10$ pc (pc means parsec), i.e. its intrinsic luminosity.",
     "explanation": "They're related by the distance modulus, $m-M=5\\log_{10}(d/10\\,\\mathrm{pc})$, for the nearby (non-cosmological) case. The reference flux $F_0$ depends on the photometric system — e.g. the AB system sets $F_0=3631$ Jy — but the $-2.5\\log_{10}$ form is universal.",
     "subject": "astro-observational-methods",
     "difficulty": "basic",

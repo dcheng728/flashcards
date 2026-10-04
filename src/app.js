@@ -114,14 +114,11 @@ function removeLabelFilter(label) {
 
 function renderActiveLabels() {
     const container = document.getElementById('active-labels');
-    const hint = document.getElementById('label-filter-hint');
     container.innerHTML = '';
 
-    if (filterState.labels.length === 0) {
-        hint.style.display = '';
-        return;
-    }
-    hint.style.display = 'none';
+    // The bar only appears once a label is selected
+    document.getElementById('label-filter-bar').classList.toggle('hidden', filterState.labels.length === 0);
+    if (filterState.labels.length === 0) return;
 
     for (const label of filterState.labels) {
         const pill = document.createElement('span');
@@ -257,7 +254,7 @@ let sessionUnsure = 0;
 const sortOrder = document.getElementById('sort-order');
 const shuffleBtn = document.getElementById('shuffle-btn');
 const counterEl = document.getElementById('counter');
-const categoryBadge = document.getElementById('category-badge');
+const difficultyLabel = document.getElementById('difficulty-label');
 const difficultyIndicator = document.getElementById('difficulty-indicator');
 const familiarityBadge = document.getElementById('familiarity-badge');
 const sessionScore = document.getElementById('session-score');
@@ -328,7 +325,7 @@ function buildFamiliarityMap() {
 }
 
 function getFamiliarityLabel(score) {
-    if (score === null) return { text: 'new', cls: 'fam-new' };
+    if (score === null) return { text: '', cls: '' };
     if (score < 0.3) return { text: Math.round(score * 100) + '%', cls: 'fam-weak' };
     if (score < 0.6) return { text: Math.round(score * 100) + '%', cls: 'fam-shaky' };
     if (score < 0.85) return { text: Math.round(score * 100) + '%', cls: 'fam-decent' };
@@ -456,7 +453,7 @@ function displayQuestion() {
         showAnswerContainer.classList.add('hidden');
         gradeContainer.classList.add('hidden');
         counterEl.textContent = '';
-        categoryBadge.textContent = '';
+        difficultyLabel.textContent = '';
         difficultyIndicator.innerHTML = '';
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
@@ -472,7 +469,7 @@ function displayQuestion() {
 
     const q = queue[currentIndex];
     counterEl.textContent = `Question ${currentIndex + 1} of ${queue.length}`;
-    categoryBadge.textContent = q.subject;
+    difficultyLabel.textContent = 'Difficulty:';
 
     // Difficulty indicator (bars)
     const diffLevel = DIFF_LEVEL[q.difficulty] || 0;
@@ -618,7 +615,7 @@ function getStats() {
 // ── Queue Display ──
 
 function renderDifficultyBars(level) {
-    let html = '<span class="difficulty-indicator">';
+    let html = `<span class="difficulty-indicator" title="difficulty ${level} of 3">`;
     for (let i = 0; i < 3; i++) {
         html += `<span class="diff-bar${i < level ? ' active' : ''}"></span>`;
     }
@@ -681,6 +678,10 @@ function renderQueueList() {
         more.textContent = `... ${queue.length - end} more`;
         list.appendChild(more);
     }
+
+    // Keep the column headers over the bars when the list shows a scrollbar
+    document.getElementById('queue-panel').style.setProperty(
+        '--scrollbar-width', (list.offsetWidth - list.clientWidth) + 'px');
 
     // Scroll current item into view within the list only
     const currentItem = list.querySelector('.queue-item.current');
@@ -932,364 +933,6 @@ gistLoginBtn.addEventListener('click', showTokenModal);
 gistPushBtn.addEventListener('click', () => gistPush(false));
 gistPullBtn.addEventListener('click', gistPull);
 gistLogoutBtn.addEventListener('click', gistLogout);
-
-// ── AI Queue Curation ──
-
-function getAIToken() { return localStorage.getItem('ai-api-key'); }
-function setAIToken(k) { localStorage.setItem('ai-api-key', k); }
-function clearAIToken() { localStorage.removeItem('ai-api-key'); }
-
-function buildQuestionSummary() {
-    const famMap = buildFamiliarityMap();
-    return ALL_QUESTIONS.map(q => {
-        const rec = famMap[q.name];
-        return {
-            name: q.name,
-            subject: q.subject,
-            difficulty: q.difficulty,
-            familiarity: rec ? rec.score.toFixed(2) : 'unseen',
-            attempts: rec ? rec.attempts : 0,
-        };
-    });
-}
-
-function buildAIPrompt(topic) {
-    const summaries = buildQuestionSummary();
-
-    // Compact format: "name"|subject|difficulty|fam|attempts
-    const summaryText = summaries.map(s => {
-        const safeName = s.name.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-        return `"${safeName}"|${s.subject}|${s.difficulty}|${s.familiarity}|${s.attempts}`;
-    }).join('\n');
-
-    return `Select ${CONFIG.ai.questionsPerBatch} flashcard questions for a physics student.
-
-Questions (name|subject|difficulty|familiarity|attempts):
-${summaryText}
-
-${topic
-    ? `Focus: ${topic}. Pick questions DIRECTLY relevant. Do NOT pad with prerequisites. Order from most essential to least.`
-    : `Personalized review. Prioritize low familiarity and unseen. Mix subjects but cluster related questions.`}
-
-Return a JSON object with two fields:
-- "reasoning": a 1-2 sentence explanation of why you chose these questions and how they address the request
-- "questions": an array of question name strings in study order
-
-Example: {"reasoning": "...", "questions": ["name1", "name2"]}`;
-}
-
-function detectProvider(key) {
-    if (key.startsWith('sk-or-')) return 'openrouter';
-    if (key.startsWith('ghp_') || key.startsWith('github_pat_')) return 'github';
-    // sk-ant-* and sk-* are both Anthropic key formats
-    return 'anthropic';
-}
-
-function parseAIResponse(text) {
-    // Try parsing as {reasoning, questions} object first
-    const objMatch = text.match(/\{[\s\S]*\}/);
-    if (objMatch) {
-        let jsonStr = objMatch[0];
-        try {
-            const obj = JSON.parse(jsonStr);
-            if (obj.questions && Array.isArray(obj.questions)) {
-                return { reasoning: obj.reasoning || '', questions: obj.questions };
-            }
-        } catch {
-            jsonStr = jsonStr.replace(/\\(?!["\\/bfnrtu])/g, '\\\\');
-            try {
-                const obj = JSON.parse(jsonStr);
-                if (obj.questions && Array.isArray(obj.questions)) {
-                    return { reasoning: obj.reasoning || '', questions: obj.questions };
-                }
-            } catch { /* fall through */ }
-        }
-    }
-    // Fallback: bare array
-    const arrMatch = text.match(/\[[\s\S]*\]/);
-    if (!arrMatch) throw new Error('No JSON found in response');
-    let jsonStr = arrMatch[0];
-    try {
-        return { reasoning: '', questions: JSON.parse(jsonStr) };
-    } catch {
-        jsonStr = jsonStr.replace(/\\(?!["\\/bfnrtu])/g, '\\\\');
-        return { reasoning: '', questions: JSON.parse(jsonStr) };
-    }
-}
-
-async function callAI(prompt) {
-    const token = getAIToken();
-    if (!token) throw new Error('No API key');
-
-    const provider = CONFIG.ai.provider || detectProvider(token);
-    let model = typeof CONFIG.ai.model === 'object' ? CONFIG.ai.model[provider] : CONFIG.ai.model;
-
-    // Anthropic-specific: selected model and web search
-    const modelSelect = document.getElementById('ai-model-select');
-    const webSearchCheck = document.getElementById('ai-web-search');
-    if (provider === 'anthropic' && modelSelect && modelSelect.value) {
-        model = modelSelect.value;
-    }
-    const useWebSearch = provider === 'anthropic' && webSearchCheck && webSearchCheck.checked;
-
-    const controller = new AbortController();
-    const timeout = useWebSearch ? 120000 : 60000;
-    const timer = setTimeout(() => controller.abort(), timeout);
-
-    try {
-        let res;
-
-        if (provider === 'anthropic') {
-            const maxTokens = useWebSearch ? 16000 : CONFIG.ai.maxTokens;
-            const body = {
-                model,
-                max_tokens: maxTokens,
-                messages: [{ role: 'user', content: prompt }],
-            };
-            if (useWebSearch) {
-                body.tools = [{ type: 'web_search_20250305', name: 'web_search', max_uses: 3 }];
-            }
-            res = await fetch('https://api.anthropic.com/v1/messages', {
-                signal: controller.signal,
-                method: 'POST',
-                headers: {
-                    'x-api-key': token,
-                    'anthropic-version': '2023-06-01',
-                    'anthropic-dangerous-direct-browser-access': 'true',
-                    'content-type': 'application/json',
-                },
-                body: JSON.stringify(body),
-            });
-
-            if (!res.ok) {
-                const err = await res.json().catch(() => ({}));
-                throw new Error(err.error?.message || `API error ${res.status}`);
-            }
-
-            const data = await res.json();
-            // Concatenate all text blocks (web search produces multiple)
-            const allText = data.content
-                .filter(b => b.type === 'text')
-                .map(b => b.text)
-                .join('\n');
-            if (!allText) throw new Error('No text in response');
-            return parseAIResponse(allText);
-
-        } else {
-            // OpenAI-compatible providers: OpenRouter, GitHub Models
-            const endpoint = provider === 'github'
-                ? 'https://models.inference.ai.azure.com/chat/completions'
-                : 'https://openrouter.ai/api/v1/chat/completions';
-            const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + token,
-            };
-            if (provider === 'openrouter') headers['HTTP-Referer'] = window.location.href;
-            const body = JSON.stringify({
-                model,
-                max_tokens: CONFIG.ai.maxTokens,
-                messages: [{ role: 'user', content: prompt }],
-            });
-            console.log('AI request:', { provider, model, tokenPrefix: token.substring(0, 8) + '...' });
-            res = await fetch(endpoint, { signal: controller.signal, method: 'POST', headers, body });
-
-            if (!res.ok) {
-                const err = await res.json().catch(() => ({}));
-                throw new Error(err.error?.message || `API error ${res.status}`);
-            }
-
-            const data = await res.json();
-            const text = data.choices[0].message.content;
-            return parseAIResponse(text);
-        }
-    } catch (e) {
-        if (e.name === 'AbortError') throw new Error('Request timed out (30s)');
-        throw e;
-    } finally {
-        clearTimeout(timer);
-    }
-}
-
-// ── AI Panel (inline collapsible) ──
-
-const PROVIDER_LABELS = {
-    anthropic: 'Anthropic (Claude)',
-    openrouter: 'OpenRouter',
-    github: 'GitHub Models',
-};
-
-function updateAIPanel() {
-    const token = getAIToken();
-    const keySection = document.getElementById('ai-key-section');
-    const genSection = document.getElementById('ai-gen-section');
-    const anthropicOptions = document.getElementById('ai-anthropic-options');
-    const modelSelect = document.getElementById('ai-model-select');
-
-    if (!token) {
-        keySection.classList.remove('hidden');
-        genSection.classList.add('hidden');
-    } else {
-        keySection.classList.add('hidden');
-        genSection.classList.remove('hidden');
-        const provider = detectProvider(token);
-        document.getElementById('ai-provider-label').textContent = `Using: ${PROVIDER_LABELS[provider]}`;
-
-        if (provider === 'anthropic') {
-            anthropicOptions.classList.remove('hidden');
-            // Populate model dropdown
-            const currentModel = CONFIG.ai.model.anthropic;
-            modelSelect.innerHTML = (CONFIG.ai.anthropicModels || []).map(m =>
-                `<option value="${m.id}"${m.id === currentModel ? ' selected' : ''}>${m.label}</option>`
-            ).join('');
-        } else {
-            anthropicOptions.classList.add('hidden');
-        }
-    }
-}
-
-document.getElementById('ai-panel').addEventListener('toggle', function () {
-    if (this.open) updateAIPanel();
-});
-
-// Key input: detect provider as user types
-document.getElementById('ai-key-input').addEventListener('input', function () {
-    const k = this.value.replace(/\s/g, '');
-    const status = document.getElementById('ai-key-status');
-    if (k) {
-        status.textContent = `Detected: ${PROVIDER_LABELS[detectProvider(k)]}`;
-        status.style.color = '';
-    } else {
-        status.textContent = '';
-    }
-});
-
-// Save key with verification
-document.getElementById('ai-key-save').addEventListener('click', async function () {
-    const keyInput = document.getElementById('ai-key-input');
-    const keyStatus = document.getElementById('ai-key-status');
-    const k = keyInput.value.replace(/\s/g, '');
-    if (!k) return;
-
-    const provider = detectProvider(k);
-    const model = typeof CONFIG.ai.model === 'object' ? CONFIG.ai.model[provider] : CONFIG.ai.model;
-    this.disabled = true;
-    this.textContent = 'Verifying...';
-    keyStatus.textContent = `Checking ${PROVIDER_LABELS[provider]} key...`;
-    keyStatus.style.color = '';
-
-    try {
-        let res;
-        if (provider === 'anthropic') {
-            res = await fetch('https://api.anthropic.com/v1/messages', {
-                method: 'POST',
-                headers: {
-                    'x-api-key': k,
-                    'anthropic-version': '2023-06-01',
-                    'anthropic-dangerous-direct-browser-access': 'true',
-                    'content-type': 'application/json',
-                },
-                body: JSON.stringify({ model, max_tokens: 1, messages: [{ role: 'user', content: 'hi' }] }),
-            });
-        } else {
-            const endpoint = provider === 'github'
-                ? 'https://models.inference.ai.azure.com/chat/completions'
-                : 'https://openrouter.ai/api/v1/chat/completions';
-            const headers = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + k };
-            if (provider === 'openrouter') headers['HTTP-Referer'] = window.location.href;
-            res = await fetch(endpoint, {
-                method: 'POST', headers,
-                body: JSON.stringify({ model, max_tokens: 1, messages: [{ role: 'user', content: 'hi' }] }),
-            });
-        }
-
-        if (!res.ok) {
-            const err = await res.json().catch(() => ({}));
-            throw new Error(err.error?.message || `HTTP ${res.status}`);
-        }
-
-        setAIToken(k);
-        keyInput.value = '';
-        updateAIPanel();
-    } catch (err) {
-        keyStatus.textContent = 'Invalid key: ' + err.message;
-        keyStatus.style.color = '#c44';
-    }
-    this.disabled = false;
-    this.textContent = 'Save key';
-});
-
-// Clear key
-document.getElementById('ai-clear-key').addEventListener('click', () => {
-    clearAIToken();
-    updateAIPanel();
-});
-
-// Build queue
-document.getElementById('ai-submit').addEventListener('click', async function () {
-    const topicInput = document.getElementById('ai-topic-input');
-    const status = document.getElementById('ai-status');
-    const results = document.getElementById('ai-results');
-    const topic = topicInput.value.trim();
-
-    this.disabled = true;
-    this.textContent = 'Building...';
-    status.textContent = '';
-    results.classList.add('hidden');
-
-    try {
-        const prompt = buildAIPrompt(topic);
-        const { reasoning, questions: names } = await callAI(prompt);
-
-        const nameMap = new Map(ALL_QUESTIONS.map(q => [q.name, q]));
-        const matched = [];
-        const unmatched = [];
-        for (const name of names) {
-            const q = nameMap.get(name);
-            if (q) matched.push(q);
-            else unmatched.push(name);
-        }
-
-        if (matched.length === 0) {
-            status.textContent = 'No matching questions found. Try a different topic.';
-            this.disabled = false;
-            this.textContent = 'Build queue';
-            return;
-        }
-
-        status.innerHTML = (reasoning ? `<em>${reasoning}</em><br>` : '') +
-            `Selected ${matched.length} questions.` +
-            (unmatched.length > 0 ? ` (${unmatched.length} not found in bank)` : '');
-
-        const famMap = buildFamiliarityMap();
-        results.classList.remove('hidden');
-        results.innerHTML = matched.map((q, i) => {
-            const rec = famMap[q.name];
-            const famText = rec ? `${Math.round(rec.score * 100)}%` : 'new';
-            return `<div class="ai-result-item">
-                <span class="ai-result-num">${i + 1}</span>
-                <span class="ai-result-name">${q.name}</span>
-                <span class="ai-result-subject">${q.subject}</span>
-                <span class="ai-result-diff">${famText}</span>
-            </div>`;
-        }).join('') + `<div style="margin-top:0.5rem;">
-            <button class="btn btn-ai" id="ai-apply">Start this queue</button>
-        </div>`;
-        renderMath(results);
-
-        results.querySelector('#ai-apply').addEventListener('click', () => {
-            queue = matched;
-            currentIndex = 0;
-            displayQuestion();
-            renderQueueList();
-            document.getElementById('ai-panel').open = false;
-        });
-    } catch (err) {
-        status.textContent = 'Error: ' + err.message;
-    }
-
-    this.disabled = false;
-    this.textContent = 'Build queue';
-});
 
 // ── Familiarity Info Panel ──
 

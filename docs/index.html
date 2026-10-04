@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics & Math Daily Quiz</title>
+    <title>Physics Flashcards</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
@@ -11,8 +11,16 @@
 </head>
 <body>
     <div id="app">
+        <header class="topbar">
+            <nav class="nav-links">
+                <a class="is-active" href="./" aria-current="page">Quiz</a>
+                <a href="about.html">About</a>
+            </nav>
+            <a class="home-link" href="https://dcheng728.github.io/">Chang Cheng</a>
+        </header>
         <div class="top-bar">
-            <h1>Physics & Math Daily Quiz</h1>
+            <h1>Physics Flashcards</h1>
+            <p class="tagline">Reveal the answer, grade yourself, and review what you miss.</p>
             <div class="top-controls">
                 <div class="dropdown" id="subject-dropdown">
                     <button class="btn btn-filter" id="subject-dropdown-btn">Subjects (all)</button>
@@ -35,42 +43,10 @@
             </div>
         </div>
 
-        <div class="label-filter-bar" id="label-filter-bar">
+        <div class="label-filter-bar hidden" id="label-filter-bar">
             <span class="label-filter-label">Labels:</span>
-            <span class="label-filter-hint" id="label-filter-hint">none (showing all)</span>
             <div id="active-labels"></div>
         </div>
-
-        <details class="ai-panel" id="ai-panel">
-            <summary>Intelligent Queue</summary>
-            <div class="ai-panel-body">
-                <div id="ai-key-section" class="hidden">
-                    <p>Enter an API key (stored locally). Supports Anthropic, OpenRouter, or GitHub PAT.</p>
-                    <input type="password" id="ai-key-input" placeholder="sk-ant-..., sk-or-..., or ghp_..." autocomplete="off">
-                    <div id="ai-key-status" class="ai-status"></div>
-                    <button class="btn btn-ai" id="ai-key-save">Save key</button>
-                </div>
-                <div id="ai-gen-section" class="hidden">
-                    <p id="ai-provider-label" class="ai-provider-label"></p>
-                    <textarea id="ai-topic-input" rows="3" placeholder="e.g. prep for reading about path integrals, review angular momentum..." autocomplete="off"></textarea>
-                    <div id="ai-anthropic-options" class="ai-options hidden">
-                        <label>
-                            Model:
-                            <select id="ai-model-select"></select>
-                        </label>
-                        <label>
-                            <input type="checkbox" id="ai-web-search"> Internet access
-                        </label>
-                    </div>
-                    <div class="ai-panel-buttons">
-                        <button class="btn btn-ai" id="ai-submit">Build queue</button>
-                        <button class="btn btn-sync btn-sync-danger" id="ai-clear-key">Remove API key</button>
-                    </div>
-                    <div id="ai-status" class="ai-status"></div>
-                    <div id="ai-results" class="ai-results hidden"></div>
-                </div>
-            </div>
-        </details>
 
         <div class="counter-bar">
             <div class="counter-left">
@@ -80,7 +56,7 @@
                 <span id="session-score" class="score"></span>
             </div>
             <div class="counter-right">
-                <span id="category-badge" class="badge badge-subject"></span>
+                <span id="difficulty-label" class="difficulty-label"></span>
                 <span id="difficulty-indicator" class="difficulty-indicator"></span>
             </div>
         </div>
@@ -110,23 +86,41 @@
         </div>
 
         <div class="queue-panel" id="queue-panel">
-            <h3 class="queue-title">Queue</h3>
+            <h3 class="queue-title">Queue <span class="queue-legend"><span>Familiar</span><span>Difficulty</span></span></h3>
             <div class="queue-list" id="queue-list"></div>
         </div>
 
         <div class="stats-bar" id="stats-bar"></div>
 
-        <div class="sync-bar" id="sync-bar">
-            <div id="sync-logged-out">
-                <button id="gist-login-btn" class="btn btn-sync" title="Connect GitHub Gist for cross-device sync">Sync with Gist</button>
+        <details class="info-panel" id="usage-info">
+            <summary>How to use</summary>
+            <div class="info-panel-body">
+                <ul>
+                    <li>Read the question, try to recall the answer, then press Show Answer (<kbd>Space</kbd>).</li>
+                    <li>Grade yourself: Missed it, Not sure, or Got it (<kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>).</li>
+                    <li>Each question has a familiarity score from your past grades. Recent grades count more.</li>
+                    <li>Reorder the queue, or filter by subject, label, or search.</li>
+                </ul>
             </div>
-            <div id="sync-logged-in" class="hidden">
-                <span id="sync-status" class="sync-status"></span>
-                <button id="gist-push-btn" class="btn btn-sync" title="Upload local history to Gist">Push to Gist</button>
-                <button id="gist-pull-btn" class="btn btn-sync" title="Download history from Gist">Pull from Gist</button>
-                <button id="gist-logout-btn" class="btn btn-sync btn-sync-danger" title="Disconnect Gist">Disconnect</button>
+        </details>
+
+        <details class="info-panel" id="sync-info">
+            <summary>Sync across devices (optional)</summary>
+            <div class="info-panel-body">
+                <p>Progress is stored in this browser only. To use it on another device, connect a GitHub Gist of your own.</p>
+            <div class="sync-bar" id="sync-bar">
+                <div id="sync-logged-out">
+                    <button id="gist-login-btn" class="btn btn-sync" title="Connect GitHub Gist for cross-device sync">Sync with Gist</button>
+                </div>
+                <div id="sync-logged-in" class="hidden">
+                    <span id="sync-status" class="sync-status"></span>
+                    <button id="gist-push-btn" class="btn btn-sync" title="Upload local history to Gist">Push to Gist</button>
+                    <button id="gist-pull-btn" class="btn btn-sync" title="Download history from Gist">Pull from Gist</button>
+                    <button id="gist-logout-btn" class="btn btn-sync btn-sync-danger" title="Disconnect Gist">Disconnect</button>
+                </div>
             </div>
-        </div>
+            </div>
+        </details>
 
         <details class="info-panel" id="conventions-info">
             <summary>Conventions</summary>

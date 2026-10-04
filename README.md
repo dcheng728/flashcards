@@ -1,4 +1,4 @@
-# Physics & Math Daily Quiz
+# Physics Daily Quiz
 
 A static flashcard quiz app for GitHub Pages. Helps a theoretical physics student stay sharp on fundamental math and physics.
 
@@ -6,6 +6,7 @@ A static flashcard quiz app for GitHub Pages. Helps a theoretical physics studen
 
 ```
 src/                 source files (HTML, CSS, JS)
+pages/               Markdown source for the About page (pages/about.md)
 questions/           question files, one per subject (e.g., quantum-mechanics.md)
 docs/                generated output for GitHub Pages (do not edit)
 build.py             builds docs/ from src/ and questions/
