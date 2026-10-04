@@ -96,6 +96,12 @@ a:hover { text-decoration: underline; }
     color: #999;
 }
 
+/* Decorative arrow (down, then right) pointing at the link */
+.home-link::before {
+    content: "\21B3\00a0";
+    display: inline-block;
+}
+
 /* About page text */
 .prose h2 {
     font-size: 1.15rem;
