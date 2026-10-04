@@ -20,6 +20,26 @@ Core-collapse events leave neutron stars or black holes; Type Ia events leave no
 
 ===
 
+### Chandrasekhar mass and physical significance
+difficulty: basic
+labels: chandrasekhar-mass, white-dwarfs, stellar-evolution
+
+What is the Chandrasekhar mass, and what is its physical significance?
+
+---
+
+- The maximum mass a white dwarf can have while gravity (inward) is balanced by electron degeneracy pressure (outward) alone: $M_{Ch}\approx1.4\,M_\odot$.
+- The standard mass at which accreting or merging white dwarfs trigger a Type Ia supernova, giving a standard luminosity.
+
+---
+
+- Degeneracy pressure is quantum (Pauli exclusion), not thermal.
+- Compression pushes electrons to higher momenta; past $M_{Ch}$ they go relativistic, softening $P\propto\rho^{5/3}\to\rho^{4/3}$.
+- No radius balances gravity anymore, so the star collapses, triggering a Type Ia supernova.
+- The fixed trigger mass is why Type Ia luminosities are standardizable.
+
+===
+
 ### neutron stars
 difficulty: basic
 labels: neutron-stars, compact-remnants, stellar-evolution

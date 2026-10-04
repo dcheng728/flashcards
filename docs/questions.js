@@ -2328,10 +2328,23 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "astronomical magnitude",
+    "question": "What is the magnitude system, and how do apparent and absolute magnitude differ?",
+    "answer": "$m=-2.5\\log_{10}(F/F_0)$, a logarithmic flux scale (larger $m$ = fainter). Apparent magnitude $m$ is how bright an object looks from Earth; absolute magnitude $M$ is its apparent magnitude if placed at $10$ pc, i.e. its intrinsic luminosity.",
+    "explanation": "They're related by the distance modulus, $m-M=5\\log_{10}(d/10\\,\\mathrm{pc})$, for the nearby (non-cosmological) case. The reference flux $F_0$ depends on the photometric system — e.g. the AB system sets $F_0=3631$ Jy — but the $-2.5\\log_{10}$ form is universal.",
+    "subject": "astro-observational-methods",
+    "difficulty": "basic",
+    "labels": [
+      "magnitude",
+      "photometry",
+      "distance-modulus"
+    ]
+  },
+  {
     "name": "baryon acoustic oscillations",
     "question": "What are baryon acoustic oscillations, and why are they useful in cosmology?",
-    "answer": "Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.\nThis is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.\nMeasuring this standard ruler at different redshifts constrains cosmic distances and expansion.",
-    "explanation": "Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.",
+    "answer": "- Excess of matter, at characteristic scale (500M light years, 150 Mpc).\n- Gives rise to a peak in the 2-pt correlation func. of matter density.\n- Produced from sound waves in matter driven by a restorative potential created by photon pressure and gravitational force in the early universe.",
+    "explanation": "Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.\nThis is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.\nMeasuring this standard ruler at different redshifts constrains cosmic distances and expansion.\n\nSound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.",
     "subject": "astro-cosmology",
     "difficulty": "intermediate",
     "labels": [
@@ -2420,6 +2433,67 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "types of standard candles",
+    "question": "What are the main types of standard candles used in the distance ladder?",
+    "answer": "- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.\n- **Cepheid variables**: pulsating stars with a period-luminosity relation.\n- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.",
+    "explanation": "Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "standard-candles",
+      "distance-ladder"
+    ]
+  },
+  {
+    "name": "active galactic nucleus (AGN)",
+    "question": "What is an active galactic nucleus, and what powers its emission?",
+    "answer": "A compact, highly luminous region at a galaxy's center, powered by accretion onto a supermassive black hole ($10^6$–$10^{10}\\,M_\\odot$) surrounded by a gaseous accretion disc.",
+    "explanation": "Disc gas spirals inward, heats up, and radiates the energy away as electromagnetic radiation. Quasars are the most luminous subclass of AGN.\n\nAccretion converts up to $\\sim10\\%$ of the infalling rest-mass energy into radiation, which is why AGN can outshine their entire host galaxy.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "active-galactic-nuclei",
+      "supermassive-black-holes"
+    ]
+  },
+  {
+    "name": "quasars",
+    "question": "What is a quasar, and how luminous can it be?",
+    "answer": "The most luminous subclass of AGN, also called a quasi-stellar object (QSO); the brightest quasars outshine an entire galaxy like the Milky Way by thousands of times.",
+    "explanation": "Named for their point-like appearance on early photographic plates, despite being powered by ordinary AGN accretion physics. Their redshifts are cosmological, so their extreme luminosity makes them visible to very high redshift — useful as probes of the early Universe.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "quasars",
+      "active-galactic-nuclei"
+    ]
+  },
+  {
+    "name": "Lyman-$\\alpha$ forest",
+    "question": "What is the Lyman-$\\alpha$ forest, and what does it probe?",
+    "answer": "The dense series of absorption lines seen blueward of a quasar's Lyman-$\\alpha$ emission line, caused by neutral hydrogen in the intergalactic medium along the line of sight.",
+    "explanation": "The line pattern maps intergalactic gas density versus redshift — a probe of large-scale structure at high redshift.",
+    "subject": "astro-cosmology",
+    "difficulty": "intermediate",
+    "labels": [
+      "lyman-alpha-forest",
+      "quasars",
+      "intergalactic-medium"
+    ]
+  },
+  {
+    "name": "large-scale structure scales",
+    "question": "What range of scales does \"large-scale structure\" refer to in cosmology?",
+    "answer": "Roughly Mpc to Gpc.",
+    "explanation": "For reference: galaxies are $\\sim10$–$100$ kpc, galaxy clusters and voids are $\\sim1$–$100$ Mpc, and the observable Universe has a radius of $\\sim14$ Gpc.",
+    "subject": "astro-cosmology",
+    "difficulty": "basic",
+    "labels": [
+      "large-scale-structure",
+      "cosmology"
+    ]
+  },
+  {
     "name": "what is a supernova",
     "question": "What is a supernova, and what are its two main channels?",
     "answer": "A supernova is a brief, extremely luminous stellar explosion. It can result from core collapse in a massive star or thermonuclear disruption of a carbon-oxygen white dwarf, usually a Type Ia event.",
@@ -2429,6 +2503,19 @@ const ALL_QUESTIONS = [
     "labels": [
       "supernovae",
       "transients",
+      "stellar-evolution"
+    ]
+  },
+  {
+    "name": "Chandrasekhar mass and physical significance",
+    "question": "What is the Chandrasekhar mass, and what is its physical significance?",
+    "answer": "- The maximum mass a white dwarf can have while gravity (inward) is balanced by electron degeneracy pressure (outward) alone: $M_{Ch}\\approx1.4\\,M_\\odot$.\n- The standard mass at which accreting or merging white dwarfs trigger a Type Ia supernova, giving a standard luminosity.",
+    "explanation": "- Degeneracy pressure is quantum (Pauli exclusion), not thermal.\n- Compression pushes electrons to higher momenta; past $M_{Ch}$ they go relativistic, softening $P\\propto\\rho^{5/3}\\to\\rho^{4/3}$.\n- No radius balances gravity anymore, so the star collapses, triggering a Type Ia supernova.\n- The fixed trigger mass is why Type Ia luminosities are standardizable.",
+    "subject": "astro-stellar-astrophysics",
+    "difficulty": "basic",
+    "labels": [
+      "chandrasekhar-mass",
+      "white-dwarfs",
       "stellar-evolution"
     ]
   },

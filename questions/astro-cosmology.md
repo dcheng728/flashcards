@@ -8,11 +8,15 @@ What are baryon acoustic oscillations, and why are they useful in cosmology?
 
 ---
 
+- Excess of matter, at characteristic scale (500M light years, 150 Mpc).
+- Gives rise to a peak in the 2-pt correlation func. of matter density.
+- Produced from sound waves in matter driven by a restorative potential created by photon pressure and gravitational force in the early universe.
+
+---
+
 Baryon acoustic oscillations (BAO) are the imprint of sound waves from the pre-recombination photon-baryon plasma on the matter distribution: a peak in the galaxy two-point correlation function at the comoving separation set by the sound horizon, roughly $150$ Mpc.
 This is due to the restoring potential created by the gravitational force (pulling in) and the photon force (pushing out), which creates an oscillator potential thus a wave.
 Measuring this standard ruler at different redshifts constrains cosmic distances and expansion.
-
----
 
 Sound waves in the pre-recombination photon-baryon fluid imprint the scale on matter, producing a feature in galaxy clustering.
 
@@ -126,5 +130,89 @@ $$F = \frac{L}{4\pi d_L^2}.$$
 ---
 
 Intrinsic luminosity is the power emitted by the source; apparent brightness depends on both luminosity and distance. Type Ia supernovae are standardizable candles because their light curves and colors allow $L$ to be calibrated.
+
+===
+
+### types of standard candles
+difficulty: basic
+labels: standard-candles, distance-ladder
+
+What are the main types of standard candles used in the distance ladder?
+
+---
+
+- **Type Ia supernovae**: white-dwarf disruptions, standardized via light-curve shape and color; reach cosmological distances.
+- **Cepheid variables**: pulsating stars with a period-luminosity relation.
+- **Tip of the red giant branch (TRGB)**: evolved red giants ignite helium fusion at a nearly fixed luminosity, giving a sharp, standardizable brightness cutoff.
+
+---
+
+Each type is calibrated against a more direct method (ultimately parallax) and used over a different distance range, which is why they chain together into the cosmic distance ladder.
+
+===
+
+### active galactic nucleus (AGN)
+difficulty: basic
+labels: active-galactic-nuclei, supermassive-black-holes
+
+What is an active galactic nucleus, and what powers its emission?
+
+---
+
+A compact, highly luminous region at a galaxy's center, powered by accretion onto a supermassive black hole ($10^6$–$10^{10}\,M_\odot$) surrounded by a gaseous accretion disc.
+
+---
+
+Disc gas spirals inward, heats up, and radiates the energy away as electromagnetic radiation. Quasars are the most luminous subclass of AGN.
+
+Accretion converts up to $\sim10\%$ of the infalling rest-mass energy into radiation, which is why AGN can outshine their entire host galaxy.
+
+===
+
+### quasars
+difficulty: basic
+labels: quasars, active-galactic-nuclei
+
+What is a quasar, and how luminous can it be?
+
+---
+
+The most luminous subclass of AGN, also called a quasi-stellar object (QSO); the brightest quasars outshine an entire galaxy like the Milky Way by thousands of times.
+
+---
+
+Named for their point-like appearance on early photographic plates, despite being powered by ordinary AGN accretion physics. Their redshifts are cosmological, so their extreme luminosity makes them visible to very high redshift — useful as probes of the early Universe.
+
+===
+
+### Lyman-$\alpha$ forest
+difficulty: intermediate
+labels: lyman-alpha-forest, quasars, intergalactic-medium
+
+What is the Lyman-$\alpha$ forest, and what does it probe?
+
+---
+
+The dense series of absorption lines seen blueward of a quasar's Lyman-$\alpha$ emission line, caused by neutral hydrogen in the intergalactic medium along the line of sight.
+
+---
+
+The line pattern maps intergalactic gas density versus redshift — a probe of large-scale structure at high redshift.
+
+===
+
+### large-scale structure scales
+difficulty: basic
+labels: large-scale-structure, cosmology
+
+What range of scales does "large-scale structure" refer to in cosmology?
+
+---
+
+Roughly Mpc to Gpc.
+
+---
+
+For reference: galaxies are $\sim10$–$100$ kpc, galaxy clusters and voids are $\sim1$–$100$ Mpc, and the observable Universe has a radius of $\sim14$ Gpc.
 
 ===
