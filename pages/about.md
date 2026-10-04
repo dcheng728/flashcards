@@ -1,6 +1,6 @@
 # About
 
-- Built with Claude Opus 4.5–5 and ChatGPT 5.6 Sol.
+- This project is built with the help of Claude Opus 4.5–5 and ChatGPT 5.6 Sol.
 - The goal is to explore human-AI interaction aimed at human understanding.
 
 This project began in March 2026, during my MSc dissertation in theoretical physics at Imperial College London.
