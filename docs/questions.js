@@ -2607,18 +2607,6 @@ const ALL_QUESTIONS = [
     ]
   },
   {
-    "name": "ray-tracing strategy for refraction problems",
-    "question": "What is the general strategy for finding where an object appears to be after refraction?",
-    "answer": "First determine what the actual ray does physically — which way it bends, based on the index change — then back-trace the outgoing ray as an observer would, to find the apparent position.",
-    "explanation": "Applying this to the reversed case — an object in air viewed by an observer underwater — light bends toward the normal (low-to-high $n$), so back-tracing places the apparent object farther from the interface than it really is, opposite to the underwater-object-viewed-from-air case.",
-    "subject": "optics",
-    "difficulty": "basic",
-    "labels": [
-      "ray-optics",
-      "problem-solving"
-    ]
-  },
-  {
     "name": "wave speed relation for light",
     "question": "How are frequency and wavelength related for a wave, and what follows for two EM waves of different frequency in air?",
     "answer": "$v = f\\lambda$, so $\\lambda = c/f$ for EM waves in air ($v\\approx c$). Higher frequency means shorter wavelength.",
