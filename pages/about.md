@@ -9,7 +9,7 @@ My view is that until some human can understand, verify, and be held accountable
 
 With that being said, the best way I know to learn physics is to do problems: the best books make their audience work.
 But my agent has never stopped to check my understanding, like a good lecturer would when sensing drowsiness or puzzlement in the audience's eyes.
-Instead, my agent hands me long markdown, and reading it feels like a chore.
+Instead, my agent hands me long markdown.
 
 So I built this site to let AI quiz me.
 The flashcards span many topics (classical, quantum, relativity, ...) and difficulty levels.
