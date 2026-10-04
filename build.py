@@ -1,14 +1,17 @@
-"""Build docs/ from src/ and questions/*.md files."""
+"""Build docs/ from src/, pages/about.md and questions/*.md files."""
 
 import os
 import json
 import re
 import shutil
 
+import markdown
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(ROOT, 'src')
 QUESTIONS_DIR = os.path.join(ROOT, 'questions')
 DOCS_DIR = os.path.join(ROOT, 'docs')
+PAGES_DIR = os.path.join(ROOT, 'pages')
 
 SUBJECTS = [
     'math-calculus', 'math-linear-algebra', 'math-differential-equations',
@@ -96,11 +99,24 @@ def copy_src():
             print(f'  {name}')
 
 
+def build_about():
+    """Render pages/about.md into the src/about.html template."""
+    with open(os.path.join(PAGES_DIR, 'about.md'), encoding='utf-8') as f:
+        body = markdown.markdown(f.read())
+    with open(os.path.join(SRC_DIR, 'about.html'), encoding='utf-8') as f:
+        template = f.read()
+    with open(os.path.join(DOCS_DIR, 'about.html'), 'w', encoding='utf-8') as f:
+        f.write(template.replace('{{content}}', body))
+
+
 def main():
     os.makedirs(DOCS_DIR, exist_ok=True)
 
     print('Copying src/ -> docs/')
     copy_src()
+
+    print('Building pages/about.md')
+    build_about()
 
     print('Building questions/')
     build_questions()

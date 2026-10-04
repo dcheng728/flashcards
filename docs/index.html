@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics & Math Daily Quiz</title>
+    <title>Physics Flashcards</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
@@ -11,8 +11,16 @@
 </head>
 <body>
     <div id="app">
+        <header class="topbar">
+            <nav class="nav-links">
+                <a class="is-active" href="./" aria-current="page">Quiz</a>
+                <a href="about.html">About</a>
+            </nav>
+            <a class="home-link" href="https://dcheng728.github.io/">Chang Cheng</a>
+        </header>
         <div class="top-bar">
-            <h1>Physics & Math Daily Quiz</h1>
+            <h1>Physics Flashcards</h1>
+            <p class="tagline">Reveal the answer, grade yourself, and review what you miss.</p>
             <div class="top-controls">
                 <div class="dropdown" id="subject-dropdown">
                     <button class="btn btn-filter" id="subject-dropdown-btn">Subjects (all)</button>
@@ -37,7 +45,7 @@
 
         <div class="label-filter-bar" id="label-filter-bar">
             <span class="label-filter-label">Labels:</span>
-            <span class="label-filter-hint" id="label-filter-hint">none (showing all)</span>
+            <span class="label-filter-hint" id="label-filter-hint">none (click a label on a card to filter)</span>
             <div id="active-labels"></div>
         </div>
 
@@ -85,17 +93,35 @@
 
         <div class="stats-bar" id="stats-bar"></div>
 
-        <div class="sync-bar" id="sync-bar">
-            <div id="sync-logged-out">
-                <button id="gist-login-btn" class="btn btn-sync" title="Connect GitHub Gist for cross-device sync">Sync with Gist</button>
+        <details class="info-panel" id="usage-info">
+            <summary>How to use</summary>
+            <div class="info-panel-body">
+                <ul>
+                    <li>Read the question, try to recall the answer, then press Show Answer (<kbd>Space</kbd>).</li>
+                    <li>Grade yourself: Missed it, Not sure, or Got it (<kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>).</li>
+                    <li>Each question has a familiarity score from your past grades. Recent grades count more.</li>
+                    <li>Reorder the queue, or filter by subject, label, or search.</li>
+                </ul>
             </div>
-            <div id="sync-logged-in" class="hidden">
-                <span id="sync-status" class="sync-status"></span>
-                <button id="gist-push-btn" class="btn btn-sync" title="Upload local history to Gist">Push to Gist</button>
-                <button id="gist-pull-btn" class="btn btn-sync" title="Download history from Gist">Pull from Gist</button>
-                <button id="gist-logout-btn" class="btn btn-sync btn-sync-danger" title="Disconnect Gist">Disconnect</button>
+        </details>
+
+        <details class="info-panel" id="sync-info">
+            <summary>Sync across devices (optional)</summary>
+            <div class="info-panel-body">
+                <p>Progress is stored in this browser only. To use it on another device, connect a GitHub Gist of your own.</p>
+            <div class="sync-bar" id="sync-bar">
+                <div id="sync-logged-out">
+                    <button id="gist-login-btn" class="btn btn-sync" title="Connect GitHub Gist for cross-device sync">Sync with Gist</button>
+                </div>
+                <div id="sync-logged-in" class="hidden">
+                    <span id="sync-status" class="sync-status"></span>
+                    <button id="gist-push-btn" class="btn btn-sync" title="Upload local history to Gist">Push to Gist</button>
+                    <button id="gist-pull-btn" class="btn btn-sync" title="Download history from Gist">Pull from Gist</button>
+                    <button id="gist-logout-btn" class="btn btn-sync btn-sync-danger" title="Disconnect Gist">Disconnect</button>
+                </div>
             </div>
-        </div>
+            </div>
+        </details>
 
         <details class="info-panel" id="conventions-info">
             <summary>Conventions</summary>

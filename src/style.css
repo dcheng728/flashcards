@@ -20,7 +20,7 @@ a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 #app {
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
     flex: 1;
     position: relative;
@@ -44,18 +44,91 @@ a:hover { text-decoration: underline; }
     height: auto;
 }
 
+/* Site header: mirrors dcheng728.github.io (current-page label over a rule) */
+.topbar {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 4rem; /* same height as the main site's bar, which holds the icon links */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-links a {
+    position: relative;
+    color: inherit;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.2rem;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.is-active::after {
+    transform: scaleX(1);
+}
+
+.nav-links a.is-active {
+    font-weight: 650;
+}
+
+.home-link {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* About page text */
+.prose h2 {
+    font-size: 1.15rem;
+    margin: 1.5rem 0 0.4rem;
+}
+
+.prose p,
+.prose ul {
+    margin-bottom: 0.75rem;
+}
+
+.prose ul {
+    padding-left: 1.25rem;
+}
+
 /* Top bar */
 .top-bar {
     margin-bottom: 1rem;
 }
 
-.top-bar h1 {
-    font-size: 1.4rem;
+.top-bar h1,
+.prose h1 {
+    font-size: 2rem;
     color: #3a3a3a;
-    margin-bottom: 0.75rem;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 0.5px;
+    margin-bottom: 0.67em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color: #6a6a6a;
+    margin-bottom: 1rem;
 }
 
 .top-controls {
@@ -562,7 +635,7 @@ kbd {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Grade Buttons */
@@ -758,6 +831,18 @@ kbd {
     line-height: 1.6;
 }
 
+.info-panel-body ul {
+    padding-left: 1.25rem;
+}
+
+.info-panel .sync-bar {
+    margin: 0.5rem 0 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
 .info-panel-body p {
     margin: 0.4rem 0;
 }
@@ -900,7 +985,6 @@ kbd {
 
 /* Responsive */
 @media (max-width: 500px) {
-    .top-bar h1 { font-size: 1.2rem; }
     .card { padding: 1.25rem; }
     .top-controls { flex-direction: column; }
     .search-container { min-width: 100%; }

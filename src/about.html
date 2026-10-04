@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Physics Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="topbar">
+            <nav class="nav-links">
+                <a href="./">Quiz</a>
+                <a class="is-active" href="about.html" aria-current="page">About</a>
+            </nav>
+            <a class="home-link" href="https://dcheng728.github.io/">Chang Cheng</a>
+        </header>
+
+        <main class="prose">
+{{content}}
+        </main>
+    </div>
+
+    <div class="footer-art" id="footer-art" aria-hidden="true"></div>
+    <script>
+      fetch('https://raw.githubusercontent.com/dcheng728/dcheng728.github.io/main/_includes/footer-art.html')
+        .then(r => r.text())
+        .then(html => { document.getElementById('footer-art').innerHTML = html; })
+        .catch(() => {});
+    </script>
+</body>
+</html>

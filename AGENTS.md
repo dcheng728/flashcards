@@ -1,4 +1,4 @@
-# Physics & Math Daily Quiz: Agent Instructions
+# Physics Daily Quiz: Agent Instructions
 
 ## Project overview
 
@@ -10,17 +10,20 @@ The app opens directly on a question. Users reveal the answer, self-grade with G
 
 - Edit application source files in `src/`.
 - Edit question content in `questions/`.
+- Edit the About page text in `pages/about.md` (rendered into `src/about.html` by `build.py`; plain Markdown, no KaTeX).
 - Treat `docs/` as generated output. Do not edit it directly.
-- Run `python build.py` after changing `src/` or `questions/` and commit the resulting `docs/` changes.
+- Run `python build.py` after changing `src/`, `pages/`, or `questions/` and commit the resulting `docs/` changes.
 
 ## Repository structure
 
 ```text
 src/
-  index.html        Page structure
+  index.html        Quiz page structure
+  about.html        About page
   style.css         Application styles
   app.js            Quiz, filters, queue, history, and sync logic
   config.js         Familiarity scores and conventions
+pages/              Markdown source for the About page
 questions/          Markdown question files, one per subject
 docs/               Generated GitHub Pages output
 build.py            Generates docs/ from src/ and questions/
