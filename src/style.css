@@ -339,12 +339,6 @@ a:hover { text-decoration: underline; }
     color: #999;
 }
 
-.label-filter-hint {
-    font-size: 0.78rem;
-    color: #bbb;
-    font-style: italic;
-}
-
 /* Label pills */
 .label-pill {
     display: inline-flex;

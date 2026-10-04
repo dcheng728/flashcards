@@ -114,14 +114,11 @@ function removeLabelFilter(label) {
 
 function renderActiveLabels() {
     const container = document.getElementById('active-labels');
-    const hint = document.getElementById('label-filter-hint');
     container.innerHTML = '';
 
-    if (filterState.labels.length === 0) {
-        hint.style.display = '';
-        return;
-    }
-    hint.style.display = 'none';
+    // The bar only appears once a label is selected
+    document.getElementById('label-filter-bar').classList.toggle('hidden', filterState.labels.length === 0);
+    if (filterState.labels.length === 0) return;
 
     for (const label of filterState.labels) {
         const pill = document.createElement('span');
