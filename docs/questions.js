@@ -2366,6 +2366,32 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "point spread function (PSF)",
+    "question": "What is the point spread function (PSF), and how does it relate an observed image to the true sky?",
+    "answer": "The PSF is the image a telescope forms of a point source. The observed image is the true sky convolved with the PSF, $I_{\\mathrm{obs}} = I_{\\mathrm{true}} \\ast \\mathrm{PSF}$, usually plus noise. Its width, usually quoted as the FWHM (the full width at half of the peak), sets the angular resolution.",
+    "explanation": "The PSF combines diffraction, optical aberrations, the detector, and, from the ground, atmospheric seeing. The diffraction limit alone gives $\\theta \\approx 1.22\\lambda/D$ for a telescope of aperture $D$. PSF knowledge matters for photometry (aperture or PSF fitting), for separating blended sources, and for weak lensing, where PSF errors mimic shear.",
+    "subject": "astro-observational-methods",
+    "difficulty": "intermediate",
+    "labels": [
+      "imaging",
+      "psf",
+      "resolution"
+    ]
+  },
+  {
+    "name": "atmospheric seeing",
+    "question": "What is atmospheric seeing, how is it measured, and what do typical values mean?",
+    "answer": "Seeing is the blurring of a point source by atmospheric turbulence, measured as the FWHM (full width at half-maximum) of the PSF, in arcseconds. Smaller seeing means a smaller FWHM and a sharper image.",
+    "explanation": "- $0.5''$: very good seeing\n- $1.0''$: blurrier\n- $2.0''$: much blurrier\n\nTurbulence varies the refractive index of the air and distorts the wavefront. For apertures larger than the Fried parameter $r_0$ (about $10$–$20$ cm at visible wavelengths), the image size is set by the atmosphere, $\\theta \\sim \\lambda/r_0$, not by the telescope. Space telescopes avoid seeing, and adaptive optics partly corrects it on the ground.",
+    "subject": "astro-observational-methods",
+    "difficulty": "intermediate",
+    "labels": [
+      "imaging",
+      "seeing",
+      "atmosphere"
+    ]
+  },
+  {
     "name": "baryon acoustic oscillations",
     "question": "What are baryon acoustic oscillations, and why are they useful in cosmology?",
     "answer": "- Excess of matter, at characteristic scale (500M light years, 150 Mpc).\n- Gives rise to a peak in the 2-pt correlation func. of matter density.\n- Produced from sound waves in matter driven by a restorative potential created by photon pressure and gravitational force in the early universe.",
