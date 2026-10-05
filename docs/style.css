@@ -102,6 +102,16 @@ a:hover { text-decoration: underline; }
     display: inline-block;
 }
 
+.gh-link {
+    display: inline-flex;
+    margin-left: 0.9rem;
+    color: #999;
+}
+
+.gh-link:hover {
+    color: #2c2c2c;
+}
+
 /* About page text */
 .prose h2 {
     font-size: 1.15rem;
