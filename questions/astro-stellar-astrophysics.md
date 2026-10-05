@@ -28,7 +28,7 @@ What is the Chandrasekhar mass, and what is its physical significance?
 
 ---
 
-- The maximum mass a white dwarf can have while gravity (inward) is balanced by electron degeneracy pressure (outward) alone: $M_{Ch}\approx1.4\,M_\odot$.
+- The maximum mass a white dwarf can have while gravity (inward) is balanced by electron degeneracy pressure (outward) alone: $M_{Ch}\approx1.4\,M_\odot\approx2.8\times10^{30}$ kg, since $M_\odot\approx1.989\times10^{30}$ kg.
 - The standard mass at which accreting or merging white dwarfs trigger a Type Ia supernova, giving a standard luminosity.
 
 ---
