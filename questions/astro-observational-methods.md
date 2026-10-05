@@ -1,6 +1,7 @@
 <!-- Questions on how astronomers measure the sky:
 - units and scales, brightness and magnitudes,
 - filters and colors, spectra and redshift
+- image quality (PSF and seeing)
 - distance measurement from parallax to the distance ladder. -->
 
 ### photometric redshift
@@ -208,5 +209,41 @@ $$m=-2.5\log_{10}(F/F_0)$$
 ---
 
 They're related by the distance modulus, $m-M=5\log_{10}(d/10\,\mathrm{pc})$, for the nearby (non-cosmological) case. The reference flux $F_0$ depends on the photometric system — e.g. the AB system sets $F_0=3631$ Jy — but the $-2.5\log_{10}$ form is universal.
+
+===
+
+### point spread function (PSF)
+difficulty: intermediate
+labels: imaging, psf, resolution
+
+What is the point spread function (PSF), and how does it relate an observed image to the true sky?
+
+---
+
+The PSF is the image a telescope forms of a point source. The observed image is the true sky convolved with the PSF, $I_{\mathrm{obs}} = I_{\mathrm{true}} \ast \mathrm{PSF}$, usually plus noise. Its width, usually quoted as the FWHM (the full width at half of the peak), sets the angular resolution.
+
+---
+
+The PSF combines diffraction, optical aberrations, the detector, and, from the ground, atmospheric seeing. The diffraction limit alone gives $\theta \approx 1.22\lambda/D$ for a telescope of aperture $D$. PSF knowledge matters for photometry (aperture or PSF fitting), for separating blended sources, and for weak lensing, where PSF errors mimic shear.
+
+===
+
+### atmospheric seeing
+difficulty: intermediate
+labels: imaging, seeing, atmosphere
+
+What is atmospheric seeing, how is it measured, and what do typical values mean?
+
+---
+
+Seeing is the blurring of a point source by atmospheric turbulence, measured as the FWHM (full width at half-maximum) of the PSF, in arcseconds. Smaller seeing means a smaller FWHM and a sharper image.
+
+---
+
+- $0.5''$: very good seeing
+- $1.0''$: blurrier
+- $2.0''$: much blurrier
+
+Turbulence varies the refractive index of the air and distorts the wavefront. For apertures larger than the Fried parameter $r_0$ (about $10$–$20$ cm at visible wavelengths), the image size is set by the atmosphere, $\theta \sim \lambda/r_0$, not by the telescope. Space telescopes avoid seeing, and adaptive optics partly corrects it on the ground.
 
 ===
