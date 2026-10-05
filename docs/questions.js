@@ -2611,7 +2611,7 @@ const ALL_QUESTIONS = [
     "name": "refraction and Snell's law",
     "question": "State Snell's law, and the qualitative rule for which way a ray bends when crossing between media of different refractive index $n$.",
     "answer": "$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$. Going from low $n$ to high $n$, the ray bends toward the normal; going from high $n$ to low $n$, it bends away from the normal.",
-    "explanation": "Higher refractive index means slower light speed, $v = c/n$ — light bends toward the normal when entering the optically slower medium. Some reference values:\n\n- vacuum: $n=1$ (exact, by definition)\n- air: $n\\approx1.0003$ (often rounded to $1.00$)\n- water: $n\\approx1.33$\n- glass (typical): $n\\approx1.5$\n- diamond: $n\\approx2.42$",
+    "explanation": "Higher refractive index means slower light speed, $v = c/n$, and counts each unit of distance as more optical path. By Fermat's principle, the ray bends to reduce the distance traveled in the high-$n$ medium overall, so it bends toward the normal when entering it (and away from the normal when leaving). Some reference values:\n\n- vacuum: $n=1$ (exact, by definition)\n- air: $n\\approx1.0003$ (often rounded to $1.00$)\n- water: $n\\approx1.33$\n- glass (typical): $n\\approx1.5$\n- diamond: $n\\approx2.42$",
     "subject": "optics",
     "difficulty": "basic",
     "labels": [
