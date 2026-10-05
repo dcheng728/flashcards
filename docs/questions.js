@@ -2243,7 +2243,7 @@ const ALL_QUESTIONS = [
     "name": "photometric redshift",
     "question": "How is a photometric redshift estimated from multiband photometry, and why is it uncertain?",
     "answer": "A photometric redshift, or photo-$z$, estimates a galaxy's redshift by fitting its measured fluxes in several filters to redshifted spectral-energy-distribution templates or a trained model. A template fit can minimize\n\n$$\\chi^2(z,\\theta)=\\sum_i\\frac{\\left[F_i^{\\mathrm{obs}}-aF_i^{\\mathrm{model}}(z,\\theta)\\right]^2}{\\sigma_i^2},$$\n\nwhere $i$ labels filters, $\\theta$ describes the galaxy template, and $a$ is its overall normalization.",
-    "explanation": "Spectral features like the 4000-Å break and Lyman break shift between filters with redshift, driving the fit. \nBecause different galaxy types and redshifts can produce similar colors, the result is a probability distribution $p(z)$, not a single value — its bias and scatter matter for weak-lensing and clustering.",
+    "explanation": "Spectral features like the 4000-Å break and Lyman break shift between filters with redshift, driving the fit. But broad filters average over wavelength, so photometry gives only coarse spectral information: different redshifts can place different features in similar bands, and changes in galaxy type, age, or dust can mimic those color changes. Measurement noise and imperfect templates or models add further ambiguity. Thus several redshifts may fit nearly as well, giving a broad or multimodal probability distribution $p(z)$ and sometimes a catastrophic outlier; its bias and scatter matter for weak-lensing and clustering.",
     "subject": "astro-observational-methods",
     "difficulty": "intermediate",
     "labels": [
