@@ -2460,7 +2460,7 @@ const ALL_QUESTIONS = [
     "name": "type Ia supernovae as distance indicators",
     "question": "Why are Type Ia supernovae useful as distance indicators?",
     "answer": "They have standardized luminosities, allowing their observed fluxes to give luminosity distances.",
-    "explanation": "Thermonuclear white-dwarf disruptions; standardized via light-curve shape and color.",
+    "explanation": "Their peak luminosities are not identical, but light-curve width and color let astronomers standardize them. Calibrating the standardized absolute magnitude with nearby supernovae gives a distance indicator.\n\nFor example, a corrected peak apparent magnitude $m=15.7$ and standardized absolute magnitude $M=-19.3$ give distance modulus $m-M=35$. Since $m-M=5\\log_{10}(d_L/10\\,\\mathrm{pc})$, the luminosity distance is $d_L=100\\,\\mathrm{Mpc}$.",
     "subject": "astro-cosmology",
     "difficulty": "intermediate",
     "labels": [
