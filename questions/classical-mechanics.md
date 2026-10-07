@@ -205,3 +205,30 @@ The phase-space distribution function is constant along the trajectories of the 
 Mathematically, $\frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \{\rho, H\} = 0$. This is foundational for statistical mechanics.
 
 ===
+
+### centrifugal and Coriolis forces
+difficulty: basic
+labels: rotating-frames, fictitious-forces
+
+In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?
+
+---
+
+For a mass $m$ at position $\vec{r}$ with velocity $\vec{v}_{\text{rot}}$ relative to the rotating frame,
+$\vec{F}_{\text{centrifugal}} = -m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$ and
+$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$. The centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\vec{\Omega} \times \vec{v}_{\text{rot}}$, perpendicular to both vectors.
+
+---
+
+$$\begin{aligned}
+\left(\frac{d\vec{A}}{dt}\right)_{\text{inertial}} &= \left(\frac{d\vec{A}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{A} \\
+\vec{v}_{\text{inertial}} &= \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r} \\
+\vec{a}_{\text{inertial}} &= \left(\frac{d\vec{v}_{\text{inertial}}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{inertial}} \\
+&= \vec{a}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r}) \\
+&= \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
+m\vec{a}_{\text{inertial}} &= \vec{F}_{\text{real}} \\
+m\vec{a}_{\text{rot}} &= \vec{F}_{\text{real}} - 2m\vec{\Omega} \times \vec{v}_{\text{rot}} - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
+&= \vec{F}_{\text{real}} + \vec{F}_{\text{Coriolis}} + \vec{F}_{\text{centrifugal}}
+\end{aligned}$$
+
+===

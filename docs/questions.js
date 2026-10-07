@@ -1453,6 +1453,18 @@ const ALL_QUESTIONS = [
     ]
   },
   {
+    "name": "centrifugal and Coriolis forces",
+    "question": "In a frame rotating with constant angular velocity $\\vec{\\Omega}$, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?",
+    "answer": "For a mass $m$ at position $\\vec{r}$ with velocity $\\vec{v}_{\\text{rot}}$ relative to the rotating frame,\n$\\vec{F}_{\\text{centrifugal}} = -m\\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r})$ and\n$\\vec{F}_{\\text{Coriolis}} = -2m\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$. The centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$, perpendicular to both vectors.",
+    "explanation": "$$\\begin{aligned}\n\\left(\\frac{d\\vec{A}}{dt}\\right)_{\\text{inertial}} &= \\left(\\frac{d\\vec{A}}{dt}\\right)_{\\text{rot}} + \\vec{\\Omega} \\times \\vec{A} \\\\\n\\vec{v}_{\\text{inertial}} &= \\vec{v}_{\\text{rot}} + \\vec{\\Omega} \\times \\vec{r} \\\\\n\\vec{a}_{\\text{inertial}} &= \\left(\\frac{d\\vec{v}_{\\text{inertial}}}{dt}\\right)_{\\text{rot}} + \\vec{\\Omega} \\times \\vec{v}_{\\text{inertial}} \\\\\n&= \\vec{a}_{\\text{rot}} + \\vec{\\Omega} \\times \\vec{v}_{\\text{rot}} + \\vec{\\Omega} \\times (\\vec{v}_{\\text{rot}} + \\vec{\\Omega} \\times \\vec{r}) \\\\\n&= \\vec{a}_{\\text{rot}} + 2\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}} + \\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r}) \\\\\nm\\vec{a}_{\\text{inertial}} &= \\vec{F}_{\\text{real}} \\\\\nm\\vec{a}_{\\text{rot}} &= \\vec{F}_{\\text{real}} - 2m\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}} - m\\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r}) \\\\\n&= \\vec{F}_{\\text{real}} + \\vec{F}_{\\text{Coriolis}} + \\vec{F}_{\\text{centrifugal}}\n\\end{aligned}$$",
+    "subject": "classical-mechanics",
+    "difficulty": "basic",
+    "labels": [
+      "rotating-frames",
+      "fictitious-forces"
+    ]
+  },
+  {
     "name": "values of $\\mu_0$ and $\\epsilon_0$",
     "question": "What are the values of the vacuum permeability $\\mu_0$ and vacuum permittivity $\\epsilon_0$ in SI units?",
     "answer": "$\\mu_0 = 4\\pi \\times 10^{-7}\\;\\text{N/A}^2 \\approx 1.257 \\times 10^{-6}\\;\\text{N/A}^2$ (equivalently $\\text{H/m}$). $\\epsilon_0 = \\frac{1}{\\mu_0 c^2} \\approx 8.854 \\times 10^{-12}\\;\\text{F/m}$ (equivalently $\\text{C}^2/\\text{N}\\cdot\\text{m}^2$).",
