@@ -205,3 +205,21 @@ The phase-space distribution function is constant along the trajectories of the 
 Mathematically, $\frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \{\rho, H\} = 0$. This is foundational for statistical mechanics.
 
 ===
+
+### centrifugal and Coriolis forces
+difficulty: basic
+labels: rotating-frames, fictitious-forces
+
+In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the centrifugal and Coriolis forces, when do they act, and which way do they point?
+
+---
+
+For a mass $m$ at position $\vec{r}$ with velocity $\vec{v}_{\text{rot}}$ relative to the rotating frame,
+$\vec{F}_{\text{centrifugal}} = -m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$ and
+$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$.
+
+---
+
+These are fictitious forces added when applying Newton's laws in a rotating (non-inertial) frame; they are not interactions and do not appear in an inertial frame. The centrifugal force points away from the rotation axis and acts even when the object is at rest in the rotating frame. The Coriolis force acts only when the object moves relative to that frame; it is perpendicular to both $\vec{\Omega}$ and $\vec{v}_{\text{rot}}$, with its direction given by $-\vec{\Omega} \times \vec{v}_{\text{rot}}$.
+
+===
