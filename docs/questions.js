@@ -1454,7 +1454,7 @@ const ALL_QUESTIONS = [
   },
   {
     "name": "centrifugal and Coriolis forces",
-    "question": "In a frame rotating with constant angular velocity $\\vec{\\Omega}$, what are the centrifugal and Coriolis forces, when do they act, and which way do they point?",
+    "question": "In a frame rotating with constant angular velocity $\\vec{\\Omega}$, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?",
     "answer": "For a mass $m$ at position $\\vec{r}$ with velocity $\\vec{v}_{\\text{rot}}$ relative to the rotating frame,\n$\\vec{F}_{\\text{centrifugal}} = -m\\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r})$ and\n$\\vec{F}_{\\text{Coriolis}} = -2m\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$.",
     "explanation": "These fictitious forces arise from the acceleration transformation for constant $\\vec{\\Omega}$:\n$\\vec{a}_{\\text{inertial}} = \\vec{a}_{\\text{rot}} + 2\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}} + \\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r})$.\nUsing $m\\vec{a}_{\\text{inertial}} = \\vec{F}_{\\text{real}}$ and rearranging gives the two forces above in the rotating-frame equation of motion. They are frame effects, not interactions, and are absent in an inertial frame. The centrifugal force points radially outward from the rotation axis and acts even at rest in the rotating frame. The Coriolis force acts only for motion relative to that frame and points perpendicular to both $\\vec{\\Omega}$ and $\\vec{v}_{\\text{rot}}$, in the direction of $-\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$.",
     "subject": "classical-mechanics",

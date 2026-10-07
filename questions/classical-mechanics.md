@@ -210,7 +210,7 @@ Mathematically, $\frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \{\rho, H
 difficulty: basic
 labels: rotating-frames, fictitious-forces
 
-In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the centrifugal and Coriolis forces, when do they act, and which way do they point?
+In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?
 
 ---
 
