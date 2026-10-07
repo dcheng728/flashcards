@@ -681,9 +681,9 @@ const ALL_QUESTIONS = [
   },
   {
     "name": "$\\nabla^2(1/r) = -4\\pi\\delta^3(\\vec{r})$",
-    "question": "What is the Laplacian of $1/r$ in three dimensions?",
-    "answer": "$\\nabla^2 \\left(\\frac{1}{r}\\right) = -4\\pi\\,\\delta^3(\\vec{r})$.",
-    "explanation": "Away from the origin, $1/r$ is harmonic ($\\nabla^2(1/r) = 0$), but the singularity at $r = 0$ contributes a delta function. This identity is the statement that $-1/(4\\pi r)$ is the Green's function of the Laplacian, i.e., the electrostatic potential of a unit point charge. It follows from applying the divergence theorem to $\\nabla \\cdot (\\hat{r}/r^2)$ over a sphere enclosing the origin.",
+    "question": "What is the distributional Laplacian of $1/r$ in three dimensions?",
+    "answer": "As a distribution, $\\nabla^2 \\left(\\frac{1}{r}\\right) = -4\\pi\\,\\delta^3(\\vec{r})$. For $r > 0$, the Laplacian is zero.",
+    "explanation": "The delta function accounts for the singularity at the origin. The flux of $\\nabla(1/r) = -\\hat{r}/r^2$ through any sphere centered at the origin is $-4\\pi$, fixing the delta function's coefficient and sign. Equivalently, $-1/(4\\pi r)$ is a Green's function satisfying $\\nabla^2 G = \\delta^3(\\vec{r})$.",
     "subject": "math-differential-equations",
     "difficulty": "intermediate",
     "labels": [
