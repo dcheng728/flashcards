@@ -216,12 +216,12 @@ In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the 
 
 For a mass $m$ at position $\vec{r}$ with velocity $\vec{v}_{\text{rot}}$ relative to the rotating frame,
 $\vec{F}_{\text{centrifugal}} = -m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$ and
-$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$.
+$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$. The centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\vec{\Omega} \times \vec{v}_{\text{rot}}$, perpendicular to both vectors.
 
 ---
 
-These fictitious forces arise from the acceleration transformation for constant $\vec{\Omega}$:
-$\vec{a}_{\text{inertial}} = \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r})$.
-Using $m\vec{a}_{\text{inertial}} = \vec{F}_{\text{real}}$ and rearranging gives the two forces above in the rotating-frame equation of motion. They are frame effects, not interactions, and are absent in an inertial frame. The centrifugal force points radially outward from the rotation axis and acts even at rest in the rotating frame. The Coriolis force acts only for motion relative to that frame and points perpendicular to both $\vec{\Omega}$ and $\vec{v}_{\text{rot}}$, in the direction of $-\vec{\Omega} \times \vec{v}_{\text{rot}}$.
+These fictitious forces are needed only when applying Newton's laws in a rotating frame. For any vector $\vec{A}$, its time derivative in inertial and rotating frames is related by $(d\vec{A}/dt)_{\text{inertial}} = (d\vec{A}/dt)_{\text{rot}} + \vec{\Omega} \times \vec{A}$. Apply this first to position: $\vec{v}_{\text{inertial}} = \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r}$. Apply it again to velocity, with constant $\vec{\Omega}$:
+$\vec{a}_{\text{inertial}} = \vec{a}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{inertial}} = \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r})$.
+Newton's second law in the inertial frame is $m\vec{a}_{\text{inertial}} = \vec{F}_{\text{real}}$. Substituting the acceleration relation and solving for $m\vec{a}_{\text{rot}}$ gives $\vec{F}_{\text{real}} - 2m\vec{\Omega} \times \vec{v}_{\text{rot}} - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$: the last two terms are the Coriolis and centrifugal forces. They are frame effects, not interactions. The centrifugal term remains when $\vec{v}_{\text{rot}} = 0$, while the Coriolis term vanishes.
 
 ===
