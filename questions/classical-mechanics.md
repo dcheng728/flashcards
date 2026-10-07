@@ -220,8 +220,15 @@ $\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$. The c
 
 ---
 
-These fictitious forces are needed only when applying Newton's laws in a rotating frame. For any vector $\vec{A}$, its time derivative in inertial and rotating frames is related by $(d\vec{A}/dt)_{\text{inertial}} = (d\vec{A}/dt)_{\text{rot}} + \vec{\Omega} \times \vec{A}$. Apply this first to position: $\vec{v}_{\text{inertial}} = \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r}$. Apply it again to velocity, with constant $\vec{\Omega}$:
-$\vec{a}_{\text{inertial}} = \vec{a}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{inertial}} = \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r})$.
-Newton's second law in the inertial frame is $m\vec{a}_{\text{inertial}} = \vec{F}_{\text{real}}$. Substituting the acceleration relation and solving for $m\vec{a}_{\text{rot}}$ gives $\vec{F}_{\text{real}} - 2m\vec{\Omega} \times \vec{v}_{\text{rot}} - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$: the last two terms are the Coriolis and centrifugal forces. They are frame effects, not interactions. The centrifugal term remains when $\vec{v}_{\text{rot}} = 0$, while the Coriolis term vanishes.
+$$\begin{aligned}
+\left(\frac{d\vec{A}}{dt}\right)_{\text{inertial}} &= \left(\frac{d\vec{A}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{A} \\
+\vec{v}_{\text{inertial}} &= \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r} \\
+\vec{a}_{\text{inertial}} &= \left(\frac{d\vec{v}_{\text{inertial}}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{inertial}} \\
+&= \vec{a}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r}) \\
+&= \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
+m\vec{a}_{\text{inertial}} &= \vec{F}_{\text{real}} \\
+m\vec{a}_{\text{rot}} &= \vec{F}_{\text{real}} - 2m\vec{\Omega} \times \vec{v}_{\text{rot}} - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
+&= \vec{F}_{\text{real}} + \vec{F}_{\text{Coriolis}} + \vec{F}_{\text{centrifugal}}
+\end{aligned}$$
 
 ===
