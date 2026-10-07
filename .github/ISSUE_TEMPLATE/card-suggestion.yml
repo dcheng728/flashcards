@@ -1,0 +1,24 @@
+name: Suggest a flashcard
+description: Suggest a topic or question for a new flashcard
+title: "[Card suggestion] "
+body:
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      description: Optional — leave blank if unsure.
+      placeholder: e.g. quantum mechanics
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should the card ask?
+      description: A topic or rough question is enough.
+    validations:
+      required: true
+
+  - type: textarea
+    id: answer
+    attributes:
+      label: Suggested answer or source
+      description: Optional — leave blank if unsure.

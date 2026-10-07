@@ -568,6 +568,18 @@ a:hover { text-decoration: underline; }
     background: #7a6a5a;
 }
 
+.btn-suggest {
+    background: #e8e2db;
+    color: #6a6a6a;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-suggest:hover {
+    background: #d4cfc8;
+    text-decoration: none;
+}
+
 .btn-secondary {
     background: #8a7a6a;
     color: white;
