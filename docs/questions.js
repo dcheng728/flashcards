@@ -1458,7 +1458,7 @@ const ALL_QUESTIONS = [
     "answer": "For a mass $m$ at position $\\vec{r}$ with velocity $\\vec{v}_{\\text{rot}}$ relative to the rotating frame,\n$\\vec{F}_{\\text{centrifugal}} = -m\\vec{\\Omega} \\times (\\vec{\\Omega} \\times \\vec{r})$ and\n$\\vec{F}_{\\text{Coriolis}} = -2m\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$. \n\n\n\nThe centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\\vec{\\Omega} \\times \\vec{v}_{\\text{rot}}$, perpendicular to both vectors.",
     "explanation": "For any vector $\\vec A$, its inertial-frame change equals its change relative to the rotating frame plus the change from the frame’s rotation:\n\n$$\nd\\vec A_{\\rm inertial}\n=\nd\\vec A_{\\rm rot}\n+\nd\\vec\\theta\\times \\vec A.\n$$\n\nSince $d\\vec\\theta/dt=\\vec\\Omega$,\n\n$$\n\\left(\\frac{d\\vec A}{dt}\\right)_{\\rm inertial}\n=\n\\left(\\frac{d\\vec A}{dt}\\right)_{\\rm rot}\n+\\vec\\Omega\\times\\vec A\n.\n$$\n\nApply this to $\\vec r$:\n\n$$\n\\vec v_{\\rm inertial}\n=\n\\vec v_{\\rm rot}\n+\\vec\\Omega\\times\\vec r.\n$$\n\nDifferentiate once more, for constant $\\vec\\Omega$:\n\n$$\n\\vec a_{\\rm inertial}\n=\n\\vec a_{\\rm rot}\n+\\vec\\Omega\\times\\vec v_{\\rm rot}\n+\\vec\\Omega\\times\n\\left(\\vec v_{\\rm rot}+\\vec\\Omega\\times\\vec r\\right),\n$$\n\nso\n\n$$\n\\vec a_{\\rm inertial}\n=\n\\vec a_{\\rm rot}\n+2\\vec\\Omega\\times\\vec v_{\\rm rot}\n+\\vec\\Omega\\times(\\vec\\Omega\\times\\vec r)\n.\n$$",
     "subject": "classical-mechanics",
-    "difficulty": "basic",
+    "difficulty": "intermediate",
     "labels": [
       "rotating-frames",
       "fictitious-forces"
