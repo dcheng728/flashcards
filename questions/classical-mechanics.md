@@ -207,7 +207,7 @@ Mathematically, $\frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \{\rho, H
 ===
 
 ### centrifugal and Coriolis forces
-difficulty: basic
+difficulty: intermediate
 labels: rotating-frames, fictitious-forces
 
 In a frame whose origin is inertial and whose axes rotate with constant angular-velocity vector $\vec{\Omega}$ relative to an inertial frame, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?
