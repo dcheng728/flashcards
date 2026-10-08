@@ -50,6 +50,22 @@ Comparing fluxes in different bands gives colors that constrain temperature, dus
 
 ===
 
+### Milky Way reddening
+difficulty: basic
+labels: dust, extinction, reddening, photometry
+
+What effect does dust in the Milky Way have on light from an astrophysical object before it reaches Earth?
+
+---
+
+Dust causes extinction: it absorbs and scatters some of the light, making the object appear dimmer. Shorter-wavelength (bluer) light is generally attenuated more than longer-wavelength (redder) light, so the observed light is reddened.
+
+---
+
+The wavelength dependence is set by the interstellar grain-size distribution and composition, rather than by pure Rayleigh scattering alone. Extinction is often described by $A_\lambda$ in magnitudes; the color excess $E(B-V)=A_B-A_V$ measures the amount of reddening and can be used to correct photometry.
+
+===
+
 ### astronomical unit (AU)
 difficulty: basic
 labels: units, distance-scale
