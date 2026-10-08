@@ -210,25 +210,70 @@ Mathematically, $\frac{d\rho}{dt} = \frac{\partial \rho}{\partial t} + \{\rho, H
 difficulty: basic
 labels: rotating-frames, fictitious-forces
 
-In a frame rotating with constant angular velocity $\vec{\Omega}$, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?
+In a frame whose origin is inertial and whose axes rotate with constant angular-velocity vector $\vec{\Omega}$ relative to an inertial frame, what are the centrifugal and Coriolis forces, when are they applicable, and which directions do they point?
 
 ---
 
 For a mass $m$ at position $\vec{r}$ with velocity $\vec{v}_{\text{rot}}$ relative to the rotating frame,
 $\vec{F}_{\text{centrifugal}} = -m\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$ and
-$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$. The centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\vec{\Omega} \times \vec{v}_{\text{rot}}$, perpendicular to both vectors.
+$\vec{F}_{\text{Coriolis}} = -2m\vec{\Omega} \times \vec{v}_{\text{rot}}$. 
+
+
+
+The centrifugal force points radially outward from the rotation axis; the Coriolis force points along $-\vec{\Omega} \times \vec{v}_{\text{rot}}$, perpendicular to both vectors.
 
 ---
 
-$$\begin{aligned}
-\left(\frac{d\vec{A}}{dt}\right)_{\text{inertial}} &= \left(\frac{d\vec{A}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{A} \\
-\vec{v}_{\text{inertial}} &= \vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r} \\
-\vec{a}_{\text{inertial}} &= \left(\frac{d\vec{v}_{\text{inertial}}}{dt}\right)_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{inertial}} \\
-&= \vec{a}_{\text{rot}} + \vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{v}_{\text{rot}} + \vec{\Omega} \times \vec{r}) \\
-&= \vec{a}_{\text{rot}} + 2\vec{\Omega} \times \vec{v}_{\text{rot}} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
-m\vec{a}_{\text{inertial}} &= \vec{F}_{\text{real}} \\
-m\vec{a}_{\text{rot}} &= \vec{F}_{\text{real}} - 2m\vec{\Omega} \times \vec{v}_{\text{rot}} - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r}) \\
-&= \vec{F}_{\text{real}} + \vec{F}_{\text{Coriolis}} + \vec{F}_{\text{centrifugal}}
-\end{aligned}$$
+For any vector $\vec A$, its inertial-frame change equals its change relative to the rotating frame plus the change from the frame’s rotation:
+
+$$
+d\vec A_{\rm inertial}
+=
+d\vec A_{\rm rot}
++
+d\vec\theta\times \vec A.
+$$
+
+Since $d\vec\theta/dt=\vec\Omega$,
+
+$$
+\left(\frac{d\vec A}{dt}\right)_{\rm inertial}
+=
+\left(\frac{d\vec A}{dt}\right)_{\rm rot}
++\vec\Omega\times\vec A
+.
+$$
+
+Apply this to $\vec r$:
+
+$$
+\vec v_{\rm inertial}
+=
+\vec v_{\rm rot}
++\vec\Omega\times\vec r.
+$$
+
+Differentiate once more, for constant $\vec\Omega$:
+
+$$
+\vec a_{\rm inertial}
+=
+\vec a_{\rm rot}
++\vec\Omega\times\vec v_{\rm rot}
++\vec\Omega\times
+\left(\vec v_{\rm rot}+\vec\Omega\times\vec r\right),
+$$
+
+so
+
+$$
+\vec a_{\rm inertial}
+=
+\vec a_{\rm rot}
++2\vec\Omega\times\vec v_{\rm rot}
++\vec\Omega\times(\vec\Omega\times\vec r)
+.
+$$
+
 
 ===
