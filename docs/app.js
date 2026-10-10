@@ -738,7 +738,7 @@ document.addEventListener('keydown', (e) => {
     // Don't capture if typing in an input or textarea
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
     // Let the Share and Report links work from the keyboard
-    if (e.target.closest('.card-actions')) return;
+    if (e.target.closest?.('.card-actions')) return;
 
     if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault();
@@ -1037,11 +1037,16 @@ shareLink.addEventListener('click', async (e) => {
 });
 
 // Keep the address bar on the current card (#<slug>) so every card has its own URL.
-// replaceState adds no history entries; browsers may throttle it, hence the try.
+// replaceState adds no history entries. It is written once a burst of navigation settles:
+// browsers throttle rapid calls (Chrome silently drops them), which would leave a stale URL.
+let urlTimer;
 function syncUrl(slug) {
-    try {
-        history.replaceState(null, '', slug ? `#${slug}` : location.pathname + location.search);
-    } catch { /* throttled: the URL just lags behind */ }
+    clearTimeout(urlTimer);
+    urlTimer = setTimeout(() => {
+        try {
+            history.replaceState(null, '', slug ? `#${slug}` : location.pathname + location.search);
+        } catch { /* still throttled: the next card change will write it */ }
+    }, 150);
 }
 
 // Open the card named by the URL hash (#<slug>) first in the queue.
@@ -1070,7 +1075,9 @@ function initApp() {
     initSubjectDropdown();
     initSearch();
     buildQueue();
-    openSharedCard();
+    // A refresh starts fresh (the hash is just the last card shown); a link, bookmark or
+    // back/forward navigation opens the card it names.
+    if (performance.getEntriesByType('navigation')[0]?.type !== 'reload') openSharedCard();
     displayQuestion();
     updateStats();
     updateSyncUI();
