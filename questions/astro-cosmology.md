@@ -180,3 +180,23 @@ Roughly Mpc to Gpc.
 For reference: galaxies are $\sim10$–$100$ kpc, galaxy clusters and voids are $\sim1$–$100$ Mpc, and the observable Universe has a radius of $\sim14$ Gpc.
 
 ===
+
+### CMB B-modes and inflation
+difficulty: advanced
+labels: cmb, inflation, gravitational-waves, polarization
+
+How can CMB B-mode polarization constrain inflation, and what complicates the measurement?
+
+---
+
+Primordial gravitational waves (tensor modes) produce a curl-type (B-mode) polarization pattern at recombination; scalar density perturbations cannot. 
+The tensor-to-scalar ratio $r=\mathcal P_t/\mathcal P_s$ fixes the inflationary energy scale,
+$$V_*^{1/4}\simeq 1.0\times10^{16}\,\text{GeV}\left(\frac{r}{0.01}\right)^{1/4}.$$
+The signal peaks at $\ell\sim 80$ (recombination bump) and $\ell\lesssim 10$ (reionization bump). Complications: lensing converts E to B ($\ell\sim1000$ dominates, removed by delensing), and Galactic dust and synchrotron emit B-modes, which multi-frequency maps must separate.
+
+---
+
+Thomson scattering of a local quadrupole gives E-modes for scalar perturbations; a gravitational wave's transverse-traceless strain gives a quadrupole that also contains a B-mode part.
+Since $\mathcal P_t\propto H_I^2$, a detection of $r$ measures $H_I$ directly (current bound $r<0.036$).
+
+===
