@@ -256,6 +256,9 @@ const shuffleBtn = document.getElementById('shuffle-btn');
 const counterEl = document.getElementById('counter');
 const difficultyLabel = document.getElementById('difficulty-label');
 const reportLink = document.getElementById('report-link');
+const shareLink = document.getElementById('share-link');
+const shareLabel = document.getElementById('share-label');
+const cardActions = document.getElementById('card-actions');
 const difficultyIndicator = document.getElementById('difficulty-indicator');
 const familiarityBadge = document.getElementById('familiarity-badge');
 const sessionScore = document.getElementById('session-score');
@@ -455,7 +458,7 @@ function displayQuestion() {
         gradeContainer.classList.add('hidden');
         counterEl.textContent = '';
         difficultyLabel.textContent = '';
-        reportLink.classList.add('hidden');
+        cardActions.classList.add('hidden');
         difficultyIndicator.innerHTML = '';
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
@@ -477,7 +480,7 @@ function displayQuestion() {
     reportLink.href = `${CONFIG.repoUrl}/issues/new?template=card-error.yml` +
         `&title=${encodeURIComponent('[Card] ' + q.name)}` +
         `&card=${encodeURIComponent(q.name)}&subject=${encodeURIComponent(q.subject)}`;
-    reportLink.classList.remove('hidden');
+    cardActions.classList.remove('hidden');
 
     // Difficulty indicator (bars)
     const diffLevel = DIFF_LEVEL[q.difficulty] || 0;
@@ -732,6 +735,8 @@ nextBtn.addEventListener('click', goNext);
 document.addEventListener('keydown', (e) => {
     // Don't capture if typing in an input or textarea
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    // Let the Share and Report links work from the keyboard
+    if (e.target.closest('.card-actions')) return;
 
     if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault();
@@ -1006,6 +1011,29 @@ function renderAllMath() {
     document.querySelectorAll('.search-item').forEach(el => renderMath(el));
 }
 
+// Share a card as #card=<name>; names are persistent identifiers, so links stay valid.
+// Use the native share sheet where available, otherwise copy the link.
+shareLink.addEventListener('click', async (e) => {
+    if (e.detail) shareLink.blur();  // mouse click: give focus back so Space still reveals the answer
+    const url = `${location.href.split('#')[0]}#${new URLSearchParams({ card: queue[currentIndex].name })}`;
+    if (navigator.share) {
+        try {
+            await navigator.share({ title: 'Physics Flashcards', url });
+            return;
+        } catch (e) {
+            if (e.name === 'AbortError') return;  // user dismissed the sheet
+        }
+    }
+    try {
+        await navigator.clipboard.writeText(url);
+    } catch {
+        window.prompt('Copy this link:', url);
+        return;
+    }
+    shareLabel.textContent = 'Link copied';
+    setTimeout(() => { shareLabel.textContent = ''; }, 1500);
+});
+
 function initApp() {
     ALL_SUBJECTS = [...new Set(ALL_QUESTIONS.map(q => q.subject))].sort();
     ALL_LABELS = [...new Set(ALL_QUESTIONS.flatMap(q => q.labels))].sort();
@@ -1015,6 +1043,13 @@ function initApp() {
     initSubjectDropdown();
     initSearch();
     buildQueue();
+    // Open a shared card first, whatever the filters, then drop the hash
+    const shared = new URLSearchParams(location.hash.slice(1)).get('card');
+    if (shared) {
+        const card = ALL_QUESTIONS.find(q => q.name === shared);
+        if (card) queue = [card, ...queue.filter(q => q !== card)];
+        history.replaceState(null, '', location.pathname + location.search);
+    }
     displayQuestion();
     updateStats();
     updateSyncUI();
