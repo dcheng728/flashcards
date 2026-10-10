@@ -463,6 +463,7 @@ function displayQuestion() {
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
         questionLabelsEl.innerHTML = '';
+        syncUrl('');
         renderQueueList();
         return;
     }
@@ -475,6 +476,7 @@ function displayQuestion() {
     const q = queue[currentIndex];
     counterEl.textContent = `Question ${currentIndex + 1} of ${queue.length}`;
     difficultyLabel.textContent = 'Difficulty:';
+    syncUrl(q.slug);
 
     // Pre-filled GitHub issue form for reporting a problem with this card
     reportLink.href = `${CONFIG.repoUrl}/issues/new?template=card-error.yml` +
@@ -1034,11 +1036,18 @@ shareLink.addEventListener('click', async (e) => {
     setTimeout(() => { shareLabel.textContent = 'Share'; }, 1500);
 });
 
-// Open the card named by the URL hash (#<slug>) first in the queue, then drop the hash.
+// Keep the address bar on the current card (#<slug>) so every card has its own URL.
+// replaceState adds no history entries; browsers may throttle it, hence the try.
+function syncUrl(slug) {
+    try {
+        history.replaceState(null, '', slug ? `#${slug}` : location.pathname + location.search);
+    } catch { /* throttled: the URL just lags behind */ }
+}
+
+// Open the card named by the URL hash (#<slug>) first in the queue.
 function openSharedCard() {
     const slug = location.hash.slice(1);
     if (!slug) return false;
-    history.replaceState(null, '', location.pathname + location.search);
     const card = ALL_QUESTIONS.find(q => q.slug === slug);
     if (!card) return false;
     queue = [card, ...queue.filter(q => q !== card)];
@@ -1047,7 +1056,10 @@ function openSharedCard() {
 }
 
 // A link pasted into a tab that is already open only changes the hash
-window.addEventListener('hashchange', () => { if (openSharedCard()) displayQuestion(); });
+window.addEventListener('hashchange', () => {
+    if (openSharedCard()) displayQuestion();
+    else if (queue.length) syncUrl(queue[currentIndex].slug);  // unknown or empty hash: snap back
+});
 
 function initApp() {
     ALL_SUBJECTS = [...new Set(ALL_QUESTIONS.map(q => q.subject))].sort();
