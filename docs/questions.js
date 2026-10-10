@@ -2882,7 +2882,7 @@ const ALL_QUESTIONS = [
   {
     "name": "wave speed relation for light",
     "question": "How are frequency and wavelength related for a wave, and what follows for two EM waves of different frequency in air?",
-    "answer": "$v = f\\lambda$, so $\\lambda = c/f$ for EM waves in air ($v\\approx c$). Higher frequency means shorter wavelength.",
+    "answer": "$v = f\\lambda$. In air, all EM waves travel at approximately the same speed, $v\\approx c$, so $\\lambda = c/f$. Thus, between two EM waves in air, the higher-frequency wave has the shorter wavelength.",
     "explanation": "A 2560 MHz microwave has a shorter wavelength ($\\approx11.7$ cm) than a 900 MHz one ($\\approx33.3$ cm). Interference features, like microwave-oven hot/cold spots spaced roughly $\\lambda/2$ apart, are correspondingly smaller at the higher frequency.",
     "subject": "optics",
     "difficulty": "basic",
