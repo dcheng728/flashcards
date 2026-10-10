@@ -24,6 +24,12 @@ SUBJECTS = [
 ]
 
 
+def slugify(name):
+    """URL-safe form of a card name: \\sin -> sin, other runs of non-alphanumerics -> '-'."""
+    s = re.sub(r'\\([a-zA-Z]+)', r'\1', name)
+    return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
+
+
 def parse_questions(text, subject):
     text = re.sub(r'^<!--.*?-->\s*\n+', '', text, flags=re.DOTALL)
     questions = []
@@ -81,6 +87,16 @@ def build_questions():
         questions = parse_questions(text, subject)
         print(f'  {subject}: {len(questions)} questions')
         all_questions.extend(questions)
+
+    # Share links use slugify(name), so the name -> slug mapping must be one-to-one.
+    by_slug = {}
+    for q in all_questions:
+        q['slug'] = slugify(q['name'])
+        if not q['slug']:
+            raise SystemExit(f"error: card name '{q['name']}' has no letters or digits to make a link from")
+        if q['slug'] in by_slug:
+            raise SystemExit(f"error: '{q['name']}' and '{by_slug[q['slug']]}' give the same link '{q['slug']}'")
+        by_slug[q['slug']] = q['name']
 
     js = 'const ALL_QUESTIONS = ' + json.dumps(all_questions, ensure_ascii=False, indent=2) + ';\n'
     out = os.path.join(DOCS_DIR, 'questions.js')
