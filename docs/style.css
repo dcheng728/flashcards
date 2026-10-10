@@ -696,6 +696,26 @@ kbd {
     line-height: 1.5;
 }
 
+/* Rendered Markdown inside cards (the global reset removes all default spacing) */
+:is(.question, #answer-text, .explanation) p { margin: 0 0 0.6em; }
+:is(.question, #answer-text, .explanation) > :last-child { margin-bottom: 0; }
+:is(.question, #answer-text, .explanation) :is(ul, ol) { margin: 0 0 0.6em; padding-left: 1.4em; }
+:is(.question, #answer-text, .explanation) blockquote {
+    margin: 0 0 0.6em;
+    padding-left: 0.8em;
+    border-left: 3px solid #e0dbd5;
+}
+:is(.question, #answer-text, .explanation) code {
+    font-family: monospace;
+    font-size: 0.9em;
+    background: #f5f0eb;
+    padding: 0 0.25em;
+    border-radius: 3px;
+}
+:is(.question, #answer-text, .explanation) table { border-collapse: collapse; margin: 0 0 0.6em; }
+:is(.question, #answer-text, .explanation) :is(th, td) { border: 1px solid #e0dbd5; padding: 0.2em 0.6em; }
+:is(.question, #answer-text, .explanation) :is(h1, h2, h3, h4, h5, h6) { font-size: 1em; margin: 0 0 0.4em; }
+
 .hidden {
     display: none !important;
 }

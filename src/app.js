@@ -536,28 +536,24 @@ function displayQuestion() {
 // Supports `- ` / `1. ` list lines and `**bold**`; everything else passes
 // through as raw HTML (there is no full Markdown parser here). `<pre>` blocks
 // are left untouched so ASCII diagrams keep their literal whitespace.
+// Card text is standard Markdown (via marked) with $...$ and $$...$$ math. Math is lifted out
+// before parsing so Markdown cannot touch its _, *, \\ or newlines, then put back HTML-escaped
+// (so a bare < in math, as in \sum_{i<j}, is not read as a tag) for KaTeX to render.
+const MATH_RE = /\\\$|\$\$[\s\S]+?\$\$|\$(?:\\.|[^$\\\n])+\$/g;  // \$ | $$...$$ | $...$
+
 function formatCardText(text) {
     if (!text) return '';
-    const lines = text.split('\n');
-    const out = [];
-    let listTag = null;
-    const closeList = () => {
-        if (listTag) { out.push(`</${listTag}>`); listTag = null; }
-    };
-    for (const line of lines) {
-        const bullet = line.match(/^- (.*)$/);
-        const numbered = line.match(/^\d+\. (.*)$/);
-        const tag = bullet ? 'ul' : numbered ? 'ol' : null;
-        if (tag) {
-            if (listTag !== tag) { closeList(); out.push(`<${tag}>`); listTag = tag; }
-            out.push(`<li>${(bullet || numbered)[1]}</li>`);
-        } else {
-            closeList();
-            out.push(line + '<br>');
-        }
-    }
-    closeList();
-    return out.join('').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    if (typeof marked === 'undefined') return text;  // CDN unavailable: show the raw text
+    const math = [];
+    const stashed = text.replace(MATH_RE, (m) => {
+        if (m === '\\$') return '\uE002';  // an escaped dollar sign is literal, never math
+        math.push(m);
+        return `\uE000${math.length - 1}\uE001`;
+    });
+    const escape = (m) => m.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return marked.parse(stashed, { gfm: true, breaks: false })
+        .replace(/\uE000(\d+)\uE001/g, (_, i) => escape(math[i]))
+        .replace(/\uE002/g, () => '<span>$</span>');  // own text node, so KaTeX cannot pair it
 }
 
 function renderMath(container) {
