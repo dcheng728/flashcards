@@ -999,6 +999,18 @@ kbd {
     min-width: 80px;
 }
 
+.file-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.file-bar .sync-status {
+    flex-basis: 100%;  /* the message gets its own line below the buttons */
+}
+
 .btn-sync {
     background: #6a8a9a;
     color: white;

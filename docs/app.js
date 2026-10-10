@@ -881,6 +881,24 @@ async function gistPush(auto = false) {
     }
 }
 
+// Merge ratings into the saved history, dropping duplicates (same card at the same time),
+// and return the merged list. Used by the Gist pull and by file upload.
+function mergeHistory(incoming) {
+    const seen = new Set();
+    const merged = [];
+    for (const h of [...getHistory(), ...incoming]) {
+        if (!h?.name || !h.timestamp) continue;
+        const key = h.name + '|' + h.timestamp;
+        if (!seen.has(key)) {
+            seen.add(key);
+            merged.push(h);
+        }
+    }
+    merged.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+    localStorage.setItem('quiz-history', JSON.stringify(merged));
+    return merged;
+}
+
 async function gistPull() {
     const token = getGistToken();
     const gistId = getGistId();
@@ -905,20 +923,7 @@ async function gistPull() {
         const remoteHistory = JSON.parse(file.content);
         const localHistory = getHistory();
 
-        // Merge: combine both, deduplicate by id+timestamp
-        const seen = new Set();
-        const merged = [];
-        for (const h of [...localHistory, ...remoteHistory]) {
-            if (!h.name) continue; // skip old format entries
-            const key = h.name + '|' + h.timestamp;
-            if (!seen.has(key)) {
-                seen.add(key);
-                merged.push(h);
-            }
-        }
-        merged.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
-
-        localStorage.setItem('quiz-history', JSON.stringify(merged));
+        const merged = mergeHistory(remoteHistory);
 
         const fromRemote = merged.length - localHistory.length;
         const localOnly = merged.length - remoteHistory.length;
@@ -946,6 +951,54 @@ gistLoginBtn.addEventListener('click', showTokenModal);
 gistPushBtn.addEventListener('click', () => gistPush(false));
 gistPullBtn.addEventListener('click', gistPull);
 gistLogoutBtn.addEventListener('click', gistLogout);
+
+// ── Ratings file: download / upload (same format as the Gist file: a JSON list of ratings) ──
+
+const ratingsFile = document.getElementById('ratings-file');
+const fileStatus = document.getElementById('file-status');
+const GRADES = ['right', 'unsure', 'wrong'];
+
+document.getElementById('ratings-download-btn').addEventListener('click', () => {
+    const history = getHistory();
+    if (!history.length) { fileStatus.textContent = 'No ratings yet.'; return; }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(history, null, 2)], { type: 'application/json' }));
+    // Local date and time, so each download has its own name: flashcards-ratings-2026-10-10-14-32-05.json
+    const now = new Date(Date.now() - new Date().getTimezoneOffset() * 60000);
+    a.download = `flashcards-ratings-${now.toISOString().slice(0, 19).replace(/[T:]/g, '-')}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    fileStatus.textContent = `Downloaded ${history.length} ratings`;
+});
+
+document.getElementById('ratings-upload-btn').addEventListener('click', () => ratingsFile.click());
+
+ratingsFile.addEventListener('change', async () => {
+    const file = ratingsFile.files[0];
+    ratingsFile.value = '';  // so choosing the same file again still fires
+    if (!file) return;
+    try {
+        const data = JSON.parse(await file.text());
+        if (!Array.isArray(data)) throw new Error('it is not a list of ratings');
+        // An uploaded file is untrusted: keep only well-formed ratings, and only the known fields
+        const valid = data
+            .filter(h => h && typeof h.name === 'string' && GRADES.includes(h.grade) &&
+                typeof h.timestamp === 'string' && !isNaN(Date.parse(h.timestamp)))
+            .map(({ name, grade, timestamp }) => ({ name, grade, timestamp }));
+        const before = getHistory().length;
+        const added = mergeHistory(valid).length - before;
+        const skipped = data.length - valid.length;
+        fileStatus.textContent = `Added ${added} new ratings` +
+            (valid.length - added ? `, ${valid.length - added} already here` : '') +
+            (skipped ? `, ${skipped} skipped` : '');
+        buildQueue();  // familiarity changed, so reorder the queue
+        currentIndex = 0;
+        displayQuestion();
+        updateStats();
+    } catch (err) {
+        fileStatus.textContent = `Could not read that file: ${err.message}`;
+    }
+});
 
 // ── Familiarity Info Panel ──
 
