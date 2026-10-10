@@ -1,0 +1,4 @@
+#!/bin/sh
+# Safety net for commits that skip pre-commit (rebase, cherry-pick, --no-verify): never push a stale docs/.
+"$(dirname "$0")/_build" || { echo "pre-push: build.py failed, push aborted" >&2; exit 1; }
+git diff --quiet -- docs || { echo "pre-push: docs/ was out of date and is now rebuilt; commit it, then push" >&2; exit 1; }

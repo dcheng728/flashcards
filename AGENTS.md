@@ -13,6 +13,7 @@ The app opens directly on a question. Users reveal the answer, self-grade with G
 - Edit the About page text in `pages/about.md` (rendered into `src/about.html` by `build.py`; plain Markdown, no KaTeX).
 - Treat `docs/` as generated output. Do not edit it directly.
 - Run `python build.py` after changing `src/`, `pages/`, or `questions/` and commit the resulting `docs/` changes.
+- Optional git hooks live in `.githooks/`; enable them once per clone with `git config core.hooksPath .githooks`. `pre-commit` rebuilds and stages `docs/` whenever a commit touches `questions/`, `src/`, `pages/` or `build.py`, and aborts the commit if the build fails. `pre-push` refuses to push a stale `docs/`, which also covers merges, rebases, cherry-picks and `git commit --no-verify`.
 
 ## Repository structure
 
