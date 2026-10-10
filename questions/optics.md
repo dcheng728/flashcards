@@ -72,11 +72,11 @@ This is the same virtual-image mechanism as a mirror, just via refraction instea
 difficulty: basic
 labels: waves, electromagnetic-waves
 
-How are frequency and wavelength related for a wave, and what follows for two EM waves of different frequency in air?
+How are frequency and wavelength related for a wave?
 
 ---
 
-$v = f\lambda$, so $\lambda = c/f$ for EM waves in air ($v\approx c$). Higher frequency means shorter wavelength.
+$v = f\lambda$. In air, all EM waves travel at approximately the same speed, $v\approx c$, so $\lambda = c/f$.
 
 ---
 
