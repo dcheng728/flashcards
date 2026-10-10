@@ -79,13 +79,13 @@ Use single backslashes in LaTeX commands, such as `\frac`, `\vec`, and `\hat`. D
 
 ### Formatting
 
-`app.js` renders question/answer/explanation text by injecting it directly as HTML (no sanitization, and no full Markdown parser — `formatCardText` in `src/app.js` only handles the subset below). Supported:
+`app.js` renders question/answer/explanation text with `formatCardText`: standard Markdown (CommonMark plus GitHub tables and strikethrough, parsed by `marked` from a CDN), with `$...$` and `$$...$$` math rendered by KaTeX. What renders in a standard Markdown editor renders here.
 
-- `- item` lines → bullet list, `1. item` lines → numbered list (must be the whole line).
-- `**bold**`.
-- A literal `<pre>...</pre>` block for ASCII diagrams — `<pre>` is native HTML (monospace, preserves whitespace), so art typed inside it renders as-is.
-
-Anything else (headers, links, code fences, italics, nested lists) is not supported — either add it to `formatCardText` or fall back to raw HTML tags (`<em>`, `<a>`, etc.) directly in the `.md` source. Escape any `<` or `>` used as literal characters (e.g. arrows in ASCII art) as `&lt;`/`&gt;`, since unescaped angle brackets are parsed as HTML tags.
+- A single newline is a soft break (it joins the lines with a space). A blank line starts a new paragraph. Two trailing spaces (or a trailing backslash) force a line break.
+- Math is lifted out before Markdown runs, so `_`, `*`, `\` and newlines inside it are safe, a `$$ ... $$` block may span lines, and a bare `<` or `>` inside math (`\sum_{i<j}`) is fine. Write a literal dollar sign as `\$`.
+- Lists, `**bold**`, `*italic*`, `` `code` ``, links, blockquotes and tables work as usual. A literal `<pre>...</pre>` block (for ASCII diagrams) passes through untouched.
+- Raw HTML in the `.md` source is passed through unsanitized, so escape a literal `<` or `>` outside math as `&lt;`/`&gt;`.
+- If the CDN script fails to load, the raw text is shown instead.
 
 ## Writing questions
 
