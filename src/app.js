@@ -1011,11 +1011,11 @@ function renderAllMath() {
     document.querySelectorAll('.search-item').forEach(el => renderMath(el));
 }
 
-// Share a card as #card=<name>; names are persistent identifiers, so links stay valid.
+// Share a card as #<slug>, the URL-safe form of its name (made by build.py).
 // Use the native share sheet where available, otherwise copy the link.
 shareLink.addEventListener('click', async (e) => {
     if (e.detail) shareLink.blur();  // mouse click: give focus back so Space still reveals the answer
-    const url = `${location.href.split('#')[0]}#${new URLSearchParams({ card: queue[currentIndex].name })}`;
+    const url = `${location.href.split('#')[0]}#${queue[currentIndex].slug}`;
     if (navigator.share) {
         try {
             await navigator.share({ title: 'Physics Flashcards', url });
@@ -1031,8 +1031,23 @@ shareLink.addEventListener('click', async (e) => {
         return;
     }
     shareLabel.textContent = 'Link copied';
-    setTimeout(() => { shareLabel.textContent = ''; }, 1500);
+    setTimeout(() => { shareLabel.textContent = 'Share'; }, 1500);
 });
+
+// Open the card named by the URL hash (#<slug>) first in the queue, then drop the hash.
+function openSharedCard() {
+    const slug = location.hash.slice(1);
+    if (!slug) return false;
+    history.replaceState(null, '', location.pathname + location.search);
+    const card = ALL_QUESTIONS.find(q => q.slug === slug);
+    if (!card) return false;
+    queue = [card, ...queue.filter(q => q !== card)];
+    currentIndex = 0;
+    return true;
+}
+
+// A link pasted into a tab that is already open only changes the hash
+window.addEventListener('hashchange', () => { if (openSharedCard()) displayQuestion(); });
 
 function initApp() {
     ALL_SUBJECTS = [...new Set(ALL_QUESTIONS.map(q => q.subject))].sort();
@@ -1043,13 +1058,7 @@ function initApp() {
     initSubjectDropdown();
     initSearch();
     buildQueue();
-    // Open a shared card first, whatever the filters, then drop the hash
-    const shared = new URLSearchParams(location.hash.slice(1)).get('card');
-    if (shared) {
-        const card = ALL_QUESTIONS.find(q => q.name === shared);
-        if (card) queue = [card, ...queue.filter(q => q !== card)];
-        history.replaceState(null, '', location.pathname + location.search);
-    }
+    openSharedCard();
     displayQuestion();
     updateStats();
     updateSyncUI();

@@ -516,12 +516,13 @@ a:hover { text-decoration: underline; }
 
 .report-link,
 .share-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
     color: #bbb;
 }
 
 .share-link {
-    display: inline-flex;
-    align-items: center;
     background: none;
     border: none;
     padding: 0;
@@ -533,9 +534,6 @@ a:hover { text-decoration: underline; }
     color: #6a6a6a;
 }
 
-.share-link span:not(:empty) {
-    margin-left: 0.3rem;
-}
 
 /* Question labels (on card) */
 .question-labels {
@@ -660,7 +658,7 @@ kbd {
     position: relative;
     background: white;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 2rem 2rem 2.6rem;  /* extra room at the bottom for the card actions */
     margin-bottom: 1.25rem;
     min-height: 180px;
     box-shadow: 0 1px 8px rgba(0,0,0,0.06);
@@ -1067,7 +1065,7 @@ kbd {
 
 /* Responsive */
 @media (max-width: 500px) {
-    .card { padding: 1.25rem; }
+    .card { padding: 1.25rem 1.25rem 2.4rem; }
     .top-controls { flex-direction: column; }
     .search-container { min-width: 100%; }
     .grade-buttons { flex-direction: column; }

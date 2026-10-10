@@ -41,7 +41,7 @@ environment.yml     Python environment for the build
 - Question names are persistent identifiers used by history, Gist synchronization, and search. Keep every name unique and avoid renaming existing questions without considering history migration.
 - KaTeX is loaded from a CDN and renders `$...$` and `$$...$$` expressions.
 - Each card has a "Report an issue" link that opens a pre-filled GitHub issue form (`.github/ISSUE_TEMPLATE/card-error.yml`, label `card-feedback`). Its field ids (`card`, `subject`) are the URL parameters set in `displayQuestion`; keep them in sync, and keep `CONFIG.repoUrl` pointing at the repo. The GitHub icon in the header of `index.html` and `about.html` points there too.
-- Each card has a share-icon button that shares (native share sheet where supported, otherwise copies) `<page url>#card=<name>`. On load, `initApp` puts that card first in the queue (ignoring filters) and then clears the hash. Because names are in shared links, renaming a card breaks them; a missing name just opens the normal queue.
+- Each card has a Share button that shares (native share sheet where supported, otherwise copies) `<page url>#<slug>`. The slug is `slugify(name)` from `build.py` (for example `Gaussian integral` becomes `gaussian-integral`), emitted as `slug` in `docs/questions.js`; the build fails if two names give the same slug. Opening such a link, on load or by pasting it into an open tab, puts that card first in the queue and clears the hash; an unknown slug just opens the normal queue. Renaming a card changes its link.
 - API keys and Gist credentials are stored locally in the browser. Never commit credentials to the repository.
 
 ## Question format

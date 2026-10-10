@@ -8,7 +8,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "derivative-of-sin-x"
   },
   {
     "name": "derivative of $e^{ax}$",
@@ -19,7 +20,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "derivative-of-e-ax"
   },
   {
     "name": "derivative of $\\ln(x)$",
@@ -30,7 +32,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "derivative-of-ln-x"
   },
   {
     "name": "Gaussian integral",
@@ -41,7 +44,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "gaussian-integral"
   },
   {
     "name": "$\\int \\frac{1}{x}\\, dx$",
@@ -52,7 +56,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "int-frac-1-x-dx"
   },
   {
     "name": "Gamma function integral",
@@ -63,7 +68,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "gamma-function-integral"
   },
   {
     "name": "divergence theorem",
@@ -74,7 +80,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "vector-calculus"
-    ]
+    ],
+    "slug": "divergence-theorem"
   },
   {
     "name": "Stokes' theorem",
@@ -85,7 +92,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "vector-calculus"
-    ]
+    ],
+    "slug": "stokes-theorem"
   },
   {
     "name": "$\\nabla \\cdot (\\nabla \\times \\vec{F})$",
@@ -96,7 +104,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "vector-calculus"
-    ]
+    ],
+    "slug": "nabla-cdot-nabla-times-vec-f"
   },
   {
     "name": "$\\nabla \\times (\\nabla f)$",
@@ -107,7 +116,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "vector-calculus"
-    ]
+    ],
+    "slug": "nabla-times-nabla-f"
   },
   {
     "name": "$e^x$ expansion",
@@ -118,7 +128,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "e-x-expansion"
   },
   {
     "name": "$\\frac{1}{1-x}$ expansion",
@@ -129,7 +140,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "frac-1-1-x-expansion"
   },
   {
     "name": "radial Laplacian in spherical coordinates",
@@ -140,7 +152,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "multivariable"
-    ]
+    ],
+    "slug": "radial-laplacian-in-spherical-coordinates"
   },
   {
     "name": "gradient in spherical coordinates",
@@ -151,7 +164,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "multivariable"
-    ]
+    ],
+    "slug": "gradient-in-spherical-coordinates"
   },
   {
     "name": "Leibniz integral rule",
@@ -162,7 +176,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "leibniz-integral-rule"
   },
   {
     "name": "finite geometric sum",
@@ -173,7 +188,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "finite-geometric-sum"
   },
   {
     "name": "infinite geometric series",
@@ -184,7 +200,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "infinite-geometric-series"
   },
   {
     "name": "values of $\\pi$ and $e$",
@@ -195,7 +212,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "constants"
-    ]
+    ],
+    "slug": "values-of-pi-and-e"
   },
   {
     "name": "change-of-base formula",
@@ -206,7 +224,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "logarithms"
-    ]
+    ],
+    "slug": "change-of-base-formula"
   },
   {
     "name": "quadratic formula",
@@ -217,7 +236,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "algebra"
-    ]
+    ],
+    "slug": "quadratic-formula"
   },
   {
     "name": "$e$ as series",
@@ -228,7 +248,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "constants"
-    ]
+    ],
+    "slug": "e-as-series"
   },
   {
     "name": "product rule",
@@ -239,7 +260,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "product-rule"
   },
   {
     "name": "quotient rule",
@@ -250,7 +272,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "quotient-rule"
   },
   {
     "name": "$\\frac{d}{dx}(\\arctan u)$",
@@ -261,7 +284,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "frac-d-dx-arctan-u"
   },
   {
     "name": "$\\frac{d}{dx}(\\arcsin u)$",
@@ -272,7 +296,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "derivatives"
-    ]
+    ],
+    "slug": "frac-d-dx-arcsin-u"
   },
   {
     "name": "integration by parts",
@@ -283,7 +308,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "integration-by-parts"
   },
   {
     "name": "$\\int \\frac{dx}{1+x^2}$",
@@ -294,7 +320,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "int-frac-dx-1-x-2"
   },
   {
     "name": "$\\int \\sec x\\, dx$",
@@ -305,7 +332,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "integrals"
-    ]
+    ],
+    "slug": "int-sec-x-dx"
   },
   {
     "name": "$\\ln(1+x)$ expansion",
@@ -316,7 +344,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "ln-1-x-expansion"
   },
   {
     "name": "$\\sin x$ expansion",
@@ -327,7 +356,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "sin-x-expansion"
   },
   {
     "name": "$\\cos x$ expansion",
@@ -338,7 +368,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "cos-x-expansion"
   },
   {
     "name": "binomial series $(1+x)^n$",
@@ -349,7 +380,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "series"
-    ]
+    ],
+    "slug": "binomial-series-1-x-n"
   },
   {
     "name": "Euler's formula",
@@ -360,7 +392,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "complex-exponentials"
-    ]
+    ],
+    "slug": "euler-s-formula"
   },
   {
     "name": "$\\sinh x$ and $\\cosh x$",
@@ -371,7 +404,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hyperbolic-functions"
-    ]
+    ],
+    "slug": "sinh-x-and-cosh-x"
   },
   {
     "name": "$\\cosh^2 x - \\sinh^2 x$",
@@ -382,7 +416,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hyperbolic-functions"
-    ]
+    ],
+    "slug": "cosh-2-x-sinh-2-x"
   },
   {
     "name": "$\\tanh x$ and hyperbolic identities",
@@ -393,7 +428,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hyperbolic-functions"
-    ]
+    ],
+    "slug": "tanh-x-and-hyperbolic-identities"
   },
   {
     "name": "saddle-point approximation",
@@ -404,7 +440,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "asymptotic-methods"
-    ]
+    ],
+    "slug": "saddle-point-approximation"
   },
   {
     "name": "asymptotic series",
@@ -415,7 +452,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "asymptotic-methods"
-    ]
+    ],
+    "slug": "asymptotic-series"
   },
   {
     "name": "Hermitian eigenvalues",
@@ -426,7 +464,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hermitian-matrices"
-    ]
+    ],
+    "slug": "hermitian-eigenvalues"
   },
   {
     "name": "matrix trace",
@@ -437,7 +476,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "traces"
-    ]
+    ],
+    "slug": "matrix-trace"
   },
   {
     "name": "determinant as eigenvalue product",
@@ -448,7 +488,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "determinants"
-    ]
+    ],
+    "slug": "determinant-as-eigenvalue-product"
   },
   {
     "name": "orthogonality of eigenstates",
@@ -459,7 +500,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hermitian-matrices"
-    ]
+    ],
+    "slug": "orthogonality-of-eigenstates"
   },
   {
     "name": "spectral theorem",
@@ -470,7 +512,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "decompositions"
-    ]
+    ],
+    "slug": "spectral-theorem"
   },
   {
     "name": "unitary matrix",
@@ -481,7 +524,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "special-matrices"
-    ]
+    ],
+    "slug": "unitary-matrix"
   },
   {
     "name": "unitary eigenvalues",
@@ -492,7 +536,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "special-matrices"
-    ]
+    ],
+    "slug": "unitary-eigenvalues"
   },
   {
     "name": "Cayley-Hamilton theorem",
@@ -503,7 +548,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "theorems"
-    ]
+    ],
+    "slug": "cayley-hamilton-theorem"
   },
   {
     "name": "why observables are Hermitian",
@@ -514,7 +560,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "hermitian-matrices"
-    ]
+    ],
+    "slug": "why-observables-are-hermitian"
   },
   {
     "name": "commutator $[A,B]$ and simultaneous diagonalization",
@@ -525,7 +572,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "commutators"
-    ]
+    ],
+    "slug": "commutator-a-b-and-simultaneous-diagonalization"
   },
   {
     "name": "$\\frac{dy}{dx} = ky$",
@@ -536,7 +584,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "odes"
-    ]
+    ],
+    "slug": "frac-dy-dx-ky"
   },
   {
     "name": "derivative of $\\frac{1}{r}$",
@@ -545,7 +594,8 @@ const ALL_QUESTIONS = [
     "explanation": "Should compute in 5 sec.",
     "subject": "math-differential-equations",
     "difficulty": "basic",
-    "labels": []
+    "labels": [],
+    "slug": "derivative-of-frac-1-r"
   },
   {
     "name": "simple harmonic oscillator",
@@ -556,7 +606,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "odes"
-    ]
+    ],
+    "slug": "simple-harmonic-oscillator"
   },
   {
     "name": "separation of variables",
@@ -567,7 +618,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "pdes"
-    ]
+    ],
+    "slug": "separation-of-variables"
   },
   {
     "name": "Green's function",
@@ -578,7 +630,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "greens-functions"
-    ]
+    ],
+    "slug": "green-s-function"
   },
   {
     "name": "heat equation",
@@ -589,7 +642,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "pdes"
-    ]
+    ],
+    "slug": "heat-equation"
   },
   {
     "name": "wave equation",
@@ -600,7 +654,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "pdes"
-    ]
+    ],
+    "slug": "wave-equation"
   },
   {
     "name": "Sturm-Liouville problem",
@@ -611,7 +666,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "sturm-liouville"
-    ]
+    ],
+    "slug": "sturm-liouville-problem"
   },
   {
     "name": "Wronskian",
@@ -622,7 +678,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "odes"
-    ]
+    ],
+    "slug": "wronskian"
   },
   {
     "name": "Frobenius method",
@@ -633,7 +690,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "odes"
-    ]
+    ],
+    "slug": "frobenius-method"
   },
   {
     "name": "Laplace's equation",
@@ -644,7 +702,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "pdes"
-    ]
+    ],
+    "slug": "laplace-s-equation"
   },
   {
     "name": "sifting property of $\\delta(x)$",
@@ -655,7 +714,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "dirac-delta"
-    ]
+    ],
+    "slug": "sifting-property-of-delta-x"
   },
   {
     "name": "$\\delta(x)$ and $\\theta(x)$",
@@ -666,7 +726,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "dirac-delta"
-    ]
+    ],
+    "slug": "delta-x-and-theta-x"
   },
   {
     "name": "derivative of $\\delta(x)$",
@@ -677,7 +738,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "dirac-delta"
-    ]
+    ],
+    "slug": "derivative-of-delta-x"
   },
   {
     "name": "$\\nabla^2(1/r) = -4\\pi\\delta^3(\\vec{r})$",
@@ -689,7 +751,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "dirac-delta",
       "greens-functions"
-    ]
+    ],
+    "slug": "nabla-2-1-r-4pidelta-3-vec-r"
   },
   {
     "name": "completeness relation as $\\delta$",
@@ -701,7 +764,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "dirac-delta",
       "sturm-liouville"
-    ]
+    ],
+    "slug": "completeness-relation-as-delta"
   },
   {
     "name": "$x\\,\\delta(x) = 0$",
@@ -712,7 +776,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "dirac-delta"
-    ]
+    ],
+    "slug": "x-delta-x-0"
   },
   {
     "name": "Airy function",
@@ -723,7 +788,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "special-functions"
-    ]
+    ],
+    "slug": "airy-function"
   },
   {
     "name": "Cauchy's integral theorem",
@@ -734,7 +800,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "cauchy-theorem"
-    ]
+    ],
+    "slug": "cauchy-s-integral-theorem"
   },
   {
     "name": "residue theorem",
@@ -745,7 +812,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "residues"
-    ]
+    ],
+    "slug": "residue-theorem"
   },
   {
     "name": "$\\int \\frac{dx}{x^2+a^2}$ by contour",
@@ -756,7 +824,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "contour-integrals"
-    ]
+    ],
+    "slug": "int-frac-dx-x-2-a-2-by-contour"
   },
   {
     "name": "residue at a simple pole",
@@ -767,7 +836,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "residues"
-    ]
+    ],
+    "slug": "residue-at-a-simple-pole"
   },
   {
     "name": "branch cuts",
@@ -778,7 +848,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "branch-cuts"
-    ]
+    ],
+    "slug": "branch-cuts"
   },
   {
     "name": "Cauchy-Riemann equations",
@@ -789,7 +860,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "analyticity"
-    ]
+    ],
+    "slug": "cauchy-riemann-equations"
   },
   {
     "name": "analytic continuation",
@@ -800,7 +872,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "analytic-continuation"
-    ]
+    ],
+    "slug": "analytic-continuation"
   },
   {
     "name": "$\\int \\frac{e^{iz}}{z^2+a^2}\\, dz$",
@@ -811,7 +884,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "contour-integrals"
-    ]
+    ],
+    "slug": "int-frac-e-iz-z-2-a-2-dz"
   },
   {
     "name": "extracting coefficients via contour integral",
@@ -822,7 +896,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "contour-integrals"
-    ]
+    ],
+    "slug": "extracting-coefficients-via-contour-integral"
   },
   {
     "name": "$\\sum_{i=1}^{n} i$",
@@ -833,7 +908,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "summation-formulas"
-    ]
+    ],
+    "slug": "sum-i-1-n-i"
   },
   {
     "name": "$\\sum_{i=1}^{n} i^2$",
@@ -844,7 +920,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "summation-formulas"
-    ]
+    ],
+    "slug": "sum-i-1-n-i-2"
   },
   {
     "name": "binomial coefficient $\\binom{n}{k}$",
@@ -855,7 +932,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "combinatorics"
-    ]
+    ],
+    "slug": "binomial-coefficient-binom-n-k"
   },
   {
     "name": "$\\sum_{k=0}^{n} \\binom{n}{k}$",
@@ -866,7 +944,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "combinatorics"
-    ]
+    ],
+    "slug": "sum-k-0-n-binom-n-k"
   },
   {
     "name": "binomial coefficient symmetry",
@@ -877,7 +956,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "combinatorics"
-    ]
+    ],
+    "slug": "binomial-coefficient-symmetry"
   },
   {
     "name": "expectation value $E[X]$",
@@ -888,7 +968,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "expectation"
-    ]
+    ],
+    "slug": "expectation-value-e-x"
   },
   {
     "name": "formula for variance and STD",
@@ -899,7 +980,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "variance"
-    ]
+    ],
+    "slug": "formula-for-variance-and-std"
   },
   {
     "name": "Bayes' theorem",
@@ -910,7 +992,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "bayes-theorem"
-    ]
+    ],
+    "slug": "bayes-theorem"
   },
   {
     "name": "linearity of expectation",
@@ -921,7 +1004,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "expectation"
-    ]
+    ],
+    "slug": "linearity-of-expectation"
   },
   {
     "name": "Markov and Chebyshev inequalities",
@@ -932,7 +1016,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "inequalities"
-    ]
+    ],
+    "slug": "markov-and-chebyshev-inequalities"
   },
   {
     "name": "inclusion-exclusion for two events",
@@ -943,7 +1028,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "probability-rules"
-    ]
+    ],
+    "slug": "inclusion-exclusion-for-two-events"
   },
   {
     "name": "conditional probability",
@@ -954,7 +1040,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "probability-rules"
-    ]
+    ],
+    "slug": "conditional-probability"
   },
   {
     "name": "binomial distribution",
@@ -965,7 +1052,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "distributions"
-    ]
+    ],
+    "slug": "binomial-distribution"
   },
   {
     "name": "Poisson distribution",
@@ -976,7 +1064,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "distributions"
-    ]
+    ],
+    "slug": "poisson-distribution"
   },
   {
     "name": "Gaussian distribution",
@@ -987,7 +1076,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "distributions"
-    ]
+    ],
+    "slug": "gaussian-distribution"
   },
   {
     "name": "geometric distribution",
@@ -998,7 +1088,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "distributions"
-    ]
+    ],
+    "slug": "geometric-distribution"
   },
   {
     "name": "coupon collector problem",
@@ -1009,7 +1100,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "coupon-collector"
-    ]
+    ],
+    "slug": "coupon-collector-problem"
   },
   {
     "name": "trig definitions for right triangle",
@@ -1020,7 +1112,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "definitions"
-    ]
+    ],
+    "slug": "trig-definitions-for-right-triangle"
   },
   {
     "name": "Pythagorean identities",
@@ -1031,7 +1124,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "identities"
-    ]
+    ],
+    "slug": "pythagorean-identities"
   },
   {
     "name": "angle addition formulas",
@@ -1042,7 +1136,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "identities"
-    ]
+    ],
+    "slug": "angle-addition-formulas"
   },
   {
     "name": "double-angle formulas",
@@ -1053,7 +1148,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "identities"
-    ]
+    ],
+    "slug": "double-angle-formulas"
   },
   {
     "name": "trig values at standard angles",
@@ -1064,7 +1160,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "special-values"
-    ]
+    ],
+    "slug": "trig-values-at-standard-angles"
   },
   {
     "name": "Legendre polynomials",
@@ -1075,7 +1172,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "legendre-polynomials"
-    ]
+    ],
+    "slug": "legendre-polynomials"
   },
   {
     "name": "spherical harmonics $Y_l^m$",
@@ -1086,7 +1184,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "spherical-harmonics"
-    ]
+    ],
+    "slug": "spherical-harmonics-y-l-m"
   },
   {
     "name": "Bessel functions",
@@ -1097,7 +1196,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "bessel-functions"
-    ]
+    ],
+    "slug": "bessel-functions"
   },
   {
     "name": "Fourier transform",
@@ -1108,7 +1208,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "fourier-transform"
-    ]
+    ],
+    "slug": "fourier-transform"
   },
   {
     "name": "Fourier transform of Gaussian",
@@ -1119,7 +1220,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "fourier-transform"
-    ]
+    ],
+    "slug": "fourier-transform-of-gaussian"
   },
   {
     "name": "Helmholtz Green's function",
@@ -1130,7 +1232,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "greens-functions"
-    ]
+    ],
+    "slug": "helmholtz-green-s-function"
   },
   {
     "name": "Laplace transform",
@@ -1141,7 +1244,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "laplace-transform"
-    ]
+    ],
+    "slug": "laplace-transform"
   },
   {
     "name": "Hermite polynomials",
@@ -1152,7 +1256,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "hermite-polynomials"
-    ]
+    ],
+    "slug": "hermite-polynomials"
   },
   {
     "name": "Dirac delta representations",
@@ -1163,7 +1268,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "delta-function"
-    ]
+    ],
+    "slug": "dirac-delta-representations"
   },
   {
     "name": "spherical Bessel functions",
@@ -1174,7 +1280,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "spherical-bessel"
-    ]
+    ],
+    "slug": "spherical-bessel-functions"
   },
   {
     "name": "orthogonal polynomial families",
@@ -1185,7 +1292,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "orthogonal-polynomials"
-    ]
+    ],
+    "slug": "orthogonal-polynomial-families"
   },
   {
     "name": "Lie groups and generators",
@@ -1196,7 +1304,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "lie-groups"
-    ]
+    ],
+    "slug": "lie-groups-and-generators"
   },
   {
     "name": "$SU(2)$ and $SO(3)$",
@@ -1207,7 +1316,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "su2"
-    ]
+    ],
+    "slug": "su-2-and-so-3"
   },
   {
     "name": "$SU(2)$ irreps",
@@ -1218,7 +1328,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "representations"
-    ]
+    ],
+    "slug": "su-2-irreps"
   },
   {
     "name": "Schur's lemma",
@@ -1229,7 +1340,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "schur-lemma"
-    ]
+    ],
+    "slug": "schur-s-lemma"
   },
   {
     "name": "$SU(2)$ tensor product decomposition",
@@ -1241,7 +1353,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "tensor-products",
       "lie-groups"
-    ]
+    ],
+    "slug": "su-2-tensor-product-decomposition"
   },
   {
     "name": "$SU(3)$ in the Standard Model",
@@ -1252,7 +1365,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "su3"
-    ]
+    ],
+    "slug": "su-3-in-the-standard-model"
   },
   {
     "name": "Noether's theorem and symmetry groups",
@@ -1263,7 +1377,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "noether"
-    ]
+    ],
+    "slug": "noether-s-theorem-and-symmetry-groups"
   },
   {
     "name": "Lie algebra structure constants",
@@ -1274,7 +1389,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "structure-constants"
-    ]
+    ],
+    "slug": "lie-algebra-structure-constants"
   },
   {
     "name": "Young tableaux",
@@ -1285,7 +1401,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "young-tableaux"
-    ]
+    ],
+    "slug": "young-tableaux"
   },
   {
     "name": "Casimir operators",
@@ -1296,7 +1413,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "casimir"
-    ]
+    ],
+    "slug": "casimir-operators"
   },
   {
     "name": "weight diagrams",
@@ -1307,7 +1425,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "weight-diagrams"
-    ]
+    ],
+    "slug": "weight-diagrams"
   },
   {
     "name": "Newton's second law",
@@ -1318,7 +1437,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "newtons-laws"
-    ]
+    ],
+    "slug": "newton-s-second-law"
   },
   {
     "name": "Euler-Lagrange equation",
@@ -1329,7 +1449,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "lagrangian-mechanics"
-    ]
+    ],
+    "slug": "euler-lagrange-equation"
   },
   {
     "name": "Lagrangian to Hamiltonian",
@@ -1340,7 +1461,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hamiltonian-mechanics"
-    ]
+    ],
+    "slug": "lagrangian-to-hamiltonian"
   },
   {
     "name": "Noether's theorem",
@@ -1351,7 +1473,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "noethers-theorem"
-    ]
+    ],
+    "slug": "noether-s-theorem"
   },
   {
     "name": "angular momentum from $\\vec{r}$ and $\\vec{p}$",
@@ -1362,7 +1485,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "angular-momentum"
-    ]
+    ],
+    "slug": "angular-momentum-from-vec-r-and-vec-p"
   },
   {
     "name": "central force conserved quantities",
@@ -1373,7 +1497,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "central-force"
-    ]
+    ],
+    "slug": "central-force-conserved-quantities"
   },
   {
     "name": "Poisson bracket",
@@ -1384,7 +1509,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "poisson-brackets"
-    ]
+    ],
+    "slug": "poisson-bracket"
   },
   {
     "name": "Hamilton's equations",
@@ -1395,7 +1521,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hamiltonian-mechanics"
-    ]
+    ],
+    "slug": "hamilton-s-equations"
   },
   {
     "name": "Hamilton-Jacobi equation",
@@ -1406,7 +1533,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "hamilton-jacobi"
-    ]
+    ],
+    "slug": "hamilton-jacobi-equation"
   },
   {
     "name": "moment of inertia tensor",
@@ -1417,7 +1545,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "rigid-body"
-    ]
+    ],
+    "slug": "moment-of-inertia-tensor"
   },
   {
     "name": "normal modes",
@@ -1428,7 +1557,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "normal-modes"
-    ]
+    ],
+    "slug": "normal-modes"
   },
   {
     "name": "relativistic free particle Lagrangian",
@@ -1439,7 +1569,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "lagrangian-mechanics"
-    ]
+    ],
+    "slug": "relativistic-free-particle-lagrangian"
   },
   {
     "name": "Liouville's theorem",
@@ -1450,7 +1581,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "hamiltonian-mechanics"
-    ]
+    ],
+    "slug": "liouville-s-theorem"
   },
   {
     "name": "centrifugal and Coriolis forces",
@@ -1462,7 +1594,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "rotating-frames",
       "fictitious-forces"
-    ]
+    ],
+    "slug": "centrifugal-and-coriolis-forces"
   },
   {
     "name": "values of $\\mu_0$ and $\\epsilon_0$",
@@ -1473,7 +1606,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "constants"
-    ]
+    ],
+    "slug": "values-of-mu-0-and-epsilon-0"
   },
   {
     "name": "Maxwell's equations",
@@ -1484,7 +1618,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "maxwells-equations"
-    ]
+    ],
+    "slug": "maxwell-s-equations"
   },
   {
     "name": "Poynting vector",
@@ -1495,7 +1630,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "poynting-vector"
-    ]
+    ],
+    "slug": "poynting-vector"
   },
   {
     "name": "EM boundary conditions",
@@ -1506,7 +1642,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "boundary-conditions"
-    ]
+    ],
+    "slug": "em-boundary-conditions"
   },
   {
     "name": "EM energy density",
@@ -1517,7 +1654,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "energy"
-    ]
+    ],
+    "slug": "em-energy-density"
   },
   {
     "name": "gauge transformations in EM",
@@ -1528,7 +1666,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "gauge-transformations"
-    ]
+    ],
+    "slug": "gauge-transformations-in-em"
   },
   {
     "name": "multipole expansion",
@@ -1539,7 +1678,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "multipole-expansion"
-    ]
+    ],
+    "slug": "multipole-expansion"
   },
   {
     "name": "speed of EM waves",
@@ -1550,7 +1690,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "electromagnetic-waves"
-    ]
+    ],
+    "slug": "speed-of-em-waves"
   },
   {
     "name": "retarded potentials",
@@ -1561,7 +1702,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "retarded-potentials"
-    ]
+    ],
+    "slug": "retarded-potentials"
   },
   {
     "name": "Lorentz force law",
@@ -1572,7 +1714,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "lorentz-force"
-    ]
+    ],
+    "slug": "lorentz-force-law"
   },
   {
     "name": "Larmor formula",
@@ -1583,7 +1726,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "radiation"
-    ]
+    ],
+    "slug": "larmor-formula"
   },
   {
     "name": "Gauss's law",
@@ -1594,7 +1738,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "gausss-law"
-    ]
+    ],
+    "slug": "gauss-s-law"
   },
   {
     "name": "field strength tensor $F^{\\mu\\nu}$",
@@ -1605,7 +1750,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "covariant-formulation"
-    ]
+    ],
+    "slug": "field-strength-tensor-f-munu"
   },
   {
     "name": "Wilson loop",
@@ -1616,7 +1762,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "gauge-theory"
-    ]
+    ],
+    "slug": "wilson-loop"
   },
   {
     "name": "de Broglie wavelength",
@@ -1627,7 +1774,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "wave-particle-duality"
-    ]
+    ],
+    "slug": "de-broglie-wavelength"
   },
   {
     "name": "$[\\hat{x}, \\hat{p}]$ commutation relation",
@@ -1638,7 +1786,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "commutation-relations"
-    ]
+    ],
+    "slug": "hat-x-hat-p-commutation-relation"
   },
   {
     "name": "Schrodinger equation",
@@ -1649,7 +1798,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "schrodinger-equation"
-    ]
+    ],
+    "slug": "schrodinger-equation"
   },
   {
     "name": "periodic boundary conditions in a 3D box",
@@ -1661,7 +1811,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "particle-in-a-box",
       "boundary-conditions"
-    ]
+    ],
+    "slug": "periodic-boundary-conditions-in-a-3d-box"
   },
   {
     "name": "quantum harmonic oscillator energies",
@@ -1672,7 +1823,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "harmonic-oscillator"
-    ]
+    ],
+    "slug": "quantum-harmonic-oscillator-energies"
   },
   {
     "name": "hydrogen atom energy levels",
@@ -1683,7 +1835,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "hydrogen-atom"
-    ]
+    ],
+    "slug": "hydrogen-atom-energy-levels"
   },
   {
     "name": "$\\hat{L}^2$ and $\\hat{L}_z$ eigenvalues",
@@ -1694,7 +1847,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "angular-momentum"
-    ]
+    ],
+    "slug": "hat-l-2-and-hat-l-z-eigenvalues"
   },
   {
     "name": "electron spin",
@@ -1705,7 +1859,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "spin"
-    ]
+    ],
+    "slug": "electron-spin"
   },
   {
     "name": "generalized uncertainty principle",
@@ -1716,7 +1871,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "uncertainty-principle"
-    ]
+    ],
+    "slug": "generalized-uncertainty-principle"
   },
   {
     "name": "first-order perturbation theory",
@@ -1727,7 +1883,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "perturbation-theory"
-    ]
+    ],
+    "slug": "first-order-perturbation-theory"
   },
   {
     "name": "Fermi's golden rule",
@@ -1738,7 +1895,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "perturbation-theory"
-    ]
+    ],
+    "slug": "fermi-s-golden-rule"
   },
   {
     "name": "WKB approximation",
@@ -1749,7 +1907,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "wkb"
-    ]
+    ],
+    "slug": "wkb-approximation"
   },
   {
     "name": "bosons vs fermions",
@@ -1760,7 +1919,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "identical-particles"
-    ]
+    ],
+    "slug": "bosons-vs-fermions"
   },
   {
     "name": "Feynman path integral",
@@ -1771,7 +1931,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "path-integrals"
-    ]
+    ],
+    "slug": "feynman-path-integral"
   },
   {
     "name": "Pauli matrices",
@@ -1782,7 +1943,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "spin"
-    ]
+    ],
+    "slug": "pauli-matrices"
   },
   {
     "name": "variational principle",
@@ -1793,7 +1955,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "variational-method"
-    ]
+    ],
+    "slug": "variational-principle"
   },
   {
     "name": "angular momentum addition",
@@ -1804,7 +1967,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "angular-momentum"
-    ]
+    ],
+    "slug": "angular-momentum-addition"
   },
   {
     "name": "non-perturbative $e^{-A/g}$",
@@ -1815,7 +1979,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "non-perturbative"
-    ]
+    ],
+    "slug": "non-perturbative-e-a-g"
   },
   {
     "name": "Bohr-Sommerfeld quantization",
@@ -1826,7 +1991,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "semiclassical"
-    ]
+    ],
+    "slug": "bohr-sommerfeld-quantization"
   },
   {
     "name": "canonical partition function",
@@ -1837,7 +2003,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "partition-function"
-    ]
+    ],
+    "slug": "canonical-partition-function"
   },
   {
     "name": "Boltzmann distribution",
@@ -1848,7 +2015,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "boltzmann-distribution"
-    ]
+    ],
+    "slug": "boltzmann-distribution"
   },
   {
     "name": "two-level system partition function",
@@ -1859,7 +2027,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "partition-function"
-    ]
+    ],
+    "slug": "two-level-system-partition-function"
   },
   {
     "name": "equipartition theorem",
@@ -1870,7 +2039,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "equipartition"
-    ]
+    ],
+    "slug": "equipartition-theorem"
   },
   {
     "name": "Fermi-Dirac and Bose-Einstein distributions",
@@ -1881,7 +2051,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "quantum-statistics"
-    ]
+    ],
+    "slug": "fermi-dirac-and-bose-einstein-distributions"
   },
   {
     "name": "statistical ensembles",
@@ -1892,7 +2063,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "ensembles"
-    ]
+    ],
+    "slug": "statistical-ensembles"
   },
   {
     "name": "entropy (statistical)",
@@ -1903,7 +2075,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "entropy"
-    ]
+    ],
+    "slug": "entropy-statistical"
   },
   {
     "name": "phase transitions",
@@ -1914,7 +2087,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "phase-transitions"
-    ]
+    ],
+    "slug": "phase-transitions"
   },
   {
     "name": "Ising model",
@@ -1925,7 +2099,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "ising-model"
-    ]
+    ],
+    "slug": "ising-model"
   },
   {
     "name": "Helmholtz free energy",
@@ -1936,7 +2111,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "free-energy"
-    ]
+    ],
+    "slug": "helmholtz-free-energy"
   },
   {
     "name": "Fermi gas ground-state energy",
@@ -1947,7 +2123,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "fermi-gas"
-    ]
+    ],
+    "slug": "fermi-gas-ground-state-energy"
   },
   {
     "name": "density of states for 3D noninteracting fermions",
@@ -1959,7 +2136,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "fermi-gas",
       "density-of-states"
-    ]
+    ],
+    "slug": "density-of-states-for-3d-noninteracting-fermions"
   },
   {
     "name": "$PV = U/3$ for ultrarelativistic gas",
@@ -1972,7 +2150,8 @@ const ALL_QUESTIONS = [
       "fermi-gas",
       "bose-gas",
       "equation-of-state"
-    ]
+    ],
+    "slug": "pv-u-3-for-ultrarelativistic-gas"
   },
   {
     "name": "grand canonical partition function",
@@ -1983,7 +2162,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "grand-canonical"
-    ]
+    ],
+    "slug": "grand-canonical-partition-function"
   },
   {
     "name": "Lorentz transformation",
@@ -1994,7 +2174,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "lorentz-transformations"
-    ]
+    ],
+    "slug": "lorentz-transformation"
   },
   {
     "name": "spacetime interval",
@@ -2005,7 +2186,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "metric-tensor"
-    ]
+    ],
+    "slug": "spacetime-interval"
   },
   {
     "name": "equivalence principle",
@@ -2016,7 +2198,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "equivalence-principle"
-    ]
+    ],
+    "slug": "equivalence-principle"
   },
   {
     "name": "Einstein field equations",
@@ -2027,7 +2210,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "einstein-field-equations"
-    ]
+    ],
+    "slug": "einstein-field-equations"
   },
   {
     "name": "geodesic equation",
@@ -2038,7 +2222,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "geodesic-equation"
-    ]
+    ],
+    "slug": "geodesic-equation"
   },
   {
     "name": "Schwarzschild metric",
@@ -2049,7 +2234,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "schwarzschild-solution"
-    ]
+    ],
+    "slug": "schwarzschild-metric"
   },
   {
     "name": "four-vectors",
@@ -2060,7 +2246,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "four-vectors"
-    ]
+    ],
+    "slug": "four-vectors"
   },
   {
     "name": "stress-energy tensor",
@@ -2071,7 +2258,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "stress-energy-tensor"
-    ]
+    ],
+    "slug": "stress-energy-tensor"
   },
   {
     "name": "energy-momentum relation",
@@ -2082,7 +2270,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "four-vectors"
-    ]
+    ],
+    "slug": "energy-momentum-relation"
   },
   {
     "name": "action of a relativistic particle",
@@ -2094,7 +2283,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "action",
       "lagrangian-mechanics"
-    ]
+    ],
+    "slug": "action-of-a-relativistic-particle"
   },
   {
     "name": "gravitational time dilation",
@@ -2105,7 +2295,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "schwarzschild-solution"
-    ]
+    ],
+    "slug": "gravitational-time-dilation"
   },
   {
     "name": "Cherenkov radiation",
@@ -2117,7 +2308,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "electrodynamics",
       "radiation"
-    ]
+    ],
+    "slug": "cherenkov-radiation"
   },
   {
     "name": "Dirac equation",
@@ -2128,7 +2320,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "dirac-equation"
-    ]
+    ],
+    "slug": "dirac-equation"
   },
   {
     "name": "Klein-Gordon equation",
@@ -2139,7 +2332,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "klein-gordon"
-    ]
+    ],
+    "slug": "klein-gordon-equation"
   },
   {
     "name": "Feynman propagator",
@@ -2150,7 +2344,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "propagators"
-    ]
+    ],
+    "slug": "feynman-propagator"
   },
   {
     "name": "Feynman rules in $\\lambda\\phi^4$",
@@ -2161,7 +2356,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "feynman-rules"
-    ]
+    ],
+    "slug": "feynman-rules-in-lambdaphi-4"
   },
   {
     "name": "Wick's theorem",
@@ -2172,7 +2368,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "wick-theorem"
-    ]
+    ],
+    "slug": "wick-s-theorem"
   },
   {
     "name": "gauge invariance in QED",
@@ -2183,7 +2380,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "gauge-invariance"
-    ]
+    ],
+    "slug": "gauge-invariance-in-qed"
   },
   {
     "name": "renormalization",
@@ -2194,7 +2392,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "renormalization"
-    ]
+    ],
+    "slug": "renormalization"
   },
   {
     "name": "Dirac spinor components",
@@ -2205,7 +2404,8 @@ const ALL_QUESTIONS = [
     "difficulty": "basic",
     "labels": [
       "spinors"
-    ]
+    ],
+    "slug": "dirac-spinor-components"
   },
   {
     "name": "LSZ reduction formula",
@@ -2216,7 +2416,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "lsz"
-    ]
+    ],
+    "slug": "lsz-reduction-formula"
   },
   {
     "name": "beta function and asymptotic freedom",
@@ -2227,7 +2428,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "running-coupling"
-    ]
+    ],
+    "slug": "beta-function-and-asymptotic-freedom"
   },
   {
     "name": "differential cross-section from $\\mathcal{M}$",
@@ -2238,7 +2440,8 @@ const ALL_QUESTIONS = [
     "difficulty": "advanced",
     "labels": [
       "cross-sections"
-    ]
+    ],
+    "slug": "differential-cross-section-from-mathcal-m"
   },
   {
     "name": "Noether stress-energy tensor",
@@ -2249,7 +2452,8 @@ const ALL_QUESTIONS = [
     "difficulty": "intermediate",
     "labels": [
       "noether-qft"
-    ]
+    ],
+    "slug": "noether-stress-energy-tensor"
   },
   {
     "name": "photometric redshift",
@@ -2262,7 +2466,8 @@ const ALL_QUESTIONS = [
       "photometric-redshift",
       "galaxies",
       "survey-methods"
-    ]
+    ],
+    "slug": "photometric-redshift"
   },
   {
     "name": "astrophysical filters",
@@ -2275,7 +2480,8 @@ const ALL_QUESTIONS = [
       "photometry",
       "filters",
       "colors"
-    ]
+    ],
+    "slug": "astrophysical-filters"
   },
   {
     "name": "astronomical unit (AU)",
@@ -2287,7 +2493,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "units",
       "distance-scale"
-    ]
+    ],
+    "slug": "astronomical-unit-au"
   },
   {
     "name": "stellar parallax",
@@ -2299,7 +2506,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "parallax",
       "distance-ladder"
-    ]
+    ],
+    "slug": "stellar-parallax"
   },
   {
     "name": "parsec",
@@ -2312,7 +2520,8 @@ const ALL_QUESTIONS = [
       "units",
       "distance-scale",
       "parallax"
-    ]
+    ],
+    "slug": "parsec"
   },
   {
     "name": "light-year",
@@ -2324,7 +2533,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "units",
       "distance-scale"
-    ]
+    ],
+    "slug": "light-year"
   },
   {
     "name": "cosmic distance ladder",
@@ -2337,7 +2547,8 @@ const ALL_QUESTIONS = [
       "distance-ladder",
       "parallax",
       "standard-candles"
-    ]
+    ],
+    "slug": "cosmic-distance-ladder"
   },
   {
     "name": "standard candles and intrinsic luminosity",
@@ -2350,7 +2561,8 @@ const ALL_QUESTIONS = [
       "standard-candles",
       "luminosity-distance",
       "photometry"
-    ]
+    ],
+    "slug": "standard-candles-and-intrinsic-luminosity"
   },
   {
     "name": "types of standard candles",
@@ -2362,7 +2574,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "standard-candles",
       "distance-ladder"
-    ]
+    ],
+    "slug": "types-of-standard-candles"
   },
   {
     "name": "astronomical magnitude",
@@ -2375,7 +2588,8 @@ const ALL_QUESTIONS = [
       "magnitude",
       "photometry",
       "distance-modulus"
-    ]
+    ],
+    "slug": "astronomical-magnitude"
   },
   {
     "name": "point spread function (PSF)",
@@ -2388,7 +2602,8 @@ const ALL_QUESTIONS = [
       "imaging",
       "psf",
       "resolution"
-    ]
+    ],
+    "slug": "point-spread-function-psf"
   },
   {
     "name": "atmospheric seeing",
@@ -2401,7 +2616,8 @@ const ALL_QUESTIONS = [
       "imaging",
       "seeing",
       "atmosphere"
-    ]
+    ],
+    "slug": "atmospheric-seeing"
   },
   {
     "name": "baryon acoustic oscillations",
@@ -2414,7 +2630,8 @@ const ALL_QUESTIONS = [
       "baryon-acoustic-oscillations",
       "cosmology",
       "large-scale-structure"
-    ]
+    ],
+    "slug": "baryon-acoustic-oscillations"
   },
   {
     "name": "surface of last scattering",
@@ -2427,7 +2644,8 @@ const ALL_QUESTIONS = [
       "cmb",
       "recombination",
       "surface-of-last-scattering"
-    ]
+    ],
+    "slug": "surface-of-last-scattering"
   },
   {
     "name": "strong-lensing time delays",
@@ -2440,7 +2658,8 @@ const ALL_QUESTIONS = [
       "strong-lensing",
       "time-delays",
       "hubble-constant"
-    ]
+    ],
+    "slug": "strong-lensing-time-delays"
   },
   {
     "name": "weak gravitational lensing",
@@ -2453,7 +2672,8 @@ const ALL_QUESTIONS = [
       "weak-lensing",
       "gravitational-lensing",
       "structure-growth"
-    ]
+    ],
+    "slug": "weak-gravitational-lensing"
   },
   {
     "name": "galaxy clustering",
@@ -2466,7 +2686,8 @@ const ALL_QUESTIONS = [
       "galaxy-clustering",
       "large-scale-structure",
       "cosmology"
-    ]
+    ],
+    "slug": "galaxy-clustering"
   },
   {
     "name": "type Ia supernovae as distance indicators",
@@ -2480,7 +2701,8 @@ const ALL_QUESTIONS = [
       "supernovae",
       "standard-candles",
       "cosmology"
-    ]
+    ],
+    "slug": "type-ia-supernovae-as-distance-indicators"
   },
   {
     "name": "active galactic nucleus (AGN)",
@@ -2492,7 +2714,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "active-galactic-nuclei",
       "supermassive-black-holes"
-    ]
+    ],
+    "slug": "active-galactic-nucleus-agn"
   },
   {
     "name": "quasars",
@@ -2504,7 +2727,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "quasars",
       "active-galactic-nuclei"
-    ]
+    ],
+    "slug": "quasars"
   },
   {
     "name": "Lyman-$\\alpha$ forest",
@@ -2517,7 +2741,8 @@ const ALL_QUESTIONS = [
       "lyman-alpha-forest",
       "quasars",
       "intergalactic-medium"
-    ]
+    ],
+    "slug": "lyman-alpha-forest"
   },
   {
     "name": "large-scale structure scales",
@@ -2529,7 +2754,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "large-scale-structure",
       "cosmology"
-    ]
+    ],
+    "slug": "large-scale-structure-scales"
   },
   {
     "name": "what is a supernova",
@@ -2542,7 +2768,8 @@ const ALL_QUESTIONS = [
       "supernovae",
       "transients",
       "stellar-evolution"
-    ]
+    ],
+    "slug": "what-is-a-supernova"
   },
   {
     "name": "Chandrasekhar mass and physical significance",
@@ -2555,7 +2782,8 @@ const ALL_QUESTIONS = [
       "chandrasekhar-mass",
       "white-dwarfs",
       "stellar-evolution"
-    ]
+    ],
+    "slug": "chandrasekhar-mass-and-physical-significance"
   },
   {
     "name": "neutron stars",
@@ -2568,7 +2796,8 @@ const ALL_QUESTIONS = [
       "neutron-stars",
       "compact-remnants",
       "stellar-evolution"
-    ]
+    ],
+    "slug": "neutron-stars"
   },
   {
     "name": "mass of the Sun",
@@ -2580,7 +2809,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "solar-mass",
       "stellar-properties"
-    ]
+    ],
+    "slug": "mass-of-the-sun"
   },
   {
     "name": "luminosity",
@@ -2593,7 +2823,8 @@ const ALL_QUESTIONS = [
       "luminosity",
       "stellar-properties",
       "photometry"
-    ]
+    ],
+    "slug": "luminosity"
   },
   {
     "name": "law of reflection",
@@ -2605,7 +2836,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "reflection",
       "ray-optics"
-    ]
+    ],
+    "slug": "law-of-reflection"
   },
   {
     "name": "real vs virtual image",
@@ -2617,7 +2849,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "image-formation",
       "ray-optics"
-    ]
+    ],
+    "slug": "real-vs-virtual-image"
   },
   {
     "name": "refraction and Snell's law",
@@ -2630,7 +2863,8 @@ const ALL_QUESTIONS = [
       "refraction",
       "snells-law",
       "ray-optics"
-    ]
+    ],
+    "slug": "refraction-and-snell-s-law"
   },
   {
     "name": "apparent depth in water",
@@ -2642,7 +2876,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "refraction",
       "ray-optics"
-    ]
+    ],
+    "slug": "apparent-depth-in-water"
   },
   {
     "name": "wave speed relation for light",
@@ -2654,7 +2889,8 @@ const ALL_QUESTIONS = [
     "labels": [
       "waves",
       "electromagnetic-waves"
-    ]
+    ],
+    "slug": "wave-speed-relation-for-light"
   },
   {
     "name": "EM wave intensity and field amplitudes",
@@ -2667,6 +2903,7 @@ const ALL_QUESTIONS = [
       "waves",
       "electromagnetic-waves",
       "poynting-vector"
-    ]
+    ],
+    "slug": "em-wave-intensity-and-field-amplitudes"
   }
 ];
