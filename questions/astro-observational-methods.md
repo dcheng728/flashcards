@@ -58,7 +58,7 @@ What effect does dust in the Milky Way have on light from an astrophysical objec
 
 ---
 
-Dust causes extinction: it absorbs and scatters some of the light, making the object appear dimmer. Shorter-wavelength (bluer) light is generally attenuated more than longer-wavelength (redder) light, so the observed light is reddened.
+Dust absorbs and scatters some of the light, making the object appear dimmer (extinction). Shorter-wavelength (bluer) light is generally scatter more than longer-wavelength (redder) light, so the observed light is reddened.
 
 ---
 
