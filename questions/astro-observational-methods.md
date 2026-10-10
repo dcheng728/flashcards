@@ -20,8 +20,7 @@ where $i$ labels filters, $\theta$ describes the galaxy template, and $a$ is its
 
 ---
 
-Spectral features like the 4000-Å break and Lyman break shift between filters with redshift, driving the fit. 
-Because different galaxy types and redshifts can produce similar colors, the result is a probability distribution $p(z)$, not a single value — its bias and scatter matter for weak-lensing and clustering.
+Spectral features like the 4000-Å break and Lyman break shift between filters with redshift, driving the fit. But broad filters average over wavelength, so photometry gives only coarse spectral information: different redshifts can place different features in similar bands, and changes in galaxy type, age, or dust can mimic those color changes. Measurement noise and imperfect templates or models add further ambiguity. Thus several redshifts may fit nearly as well, giving a broad or multimodal probability distribution $p(z)$ and sometimes a catastrophic outlier; its bias and scatter matter for weak-lensing and clustering.
 
 ===
 
