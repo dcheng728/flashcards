@@ -463,7 +463,6 @@ function displayQuestion() {
         familiarityBadge.textContent = '';
         familiarityBadge.className = 'familiarity-indicator';
         questionLabelsEl.innerHTML = '';
-        syncUrl('');
         renderQueueList();
         return;
     }
@@ -476,7 +475,6 @@ function displayQuestion() {
     const q = queue[currentIndex];
     counterEl.textContent = `Question ${currentIndex + 1} of ${queue.length}`;
     difficultyLabel.textContent = 'Difficulty:';
-    syncUrl(q.slug);
 
     // Pre-filled GitHub issue form for reporting a problem with this card
     reportLink.href = `${CONFIG.repoUrl}/issues/new?template=card-error.yml` +
@@ -1013,7 +1011,9 @@ function renderAllMath() {
 // Use the native share sheet where available, otherwise copy the link.
 shareLink.addEventListener('click', async (e) => {
     if (e.detail) shareLink.blur();  // mouse click: give focus back so Space still reveals the answer
-    const url = `${location.href.split('#')[0]}#${queue[currentIndex].slug}`;
+    const card = queue[currentIndex];
+    if (!card) return;
+    const url = location.href.split('#')[0] + (card.slug ? `#${card.slug}` : '');  // no slug: link to the app
     if (navigator.share) {
         try {
             await navigator.share({ title: 'Physics Flashcards', url });
@@ -1032,35 +1032,20 @@ shareLink.addEventListener('click', async (e) => {
     setTimeout(() => { shareLabel.textContent = 'Share'; }, 1500);
 });
 
-// Keep the address bar on the current card (#<slug>) so every card has its own URL.
-// replaceState adds no history entries. It is written once a burst of navigation settles:
-// browsers throttle rapid calls (Chrome silently drops them), which would leave a stale URL.
-let urlTimer;
-function syncUrl(slug) {
-    clearTimeout(urlTimer);
-    urlTimer = setTimeout(() => {
-        try {
-            history.replaceState(null, '', slug ? `#${slug}` : location.pathname + location.search);
-        } catch { /* still throttled: the next card change will write it */ }
-    }, 150);
-}
-
-// Open the card named by the URL hash (#<slug>) first in the queue.
+// Open the card named by the URL hash (#<slug>) first in the queue, then drop the hash,
+// so the address bar stays clean and a reload starts fresh.
 function openSharedCard() {
     const slug = location.hash.slice(1);
-    if (!slug) return false;
+    if (!slug) return;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch { /* keep the hash */ }
     const card = ALL_QUESTIONS.find(q => q.slug === slug);
-    if (!card) return false;
+    if (!card) return;
     queue = [card, ...queue.filter(q => q !== card)];
     currentIndex = 0;
-    return true;
 }
 
 // A link pasted into a tab that is already open only changes the hash
-window.addEventListener('hashchange', () => {
-    if (openSharedCard()) displayQuestion();
-    else if (queue.length) syncUrl(queue[currentIndex].slug);  // unknown or empty hash: snap back
-});
+window.addEventListener('hashchange', () => { openSharedCard(); displayQuestion(); });
 
 function initApp() {
     ALL_SUBJECTS = [...new Set(ALL_QUESTIONS.map(q => q.subject))].sort();
@@ -1071,9 +1056,7 @@ function initApp() {
     initSubjectDropdown();
     initSearch();
     buildQueue();
-    // A refresh starts fresh (the hash is just the last card shown); a link, bookmark or
-    // back/forward navigation opens the card it names.
-    if (performance.getEntriesByType('navigation')[0]?.type !== 'reload') openSharedCard();
+    openSharedCard();
     displayQuestion();
     updateStats();
     updateSyncUI();
