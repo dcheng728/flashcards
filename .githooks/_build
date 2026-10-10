@@ -1,0 +1,7 @@
+#!/bin/sh
+# Run build.py in the flashcards conda env if there is one, else with python3.
+if command -v conda >/dev/null 2>&1 && conda env list | grep -q '^flashcards '; then
+    conda run -n flashcards python build.py >/dev/null
+else
+    python3 build.py >/dev/null
+fi
