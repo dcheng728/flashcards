@@ -76,7 +76,7 @@ How are frequency and wavelength related for a wave, and what follows for two EM
 
 ---
 
-$v = f\lambda$, so $\lambda = c/f$ for EM waves in air ($v\approx c$). Higher frequency means shorter wavelength.
+$v = f\lambda$. In air, all EM waves travel at approximately the same speed, $v\approx c$, so $\lambda = c/f$. Thus, between two EM waves in air, the higher-frequency wave has the shorter wavelength.
 
 ---
 
