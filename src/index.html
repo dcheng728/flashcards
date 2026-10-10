@@ -113,9 +113,15 @@
         </details>
 
         <details class="info-panel" id="sync-info">
-            <summary>Sync across devices (optional)</summary>
+            <summary>Back up and sync (optional)</summary>
             <div class="info-panel-body">
-                <p>Progress is stored in this browser only. To use it on another device, connect a GitHub Gist of your own.</p>
+                <p>Progress is stored in this browser only. Save your ratings to a file to keep or move them, or connect a GitHub Gist of your own to sync across devices.</p>
+                <div class="file-bar">
+                    <button id="ratings-download-btn" class="btn btn-sync" title="Save your ratings as a JSON file">Download ratings</button>
+                    <button id="ratings-upload-btn" class="btn btn-sync" title="Merge the ratings in a downloaded file into this browser">Upload ratings</button>
+                    <input type="file" id="ratings-file" accept=".json,application/json" hidden>
+                    <span id="file-status" class="sync-status"></span>
+                </div>
             <div class="sync-bar" id="sync-bar">
                 <div id="sync-logged-out">
                     <button id="gist-login-btn" class="btn btn-sync" title="Connect GitHub Gist for cross-device sync">Sync with Gist</button>
