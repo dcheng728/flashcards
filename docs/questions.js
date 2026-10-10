@@ -2495,7 +2495,8 @@ const ALL_QUESTIONS = [
       "extinction",
       "reddening",
       "photometry"
-    ]
+    ],
+    "slug": "milky-way-reddening"
   },
   {
     "name": "astronomical unit (AU)",
